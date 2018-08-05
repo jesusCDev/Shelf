@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -14,7 +13,7 @@
       <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#btnActionCancel" text="Cancel" />
-            <Button mnemonicParsing="false" onAction="#btnActionCreateCard" text="Create" />
+            <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnActionCreateCard" text="Create" />
          </children>
       </HBox>
    </bottom>
@@ -23,13 +22,13 @@
          <children>
             <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="New Card" />
+                  <Label fx:id="lbCardTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" text="New Card" />
                </children>
             </HBox>
          </children></HBox>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="270.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
@@ -40,13 +39,7 @@
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
                   <Label text="Description:" />
-                  <TextArea fx:id="tfCardDescription" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-            </VBox>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-               <children>
-                  <Label text="Favorite:" />
-                  <ToggleButton mnemonicParsing="false" text="                   " />
+                  <TextArea fx:id="taCardDescription" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
          </children>

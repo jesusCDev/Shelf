@@ -7,11 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" afterPath="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
+      <change beforePath="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java" afterPath="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java" />
       <change beforePath="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" afterPath="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Constants.java" afterPath="$PROJECT_DIR$/src/assets/Constants.java" />
       <change beforePath="$PROJECT_DIR$/src/controllers/Home.java" afterPath="$PROJECT_DIR$/src/controllers/Home.java" />
       <change beforePath="$PROJECT_DIR$/src/controllers/MainCardCreator.java" afterPath="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Main.fxml" afterPath="$PROJECT_DIR$/src/fxml/Main.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CardCreator.fxml" afterPath="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,30 +96,30 @@
                     </provider>
                   </entry>
                 </file>
-                <file leaf-file-name="FM_CardManager_Info.java" pinned="false" current-in-tab="false">
+                <file leaf-file-name="FM_CardManager_Info.java" pinned="false" current-in-tab="true">
                   <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java">
                     <provider selected="true" editor-type-id="text-editor">
                       <state relative-caret-position="228">
-                        <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+                        <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                         <folding>
-                          <element signature="e#461#462#0" expanded="true" />
-                          <element signature="e#493#494#0" expanded="true" />
-                          <element signature="e#543#544#0" expanded="true" />
-                          <element signature="e#585#586#0" expanded="true" />
-                          <element signature="e#627#628#0" expanded="true" />
-                          <element signature="e#665#666#0" expanded="true" />
-                          <element signature="e#727#728#0" expanded="true" />
-                          <element signature="e#781#782#0" expanded="true" />
-                          <element signature="e#820#821#0" expanded="true" />
-                          <element signature="e#855#856#0" expanded="true" />
-                          <element signature="e#911#912#0" expanded="true" />
-                          <element signature="e#959#960#0" expanded="true" />
+                          <element signature="e#477#478#0" expanded="true" />
+                          <element signature="e#509#510#0" expanded="true" />
+                          <element signature="e#559#560#0" expanded="true" />
+                          <element signature="e#601#602#0" expanded="true" />
+                          <element signature="e#643#644#0" expanded="true" />
+                          <element signature="e#681#682#0" expanded="true" />
+                          <element signature="e#743#744#0" expanded="true" />
+                          <element signature="e#797#798#0" expanded="true" />
+                          <element signature="e#836#837#0" expanded="true" />
+                          <element signature="e#871#872#0" expanded="true" />
+                          <element signature="e#927#928#0" expanded="true" />
+                          <element signature="e#975#976#0" expanded="true" />
                         </folding>
                       </state>
                     </provider>
                   </entry>
                 </file>
-                <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="true">
+                <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="false">
                   <entry file="file://$PROJECT_DIR$/src/fxml/Main.fxml">
                     <provider editor-type-id="text-editor">
                       <state relative-caret-position="798">
@@ -127,6 +128,19 @@
                       </state>
                     </provider>
                     <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+                      <state />
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="CardCreator.fxml" pinned="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/src/fxml/CardCreator.fxml">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="684">
+                        <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+                        <folding />
+                      </state>
+                    </provider>
+                    <provider editor-type-id="JavaFX-Scene-Builder">
                       <state />
                     </provider>
                   </entry>
@@ -164,27 +178,37 @@
       <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+            <state relative-caret-position="207">
+              <caret line="171" column="22" lean-forward="true" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7600#7601#0" expanded="true" />
-                <element signature="e#7673#7674#0" expanded="true" />
+                <element signature="e#7666#7667#0" expanded="true" />
+                <element signature="e#7739#7740#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainCardCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainCardCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/MainCardCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1951#1952#0" expanded="true" />
-                <element signature="e#2017#2018#0" expanded="true" />
+                <element signature="e#2711#2712#0" expanded="true" />
+                <element signature="e#2777#2778#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FM_XMLParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="168" column="5" lean-forward="false" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,11 +226,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FM_MainCardManager_XML.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FM_MainCardManager_XML.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="151" column="13" lean-forward="true" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+            <state relative-caret-position="202">
+              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#791#792#0" expanded="true" />
@@ -217,6 +241,32 @@
                 <element signature="e#4029#4030#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FM_MainCardManager_Info.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardCreator.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fxml/CardCreator.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="757">
+              <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+              <folding>
+                <marker date="1533488155683" expanded="true" signature="2088:2118" ph="..." />
+                <marker date="1533488155683" expanded="true" signature="2088:2138" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -258,10 +308,10 @@
       <find>Main</find>
       <find>System.out.</find>
       <find>FM_MainCardManager_XML</find>
-      <find>tfCardDescription</find>
       <find>btnActionDeleteCard</find>
       <find>getFavCards</find>
       <find>getCards</find>
+      <find>tfCardDescription</find>
     </findStrings>
     <replaceStrings>
       <replace>false</replace>
@@ -331,26 +381,26 @@
         <option value="$PROJECT_DIR$/src/assets/Defaults.java" />
         <option value="$PROJECT_DIR$/src/controllers/LanguageView.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/MenuCardHandler.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Values.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" />
-        <option value="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Values.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
         <option value="$PROJECT_DIR$/src/controllers/CardCreator.java" />
         <option value="$PROJECT_DIR$/src/controllers/CardView.java" />
         <option value="$PROJECT_DIR$/src/fxml/Main.fxml" />
         <option value="$PROJECT_DIR$/src/assets/Constants.java" />
-        <option value="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
         <option value="$PROJECT_DIR$/src/controllers/Home.java" />
+        <option value="$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" />
+        <option value="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
+        <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java" />
+        <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
+        <option value="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="373" />
     <option name="y" value="219" />
     <option name="width" value="1395" />
@@ -425,6 +475,12 @@
               <item name="Shelf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ControllerUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FileHandler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
@@ -636,7 +692,8 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="219" width="1871" height="1053" extended-state="6" />
+    <frame x="49" y="219" width="1871" height="1053" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -644,7 +701,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="140" y="341" width="1763" height="931" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="157" y="303" width="1763" height="931" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -692,8 +749,8 @@
           <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7600#7601#0" expanded="true" />
-            <element signature="e#7673#7674#0" expanded="true" />
+            <element signature="e#7666#7667#0" expanded="true" />
+            <element signature="e#7739#7740#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -722,8 +779,8 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7600#7601#0" expanded="true" />
-            <element signature="e#7673#7674#0" expanded="true" />
+            <element signature="e#7666#7667#0" expanded="true" />
+            <element signature="e#7739#7740#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -895,14 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/Common_ControllerMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2299">
-          <caret line="136" column="76" lean-forward="true" selection-start-line="136" selection-start-column="76" selection-end-line="136" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/C#_language_data.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -935,25 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="e#900#901#0" expanded="false" />
-            <element signature="e#936#937#0" expanded="false" />
-            <element signature="e#971#972#0" expanded="false" />
-            <element signature="e#1003#1004#0" expanded="false" />
-            <element signature="e#1043#1044#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1124#1125#0" expanded="false" />
-            <element signature="e#1165#1166#0" expanded="false" />
-            <element signature="e#1197#1198#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -970,31 +1000,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Values.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/CardCreator.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="52" lean-forward="false" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/Defaults.java">
@@ -1010,27 +1021,6 @@
         <state relative-caret-position="171">
           <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,34 +1086,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/MainCardCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1951#1952#0" expanded="true" />
-            <element signature="e#2017#2018#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="682">
+          <caret line="168" column="5" lean-forward="false" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/Common_ControllerMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1256">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+        <state relative-caret-position="207">
+          <caret line="171" column="22" lean-forward="true" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7600#7601#0" expanded="true" />
-            <element signature="e#7673#7674#0" expanded="true" />
+            <element signature="e#7666#7667#0" expanded="true" />
+            <element signature="e#7739#7740#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/CardCreator.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+          <folding>
+            <marker date="1533488155683" expanded="true" signature="2088:2118" ph="..." />
+            <marker date="1533488155683" expanded="true" signature="2088:2138" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="151" column="13" lean-forward="true" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+        <state relative-caret-position="202">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#791#792#0" expanded="true" />
@@ -1132,6 +1140,47 @@
             <element signature="e#3920#3921#0" expanded="true" />
             <element signature="e#3986#3987#0" expanded="true" />
             <element signature="e#4029#4030#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/MainCardCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+            <element signature="e#2777#2778#0" expanded="true" />
           </folding>
         </state>
       </provider>

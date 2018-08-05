@@ -167,4 +167,13 @@ public class FM_MainCardManager_XML extends FM_XMLParser {
         File f = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + File.separator + cardName + ".xml");
         f.delete();
     }
+
+    public FM_MainCardManager_Info getCard(String cardID) {
+        for(FM_MainCardManager_Info card: cards){
+            if(cardID.equalsIgnoreCase(card.getCardID())){
+                return card;
+            }
+        }
+        return null;
+    }
 }

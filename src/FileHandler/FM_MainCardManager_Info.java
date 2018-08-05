@@ -2,8 +2,8 @@ package FileHandler;
 
 public class FM_MainCardManager_Info {
 
-    private String cardTitle;
-    private String cardDescription;
+    private String cardTitle = "";
+    private String cardDescription = "";
     private String cardFavoriteStatus;
     private String cardID;
 

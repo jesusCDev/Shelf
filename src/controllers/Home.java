@@ -18,6 +18,8 @@ import javafx.scene.layout.*;
 import java.util.ArrayList;
 
 
+// TODO SET SO IT IS NOT ALWAYS ON TOP UNLESS IT IS IN CARD VIEW
+
 public class Home extends Common_ControllerMethods {
 
     @FXML

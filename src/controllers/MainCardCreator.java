@@ -7,6 +7,7 @@ import FileHandler.FM_MainCardManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -20,29 +21,35 @@ public class MainCardCreator extends Common_ControllerMethods{
     @FXML
     TextField tfCardTitle;
     @FXML
-    TextArea tfCardDescription;
+    TextArea taCardDescription;
+    @FXML
+    Button btnCreateCard;
 
     private Boolean cardGettingEdited;
+    private String cardID;
+    private FM_MainCardManager_XML mainCardXmlParser;
 
     @FXML
     public void initialize(){
+
         cardGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_EditingCard, false);
         Constants.pref.putBoolean(Constants.PREF_SV_EditingCard, false);
 
         if(cardGettingEdited){
-            // TODO Get Data from card
-            // TODO change label and buttons names
-            // TODO get card so you can edit it
-            lbCardTitle.setText("");
+            cardID = Constants.pref.get(Constants.PREF_SV_CardViewTextFileName, null);
+            btnCreateCard.setText("Update");
+
+            mainCardXmlParser= new FM_MainCardManager_XML(false);
+            lbCardTitle.setText(mainCardXmlParser.getCard(cardID).getCardTitle());
+            tfCardTitle.setText(mainCardXmlParser.getCard(cardID).getCardTitle());
+            taCardDescription.setText(mainCardXmlParser.getCard(cardID).getCardDescription());
         }
     }
 
     public void btnActionCreateCard(ActionEvent btn){
 
-        // TODO IF ALREADY CREATED THEN YOUR JUST UPDATING IT
-        if(!tfCardDescription.getText().isEmpty() && !tfCardTitle.getText().isEmpty()){
-            FM_MainCardManager_XML mainCardXmlParser = new FM_MainCardManager_XML(false);
-            FM_MainCardManager_Info card = new FM_MainCardManager_Info(tfCardTitle.getText(), tfCardDescription.getText(), Boolean.toString(false), idCreator(16));
+        if(!tfCardTitle.getText().isEmpty() && !cardGettingEdited){
+            FM_MainCardManager_Info card = new FM_MainCardManager_Info(tfCardTitle.getText(), taCardDescription.getText(), Boolean.toString(false), idCreator(16));
             FM_CardManager_XML cardXmlParser = new FM_CardManager_XML(card.getCardID(), true);
             cardXmlParser.createXMLFile();
 
@@ -50,6 +57,15 @@ public class MainCardCreator extends Common_ControllerMethods{
             mainCardXmlParser.reorganizeCardAlphabetically();
             mainCardXmlParser.updateXMLFile();
             screen_changeNormal(btn, Constants.FILE_FXML_Main);
+        }else if(!tfCardTitle.getText().isEmpty() && cardGettingEdited){
+            mainCardXmlParser.getCard(cardID).setCardTitle(tfCardTitle.getText());
+            mainCardXmlParser.getCard(cardID).setCardDescrption(taCardDescription.getText());
+
+            mainCardXmlParser.reorganizeCardAlphabetically();
+            mainCardXmlParser.updateXMLFile();
+            screen_changeNormal(btn, Constants.FILE_FXML_Main);
+        }else{
+            // TODO TELL USER TO ADD AT LEAST A TITLE
         }
     }
 
