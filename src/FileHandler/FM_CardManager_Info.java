@@ -7,6 +7,15 @@ public class FM_CardManager_Info {
     private String cardDescription;
     private String cardCopyData;
 
+    public FM_CardManager_Info(){
+
+    }
+    public FM_CardManager_Info(String cardTitle, String cardDescription, String cardCopyData){
+        this.cardTitle = cardTitle;
+        this.cardDescription = cardDescription;
+        this.cardCopyData = cardCopyData;
+    }
+
     public String getCardTitle() {
         return cardTitle;
     }

@@ -1,8 +1,9 @@
 package controllers;
 
 import ControllerUI.Common_ControllerMethods;
-import FileHandler.FM_MainCardManager_Info;
-import FileHandler.FM_MainCardManager_XML;
+import FileHandler.FM_CardManager_XML;
+import FileHandler.FM_CardManager_Info;
+import FileHandler.FM_CardManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +17,9 @@ public class CardCreator extends Common_ControllerMethods{
     @FXML
     TextField tfCardTitle;
     @FXML
-    TextArea tfCardDescription;
+    TextArea taCardDescription;
+    @FXML
+    TextArea taCardCopyData;
 
     @FXML
     public void initialize(){
@@ -24,26 +27,17 @@ public class CardCreator extends Common_ControllerMethods{
     }
 
     public void btnActionCreateCard(ActionEvent btn){
-        if(!tfCardDescription.getText().isEmpty() && !tfCardTitle.getText().isEmpty()){
-            FM_MainCardManager_XML xmlParser = new FM_MainCardManager_XML(false);
-            xmlParser.getCards().add(new FM_MainCardManager_Info(tfCardTitle.getText(), tfCardDescription.getText(), Boolean.toString(false), idCreator(16)));
-            xmlParser.reorganizeCardAlphabetically();
-            xmlParser.updateXMLFile();
+        if(!taCardCopyData.getText().isEmpty()){
+            FM_CardManager_XML cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_CardViewTextFileName, null), false);
+            FM_CardManager_Info card = new FM_CardManager_Info(tfCardTitle.getText(), taCardDescription.getText(), taCardCopyData.getText());
+
+            cardXmlParser.getCards().add(card);
+            cardXmlParser.updateXMLFile();
+            screen_changeNormal(btn, Constants.FILE_FXML_Main);
         }
-        screen_changeNormal(btn, Constants.FILE_FXML_Main);
     }
 
     public void btnActionCancel(ActionEvent btn){
-
-    }
-
-    private String idCreator(int length){
-        StringBuilder sb = new StringBuilder();
-        Random ranNum = new Random();
-
-        for(int i = 0; i < length; i++){
-            sb.append(ranNum.nextInt(Integer.MAX_VALUE));
-        }
-        return sb.toString();
+        screen_changeNormal(btn, Constants.FILE_FXML_CardViewer);
     }
 }

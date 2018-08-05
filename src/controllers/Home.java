@@ -46,8 +46,12 @@ public class Home extends Common_ControllerMethods {
             mainCards = new FM_MainCardManager_XML(false);
         }
 
-        recreateCols(vbFav, mainCards.getFavCards());
-        recreateCols(vbMain, mainCards.getNonFavCards());
+        if(mainCards.getCards().size() > 0) {
+            recreateCols(vbFav, mainCards.getFavCards());
+        }
+        if(mainCards.getCards().size() > 0) {
+            recreateCols(vbMain, mainCards.getNonFavCards());
+        }
     }
 
     private void recreateCols(VBox vb, ArrayList<FM_MainCardManager_Info> cards){
@@ -59,14 +63,13 @@ public class Home extends Common_ControllerMethods {
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
 
-        if(cards.size() > 0){
-            for(FM_MainCardManager_Info card: cards){
-                vbCol.add(createVBoxCreateMainBtn(card.getCardTitle(), card.getCardDescription(), card.getCardID(), buttonSize));
-            }
-            cc.addVBoxArrayContainersToArray(vbCol);
-            // Create Columns
-            cc.createColumns();
+        for(FM_MainCardManager_Info card: cards){
+            vbCol.add(createVBoxCreateMainBtn(card.getCardTitle(), card.getCardDescription(), card.getCardID(), buttonSize));
         }
+        cc.addVBoxArrayContainersToArray(vbCol);
+
+        // Create Columns
+        cc.createColumns();
     }
 
     /**
@@ -83,6 +86,7 @@ public class Home extends Common_ControllerMethods {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
                 screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_CardViewer);
             }
         });

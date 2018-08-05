@@ -2,6 +2,9 @@ package controllers;
 
 import ControllerUI.ColumnCreator;
 import ControllerUI.Common_ControllerMethods;
+import FileHandler.FM_CardManager_Info;
+import FileHandler.FM_CardManager_XML;
+import FileHandler.FM_MainCardManager_Info;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -24,20 +27,27 @@ public class CardView extends Common_ControllerMethods {
 
     @FXML
     VBox vbContainer;
+    private FM_CardManager_XML cards;
 
     public void initialize(){
 
         // Grab values from xml file
-//        FM_LanguageManager_XML languageManager = new FM_LanguageManager_XML(false);
+        cards = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_CardViewTextFileName, null), false);
 
+        if(cards.getCards().size() > 0){
+            createVBox();
+        }
+    }
+
+    private void createVBox(){
         // Column Creator class will generate resizable columns
         int buttonSize = 400; // px
         ColumnCreator cc = new ColumnCreator(vbContainer, buttonSize);
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
-        for(int i = 0; i < COMMENTS_JAVA.length; i++){
-            vbCol.add(createVBoxCreateMainBtn(COMMENTS_JAVA[i], buttonSize));
+        for(int i = 0; i < cards.getCards().size(); i++){
+            vbCol.add(createVBoxCreateMainBtn(cards.getCards().get(i), buttonSize));
         }
         cc.addVBoxArrayContainersToArray(vbCol);
 
@@ -52,7 +62,7 @@ public class CardView extends Common_ControllerMethods {
         clipboard.setContent(content);
     }
 
-    private VBox createVBoxCreateMainBtn(String comment, int buttonSize){
+    private VBox createVBoxCreateMainBtn(FM_CardManager_Info card, int buttonSize){
 
         VBox vb = new VBox();
 
@@ -60,15 +70,13 @@ public class CardView extends Common_ControllerMethods {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                System.out.println(comment);
                 // TODO ADD HERE TO ADD TO CLIPBOARD
-
-                writeToClipboard(comment);
+                writeToClipboard(card.getCardCopyData());
             }
         });
 
         // Create Comment
-        Label lbComment = new Label(comment);
+        Label lbComment = new Label(card.getCardCopyData());
 
         // create favorite buttons
         HBox hbButton = new HBox();

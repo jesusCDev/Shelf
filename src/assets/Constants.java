@@ -18,6 +18,7 @@ public interface Constants {
 
     String PREF_SV_MainPath = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_MainPath";
     String PREF_SV_FirstTimeUsingApp = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_firstTimeUsingApp";
+    String PREF_SV_CardViewTextFileName = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_CardViewingTextFileName";
     String PREF_SV_ScreenWidth = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_width";
     String PREF_SV_ScreenHeight = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_height";
     String PREF_SV_ScreenMax = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_Maximized";
