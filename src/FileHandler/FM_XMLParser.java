@@ -23,11 +23,13 @@ public abstract class FM_XMLParser {
 	
 	
 	// update XML file updateXMLFile
-	public abstract void updateXMLFile();
-	// Set XML values setXml()
+	public abstract void updateXMLFile();	// Set XML values setXml()
+    // get info from xml file
 	public abstract void getXMLInfo();
 	// Get XML values getXml()
 	public abstract Document setXMLInfo();
+	// Create an xml file
+	public abstract void createXMLFile();
 	
 	/******** CREATE XML DOCUMENT ********/
 	

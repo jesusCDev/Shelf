@@ -61,7 +61,7 @@ public class Home extends Common_ControllerMethods {
 
         if(cards.size() > 0){
             for(FM_MainCardManager_Info card: cards){
-                vbCol.add(createVBoxCreateMainBtn(card.getCardTitle(), card.getCardDescription(), buttonSize));
+                vbCol.add(createVBoxCreateMainBtn(card.getCardTitle(), card.getCardDescription(), card.getCardID(), buttonSize));
             }
             cc.addVBoxArrayContainersToArray(vbCol);
             // Create Columns
@@ -75,7 +75,7 @@ public class Home extends Common_ControllerMethods {
      * @param summary
      * @return
      */
-    private VBox createVBoxCreateMainBtn(String title, String summary, int buttonSize){
+    private VBox createVBoxCreateMainBtn(String title, String summary, String cardId, int buttonSize){
 
         VBox vb = new VBox();
 
@@ -100,6 +100,9 @@ public class Home extends Common_ControllerMethods {
         btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                mainCards.changeCardFavStats(cardId);
+                mainCards.updateXMLFile();
+
                 recreateCols(vbFav, mainCards.getFavCards());
                 recreateCols(vbMain, mainCards.getNonFavCards());
             }

@@ -19,19 +19,12 @@ public class FM_MainCardManager_XML extends FM_XMLParser {
     private ArrayList<FM_MainCardManager_Info> cards = new ArrayList<>();
 
     private File xmlDocument;
-    private FM_MainCardManager_Info cardDocument;
 
     public FM_MainCardManager_XML(boolean creatingANewDocument){
         xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + File.separator + Constants.DOC_MainCard_XML);
-        cardDocument = new FM_MainCardManager_Info();
-
         if(!creatingANewDocument){
             getXMLInfo();
         }
-    }
-
-    public void setCards(ArrayList<FM_MainCardManager_Info> cards) {
-        this.cards = cards;
     }
 
     public ArrayList<FM_MainCardManager_Info> getCards(){
@@ -146,5 +139,17 @@ public class FM_MainCardManager_XML extends FM_XMLParser {
             }
         }
         return newList;
+    }
+
+    public void changeCardFavStats(String cardId) {
+        for(FM_MainCardManager_Info card: cards){
+            if(card.getCardID().equalsIgnoreCase(cardId)){
+                if(card.getCardFavoriteStatus().equalsIgnoreCase(Boolean.toString(true))){
+                    card.setCardFavoriteSTatus(Boolean.toString(false));
+                }else{
+                    card.setCardFavoriteSTatus(Boolean.toString(true));
+                }
+            }
+        }
     }
 }
