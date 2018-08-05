@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Manager>
+    <Language>
+        <Title>Python - Work</Title>
+        <Summary>Comment Styling For Work</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Java - Work</Title>
+        <Summary>Comment Styling For Work</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Swift - Work</Title>
+        <Summary>Comment Styling For Work</Summary>
+        <FavoriteStatus>true</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>HTML - Work</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>CSS - Work</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>true</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Python - Personal</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Java - Personal</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Swift - Personal</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>HTML - Personal</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>CSS - Personal</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+</Manager>

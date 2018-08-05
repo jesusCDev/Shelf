@@ -1,0 +1,59 @@
+/****************************************************************************************
+// RESETS
+****************************************************************************************/
+.root{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.button{
+    -fx-cursor: hand;
+}
+.label{
+    /* Set font here */
+}
+.background{
+    -fx-background-color: white;
+}
+.container{
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+}
+
+
+/****************************************************************************************
+// BUTTON STYLES
+****************************************************************************************/
+
+/***** Cancel Buttons *****/
+
+.btn-cancel-important{
+    -fx-background-color: red;
+}
+.btn-cancel-minor{
+    -fx-background-color: transparent;
+}
+.btn-cancel-minor: hover {
+    -fx-text-fill: red;
+}
+
+/***** Submit/Add Buttons *****/
+.btn-add{
+
+}
+.btn-accept{
+
+}
+/***** Preview/Back Buttons *****/
+.btn-change-screen{
+
+}
+/****************************************************************************************
+// TEXT FIELD STYLES
+****************************************************************************************/
+.text-field{
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+
+/****************************************************************************************
+// LIST VIEW STYLES
+****************************************************************************************/

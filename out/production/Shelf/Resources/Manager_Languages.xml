@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Manager>
+    <Language>
+        <Title>Python</Title>
+        <Summary>Comment Styling For Work</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Java</Title>
+        <Summary>Comment Styling For Work</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Swift</Title>
+        <Summary>Comment Styling For Work</Summary>
+        <FavoriteStatus>true</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>PHP</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Ruby</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>Go</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>C#</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>C++</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>XML</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>HTML</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>CSS</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>true</FavoriteStatus>
+    </Language>
+    <Language>
+        <Title>JavaScript</Title>
+        <Summary>Comment Styling For Home</Summary>
+        <FavoriteStatus>false</FavoriteStatus>
+    </Language>
+</Manager>
