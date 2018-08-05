@@ -34,10 +34,10 @@
    <top>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
          <right>
-            <Button mnemonicParsing="false" onAction="#btnActionCreateCard" text="+" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnActionCreateCard" text="Add" BorderPane.alignment="CENTER" />
          </right>
          <left>
-            <Button mnemonicParsing="false" onAction="#btnActionDeleteCard" text="-" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnActionEditCards" text="Edit" BorderPane.alignment="CENTER" />
          </left>
          <center>
             <Label text="Shelf" BorderPane.alignment="CENTER" />

@@ -29,6 +29,7 @@ public class Home extends Common_ControllerMethods {
 
     // Grab values from xml file
     private FM_MainCardManager_XML mainCards;
+    private int tracker = 1;
 
     @FXML
     public void initialize(){
@@ -46,15 +47,19 @@ public class Home extends Common_ControllerMethods {
             mainCards = new FM_MainCardManager_XML(false);
         }
 
-        if(mainCards.getCards().size() > 0) {
-            recreateCols(vbFav, mainCards.getFavCards());
+        if(mainCards.getFavCards().size() > 0) {
+            recreateCols(vbFav, mainCards.getFavCards(), false);
+        }else{
+            vbFav.getChildren().clear();
         }
-        if(mainCards.getCards().size() > 0) {
-            recreateCols(vbMain, mainCards.getNonFavCards());
+        if(mainCards.getNonFavCards().size() > 0) {
+            recreateCols(vbMain, mainCards.getNonFavCards(), false);
+        }else{
+            vbMain.getChildren().clear();
         }
     }
 
-    private void recreateCols(VBox vb, ArrayList<FM_MainCardManager_Info> cards){
+    private void recreateCols(VBox vb, ArrayList<FM_MainCardManager_Info> cards, boolean editMode){
         vb.getChildren().clear();
         // Column Creator class will generate resizable columns
         int buttonSize = 400; // px
@@ -64,7 +69,7 @@ public class Home extends Common_ControllerMethods {
         ArrayList<VBox> vbCol = new ArrayList<>();
 
         for(FM_MainCardManager_Info card: cards){
-            vbCol.add(createVBoxCreateMainBtn(card.getCardTitle(), card.getCardDescription(), card.getCardID(), buttonSize));
+            vbCol.add(createVBoxCreateMainBtn(card.getCardTitle(), card.getCardDescription(), card.getCardID(), buttonSize, editMode));
         }
         cc.addVBoxArrayContainersToArray(vbCol);
 
@@ -78,19 +83,12 @@ public class Home extends Common_ControllerMethods {
      * @param summary
      * @return
      */
-    private VBox createVBoxCreateMainBtn(String title, String summary, String cardId, int buttonSize){
+    private VBox createVBoxCreateMainBtn(String title, String summary, String cardId, int buttonSize, boolean editMode){
 
         VBox vb = new VBox();
 
         // Clicking on vb field sends user to Card view
-        vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
-                screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_CardViewer);
-            }
-        });
-
+        setVbAction(vb, cardId, editMode);
         // Create title
         Label lbTitle = new Label(title);
 
@@ -100,17 +98,8 @@ public class Home extends Common_ControllerMethods {
         HBox hbButton = new HBox();
         // TODO ADD AN ICON HERE
         // Clicking the favorite btn allows user to add their most used Card to the top
-        Button btn = new Button("Fav");
-        btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                mainCards.changeCardFavStats(cardId);
-                mainCards.updateXMLFile();
-
-                recreateCols(vbFav, mainCards.getFavCards());
-                recreateCols(vbMain, mainCards.getNonFavCards());
-            }
-        });
+        Button btn = new Button();
+        setBtnAction(btn, cardId, editMode);
 
         hbButton.getChildren().add(btn);
         hbButton.setAlignment(Pos.TOP_RIGHT);
@@ -128,9 +117,103 @@ public class Home extends Common_ControllerMethods {
         return vb;
     }
 
-    @FXML
-    public void btnActionDeleteCard(ActionEvent btn){
+    private void setBtnAction(Button btn, String cardId, boolean editMode){
+        if(!editMode){
+            btn.setText("Fav");
+            btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    mainCards.changeCardFavStats(cardId);
+                    mainCards.updateXMLFile();
 
+
+                    if(mainCards.getFavCards().size() > 0) {
+                        recreateCols(vbFav, mainCards.getFavCards(), editMode);
+                    }else{
+                        vbFav.getChildren().clear();
+                    }
+                    if(mainCards.getNonFavCards().size() > 0) {
+                        recreateCols(vbMain, mainCards.getNonFavCards(), editMode);
+                    }else{
+                        vbMain.getChildren().clear();
+                    }
+                }
+            });
+        }else{
+            btn.setText("Delete");
+
+            btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    // TODO DELTE CARD FROM FILE
+                    // TODO DELTE CARD IN FOLDER
+                    mainCards.deleteCard(cardId);
+                    mainCards.updateXMLFile();
+
+
+                    if(mainCards.getFavCards().size() > 0) {
+                        recreateCols(vbFav, mainCards.getFavCards(), editMode);
+                    }else{
+                        vbFav.getChildren().clear();
+                    }
+                    if(mainCards.getNonFavCards().size() > 0) {
+                        recreateCols(vbMain, mainCards.getNonFavCards(), editMode);
+                    }else{
+                        vbMain.getChildren().clear();
+                    }
+                }
+            });
+        }
+    }
+
+    private void setVbAction(VBox vb, String cardId, boolean editMode){
+        if(!editMode){
+            vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
+                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_CardViewer);
+                }
+            });
+        }else{
+            // TODO THIS METHOD WILL BE FOR EDITING THE MAIN CARD
+            vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    Constants.pref.putBoolean(Constants.PREF_SV_EditingCard, true);
+                    Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
+                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_CardCreator);
+                }
+            });
+        }
+    }
+
+    @FXML
+    public void btnActionEditCards(ActionEvent btn){
+        if(tracker == 1){
+            if(mainCards.getFavCards().size() > 0) {
+                recreateCols(vbFav, mainCards.getFavCards(), true);
+            }else{
+                vbFav.getChildren().clear();
+            }
+            if(mainCards.getNonFavCards().size() > 0) {
+                recreateCols(vbMain, mainCards.getNonFavCards(), true);
+            }else{
+                vbMain.getChildren().clear();
+            }
+        }else{
+            if(mainCards.getFavCards().size() > 0) {
+                recreateCols(vbFav, mainCards.getFavCards(), false);
+            }else{
+                vbFav.getChildren().clear();
+            }
+            if(mainCards.getNonFavCards().size() > 0) {
+                recreateCols(vbMain, mainCards.getNonFavCards(), false);
+            }else{
+                vbMain.getChildren().clear();
+            }
+        }
+        tracker *= -1;
     }
 
     @FXML

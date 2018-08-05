@@ -7,6 +7,7 @@ import FileHandler.FM_MainCardManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -15,16 +16,30 @@ import java.util.Random;
 public class MainCardCreator extends Common_ControllerMethods{
 
     @FXML
+    Label lbCardTitle;
+    @FXML
     TextField tfCardTitle;
     @FXML
     TextArea tfCardDescription;
 
+    private Boolean cardGettingEdited;
+
     @FXML
     public void initialize(){
+        cardGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_EditingCard, false);
+        Constants.pref.putBoolean(Constants.PREF_SV_EditingCard, false);
 
+        if(cardGettingEdited){
+            // TODO Get Data from card
+            // TODO change label and buttons names
+            // TODO get card so you can edit it
+            lbCardTitle.setText("");
+        }
     }
 
     public void btnActionCreateCard(ActionEvent btn){
+
+        // TODO IF ALREADY CREATED THEN YOUR JUST UPDATING IT
         if(!tfCardDescription.getText().isEmpty() && !tfCardTitle.getText().isEmpty()){
             FM_MainCardManager_XML mainCardXmlParser = new FM_MainCardManager_XML(false);
             FM_MainCardManager_Info card = new FM_MainCardManager_Info(tfCardTitle.getText(), tfCardDescription.getText(), Boolean.toString(false), idCreator(16));

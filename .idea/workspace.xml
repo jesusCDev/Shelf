@@ -7,354 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/maven/jaxen/jaxen/pom.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/maven/jaxen/jaxen/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/BaseXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/Context.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/ContextSupport.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/DefaultNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/Function.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/FunctionCallException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/FunctionContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenConstants.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenRuntimeException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/NamedAccessNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/NamespaceContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/Navigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/QualifiedName.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/SimpleFunctionContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/SimpleNamespaceContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/SimpleVariableContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/UnresolvableException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/UnsupportedAxisException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/VariableContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/XPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/XPathFunctionContext.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/XPathSyntaxException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom/DOMXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom/DocumentNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom/NamespaceNode.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom4j/DocumentNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom4j/Dom4jXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/AdditiveExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/AllNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/BinaryExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/CommentNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAbsoluteLocationPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAdditiveExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAllNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAndExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultArithExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultBinaryExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultCommentNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultDivExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultEqualityExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultEqualsExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultFilterExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultFunctionCallExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultGreaterThanEqualExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultGreaterThanExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLessThanEqualExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLessThanExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLiteralExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLocationPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLogicalExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultMinusExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultModExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultMultiplicativeExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultMultiplyExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultNameStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultNotEqualsExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultNumberExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultOrExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultPathExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultPlusExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultPredicate.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultProcessingInstructionNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultRelationalExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultRelativeLocationPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultTextNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultTruthExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultUnaryExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultUnionExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultVariableReferenceExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultXPathExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultXPathFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/EqualityExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Expr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/FilterExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/FunctionCallExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/IdentitySet.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/LiteralExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/LocationPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/LogicalExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/MultiplicativeExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/NameStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/NodeComparator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/NumberExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/PathExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Predicate.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/PredicateSet.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Predicated.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/ProcessingInstructionNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/RelationalExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Step.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/TextNodeStep.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/UnaryExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/UnionExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/VariableReferenceExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/XPathExpr.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/XPathFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAncestorAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAncestorOrSelfAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAttributeAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableChildAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableDescendantAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableDescendantOrSelfAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableFollowingAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableFollowingSiblingAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableNamespaceAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableParentAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterablePrecedingAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterablePrecedingSiblingAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableSelfAxis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/BooleanFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/CeilingFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ConcatFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ContainsFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/CountFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/FalseFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/FloorFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/IdFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/LangFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/LastFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/LocalNameFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NameFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NamespaceUriFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NormalizeSpaceFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NotFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NumberFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/PositionFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/RoundFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/StartsWithFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/StringFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/StringLengthFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SubstringAfterFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SubstringBeforeFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SubstringFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SumFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/TranslateFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/TrueFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/EndsWithFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/EvaluateFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/LocaleFunctionSupport.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/LowerFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/UpperFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/xslt/DocumentFunction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/DocumentNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/Element.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/ElementIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/JavaBeanXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/jdom/DocumentNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/jdom/JDOMXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/jdom/XPathNamespace.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/AnyChildNodeTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/AnyNodeTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/LocationPathPattern.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NameTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NamespaceTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NoNodeTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NodeTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NodeTypeTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/Pattern.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/PatternHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/PatternParser.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/TextNodeTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/UnionPattern.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/Axis.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/Operator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/SAXPathEventSource.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/SAXPathException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/XPathHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/XPathReader.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/XPathSyntaxException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/Token.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/TokenTypes.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/Verifier.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/XPathLexer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/XPathReader.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/helpers/DefaultXPathHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/helpers/XPathReaderFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/AncestorAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/AncestorOrSelfAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/DescendantAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/DescendantOrSelfAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/FollowingAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/FollowingSiblingAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/LinkedIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/PrecedingAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/PrecedingSiblingAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/SelfAxisIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/SingleObjectIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/SingletonList.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/StackedIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/xom/DocumentNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/xom/XOMXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/w3c/dom/UserDataHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/META-INF/LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/META-INF/jdom-info.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Attribute.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/AttributeList.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/AttributeType.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/CDATA.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/CloneBase.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Comment.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Content.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/ContentList.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DataConversionException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DefaultJDOMFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DescendantIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DocType.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Document.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Element.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/EntityRef.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/FilterIterator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalAddException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalDataException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalNameException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalTargetException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/JDOMConstants.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/JDOMException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/JDOMFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Namespace.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/NamespaceAware.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Parent.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/ProcessingInstruction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/SlimJDOMFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/StringBin.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Text.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/UncheckedJDOMFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Verifier.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/adapters/AbstractDOMAdapter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/adapters/DOMAdapter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/adapters/JAXPDOMAdapter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/AbstractFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/AndFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/AttributeFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/ClassFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/ContentFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/ElementFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/Filter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/Filters.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/NegateFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/OrFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/PassThroughFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/TextOnlyFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/DOMBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/JDOMParseException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/SAXBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/StAXEventBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/StAXStreamBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/AbstractReaderSchemaFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/AbstractReaderXSDFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/BuilderErrorHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/DefaultSAXHandlerFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXBuilderEngine.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXEngine.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXHandler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXHandlerFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/TextBuffer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderJAXPFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderJDOMFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderSAX2Factory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderSchemaFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderXSDFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaders.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/package-info.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/DTDParser.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/DefaultStAXFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/StAXFilter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/package-info.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/internal/ArrayCopy.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/internal/ReflectionConstructor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/internal/SystemProperty.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/Located.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedCDATA.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedComment.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedDocType.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedElement.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedEntityRef.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedJDOMFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedProcessingInstruction.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedText.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/DOMOutputter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/EscapeStrategy.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/Format.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/JDOMLocator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/LineSeparator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/SAXOutputter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/StAXEventOutputter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/StAXStreamOutputter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/XMLOutputter.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractDOMOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractFormattedWalker.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractSAXOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractStAXEventProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractStAXStreamProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractXMLOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/DOMOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/FormatStack.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/SAXOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/SAXTarget.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/StAXEventProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/StAXStreamProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/Walker.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerNORMALIZE.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerPRESERVE.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerTRIM.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerTRIM_FULL_WHITE.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/XMLOutputProcessor.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/JDOMResult.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/JDOMSource.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/XSLTransformException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/XSLTransformer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/util/IteratorIterable.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/util/NamespaceStack.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathBuilder.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathDiagnostic.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathExpression.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathHelper.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOM2Navigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOMCoreNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOMNavigator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOMXPath.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JaxenCompiled.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JaxenXPathFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/NamespaceContainer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/util/AbstractXPathCompiled.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/util/XPathDiagnosticImpl.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/FileHandler/FM_MainCardManager_XML.class" afterPath="$PROJECT_DIR$/out/production/Shelf/FileHandler/FM_MainCardManager_XML.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/FileHandler/FM_XMLParser.class" afterPath="$PROJECT_DIR$/out/production/Shelf/FileHandler/FM_XMLParser.class" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" afterPath="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java" afterPath="$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java" />
+      <change beforePath="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" afterPath="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" />
       <change beforePath="$PROJECT_DIR$/src/assets/Constants.java" afterPath="$PROJECT_DIR$/src/assets/Constants.java" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CardCreator.java" afterPath="$PROJECT_DIR$/src/controllers/CardCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CardView.java" afterPath="$PROJECT_DIR$/src/controllers/CardView.java" />
       <change beforePath="$PROJECT_DIR$/src/controllers/Home.java" afterPath="$PROJECT_DIR$/src/controllers/Home.java" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/CardCreator.fxml" afterPath="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/MainCardCreator.java" afterPath="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Main.fxml" afterPath="$PROJECT_DIR$/src/fxml/Main.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -424,7 +81,7 @@
                     </provider>
                   </entry>
                 </file>
-                <file leaf-file-name="FM_CardManager_XML.java" pinned="false" current-in-tab="true">
+                <file leaf-file-name="FM_CardManager_XML.java" pinned="false" current-in-tab="false">
                   <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java">
                     <provider selected="true" editor-type-id="text-editor">
                       <state relative-caret-position="247">
@@ -461,6 +118,19 @@
                     </provider>
                   </entry>
                 </file>
+                <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/fxml/Main.fxml">
+                    <provider editor-type-id="text-editor">
+                      <state relative-caret-position="798">
+                        <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
+                        <folding />
+                      </state>
+                    </provider>
+                    <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+                      <state />
+                    </provider>
+                  </entry>
+                </file>
               </leaf>
             </split-first>
             <split-second>
@@ -491,26 +161,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Home.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="278">
+              <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4288#4289#0" expanded="true" />
-                <element signature="e#4361#4362#0" expanded="true" />
+                <element signature="e#7600#7601#0" expanded="true" />
+                <element signature="e#7673#7674#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColumnCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -518,12 +178,12 @@
       <file leaf-file-name="MainCardCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/MainCardCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1951#1952#0" expanded="true" />
+                <element signature="e#2017#2018#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -537,6 +197,24 @@
               <folding>
                 <element signature="e#3410#3411#0" expanded="true" />
                 <element signature="e#3474#3475#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FM_MainCardManager_XML.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="151" column="13" lean-forward="true" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#3878#3879#0" expanded="true" />
+                <element signature="e#3920#3921#0" expanded="true" />
+                <element signature="e#3986#3987#0" expanded="true" />
+                <element signature="e#4029#4030#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -581,6 +259,9 @@
       <find>System.out.</find>
       <find>FM_MainCardManager_XML</find>
       <find>tfCardDescription</find>
+      <find>btnActionDeleteCard</find>
+      <find>getFavCards</find>
+      <find>getCards</find>
     </findStrings>
     <replaceStrings>
       <replace>false</replace>
@@ -652,19 +333,19 @@
         <option value="$PROJECT_DIR$/src/ControllerUI/MenuCardHandler.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Values.java" />
-        <option value="$PROJECT_DIR$/src/fxml/Main.fxml" />
         <option value="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" />
         <option value="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Values.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/assets/Constants.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
         <option value="$PROJECT_DIR$/src/controllers/CardCreator.java" />
         <option value="$PROJECT_DIR$/src/controllers/CardView.java" />
+        <option value="$PROJECT_DIR$/src/fxml/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/assets/Constants.java" />
+        <option value="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
         <option value="$PROJECT_DIR$/src/controllers/Home.java" />
+        <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" />
       </list>
     </option>
   </component>
@@ -744,12 +425,6 @@
               <item name="Shelf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ControllerUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FileHandler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
@@ -962,15 +637,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="219" width="1871" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853982" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="123" y="292" width="1723" height="923" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="140" y="341" width="1763" height="931" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1018,8 +692,8 @@
           <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
+            <element signature="e#7600#7601#0" expanded="true" />
+            <element signature="e#7673#7674#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,8 +722,8 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
+            <element signature="e#7600#7601#0" expanded="true" />
+            <element signature="e#7673#7674#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1304,33 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="57" column="73" lean-forward="true" selection-start-line="57" selection-start-column="73" selection-end-line="57" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#3878#3879#0" expanded="true" />
-            <element signature="e#3920#3921#0" expanded="true" />
-            <element signature="e#3986#3987#0" expanded="true" />
-            <element signature="e#4029#4030#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/Main.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Values.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1366,14 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1395,6 +1034,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CardCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1407,15 +1058,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CardCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/fxml/Main.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1210#1211#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,7 +1090,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="278">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
@@ -1440,24 +1098,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/MainCardCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        <state relative-caret-position="278">
+          <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
+            <element signature="e#7600#7601#0" expanded="true" />
+            <element signature="e#7673#7674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="151" column="13" lean-forward="true" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#3878#3879#0" expanded="true" />
+            <element signature="e#3920#3921#0" expanded="true" />
+            <element signature="e#3986#3987#0" expanded="true" />
+            <element signature="e#4029#4030#0" expanded="true" />
           </folding>
         </state>
       </provider>

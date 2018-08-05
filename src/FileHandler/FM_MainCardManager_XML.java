@@ -152,4 +152,19 @@ public class FM_MainCardManager_XML extends FM_XMLParser {
             }
         }
     }
+
+    public void deleteCard(String cardId) {
+        for(FM_MainCardManager_Info card: cards){
+            if(card.getCardID().equalsIgnoreCase(cardId)){
+                deleteCardTextFile(cardId);
+                cards.remove(card);
+                break;
+            }
+        }
+    }
+
+    private void deleteCardTextFile(String cardName){
+        File f = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + File.separator + cardName + ".xml");
+        f.delete();
+    }
 }
