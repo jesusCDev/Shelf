@@ -7,10 +7,11 @@ public interface Constants {
     String DOC_MainCard_XML = "MainCards.xml";
     String DOC_SubCard_XML = "SubCards.xml";
 
-    String FILE_FXML_CardCreator = "/fxml/CardCreator.fxml";
+    String FILE_FXML_MainCardCreator = "/fxml/MainCardCreator.fxml";
     String FILE_FXML_Main = "/fxml/Main.fxml";
     String FILE_FXML_FileSetup = "/ControllerUI/FileFinder/FileSetUp.fxml";
     String FILE_FXML_CardViewer = "/fxml/CardViewer.fxml";
+    String FILE_FXML_CardCreator = "/fxml/CardCreator.fxml";
 
     String FILE_CSS = "/styles/styles.css";
 

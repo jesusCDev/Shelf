@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardCreator">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainCardCreator">
    <bottom>
       <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#btnAction_Cancel" text="Cancel" />
-            <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" text="Create" />
+            <Button mnemonicParsing="false" onAction="#btnActionCancel" text="Cancel" />
+            <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnActionCreateCard" text="Create" />
          </children>
       </HBox>
    </bottom>
@@ -40,17 +40,6 @@
                <children>
                   <Label text="Description:" />
                   <TextArea fx:id="taCardDescription" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-            </VBox>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-               <children>
-                  <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0">
-                     <children>
-                        <Label text="Data:" />
-                        <Button mnemonicParsing="false" onAction="#btnAction_ShowUserInfo" text="?" />
-                     </children>
-                  </HBox>
-                  <TextArea fx:id="taCardCopyData" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
          </children>

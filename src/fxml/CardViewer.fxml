@@ -11,10 +11,10 @@
    <top>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="container" BorderPane.alignment="CENTER">
          <left>
-            <Button mnemonicParsing="false" onAction="#btn_GoBackToMainMenu" text="&lt;---" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" text="&lt;---" BorderPane.alignment="CENTER" />
          </left>
          <right>
-            <Button mnemonicParsing="false" text="+" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" text="+" BorderPane.alignment="CENTER" />
          </right>
          <center>
             <Label text="Language Viewer" BorderPane.alignment="CENTER" />

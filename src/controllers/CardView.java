@@ -107,7 +107,12 @@ public class CardView extends Common_ControllerMethods {
     // BUTTON ACTIONS
 
     @FXML
-    public void btn_GoBackToMainMenu(ActionEvent e){
+    public void btnAction_CreateNewCard(ActionEvent e){
+        screen_changeNormal(e, Constants.FILE_FXML_CardCreator);
+    }
+
+    @FXML
+    public void btnAction_GoBackToMainMenu(ActionEvent e){
         screen_changeNormal(e, Constants.FILE_FXML_Main);
     }
 }

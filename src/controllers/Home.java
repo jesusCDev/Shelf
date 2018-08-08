@@ -184,7 +184,7 @@ public class Home extends Common_ControllerMethods {
                 public void handle(MouseEvent event) {
                     Constants.pref.putBoolean(Constants.PREF_SV_EditingCard, true);
                     Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
-                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_CardCreator);
+                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_MainCardCreator);
                 }
             });
         }
@@ -220,6 +220,6 @@ public class Home extends Common_ControllerMethods {
 
     @FXML
     public void btnActionCreateCard(ActionEvent btn){
-        screen_changeNormal(btn, Constants.FILE_FXML_CardCreator);
+        screen_changeNormal(btn, Constants.FILE_FXML_MainCardCreator);
     }
 }
