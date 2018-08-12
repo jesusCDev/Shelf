@@ -91,6 +91,49 @@ public class Common_ControllerMethods implements Constants{
         stage.show();
     }
 
+    public void screen_changeNormalTurnOfAlwaysOnTop(ActionEvent e, String fxmlScreen){
+        Parent loader = null;
+        try {
+            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+        Scene scene = new Scene(loader);
+        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setAlwaysOnTop(false);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    public void screen_changeNormalAlwaysOnTop(ActionEvent e, String fxmlScreen){
+        Parent loader = null;
+        try {
+            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+        Scene scene = new Scene(loader);
+        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setAlwaysOnTop(true);
+
+        if (stage.isFullScreen()) {
+            stage.setMaximized(true);
+            pref.putBoolean(PREF_SV_ScreenMax, true);
+        }else{
+            pref.putBoolean(PREF_SV_ScreenMax, false);
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    // TODO MAYBE I SHOULDNT BE TAKING OFF AND ON THE ALWAYS ON TOP FEATURE - TO INCONSISTANT
 
     public void screen_changeNormalAlwaysOnTop(MouseEvent e, String fxmlScreen){
         Parent loader = null;

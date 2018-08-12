@@ -46,14 +46,23 @@ public class MainCardCreator extends Common_ControllerMethods{
         }
     }
 
+    public void pm(String message){
+        System.out.println(message);
+    }
     public void btnActionCreateCard(ActionEvent btn){
 
         if(!tfCardTitle.getText().isEmpty() && !cardGettingEdited){
+            // TODO When am i creating a new document
+            mainCardXmlParser = new FM_MainCardManager_XML(false);
+            pm("One");
             FM_MainCardManager_Info card = new FM_MainCardManager_Info(tfCardTitle.getText(), taCardDescription.getText(), Boolean.toString(false), idCreator(16));
             FM_CardManager_XML cardXmlParser = new FM_CardManager_XML(card.getCardID(), true);
             cardXmlParser.createXMLFile();
-
+            pm("Two");
+            pm(card.toString());
+            pm(mainCardXmlParser.toString());
             mainCardXmlParser.getCards().add(card);
+            pm("Three");
             mainCardXmlParser.reorganizeCardAlphabetically();
             mainCardXmlParser.updateXMLFile();
             screen_changeNormal(btn, Constants.FILE_FXML_Main);

@@ -10,8 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.util.Random;
-
 public class CardCreator extends Common_ControllerMethods{
 
     @FXML
@@ -39,11 +37,11 @@ public class CardCreator extends Common_ControllerMethods{
 
             cardXmlParser.getCards().add(card);
             cardXmlParser.updateXMLFile();
-            screen_changeNormal(btn, Constants.FILE_FXML_CardViewer);
+            screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_CardViewer);
         }
     }
 
     public void btnAction_Cancel(ActionEvent btn){
-        screen_changeNormal(btn, Constants.FILE_FXML_CardViewer);
+        screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_CardViewer);
     }
 }

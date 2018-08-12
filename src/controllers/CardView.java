@@ -17,9 +17,11 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
+import java.util.Timer;
 
 import static assets.Defaults.COMMENTS_JAVA;
 
@@ -27,6 +29,9 @@ public class CardView extends Common_ControllerMethods {
 
     @FXML
     VBox vbContainer;
+    @FXML
+    StackPane spToastMessanger;
+
     private FM_CardManager_XML cards;
 
     public void initialize(){
@@ -71,9 +76,14 @@ public class CardView extends Common_ControllerMethods {
             @Override
             public void handle(MouseEvent event) {
                 // TODO ADD HERE TO ADD TO CLIPBOARD
+                spToastMessanger.getChildren().add(new Button(card.getCardCopyData()));
+//                Timer t = new Timer()
                 writeToClipboard(card.getCardCopyData());
             }
         });
+
+        Label lbTitle = new Label(card.getCardTitle());
+        Label lbDescription = new Label(card.getCardDescription());
 
         // Create Comment
         Label lbComment = new Label(card.getCardCopyData());
@@ -87,6 +97,7 @@ public class CardView extends Common_ControllerMethods {
             @Override
             public void handle(MouseEvent event) {
                 System.out.println("Favorited this");
+                spToastMessanger.getChildren().clear();
             }
         });
 
@@ -99,6 +110,8 @@ public class CardView extends Common_ControllerMethods {
         vb.paddingProperty().setValue(new Insets(10));
 
         // Add vb
+        vb.getChildren().add(lbTitle);
+        vb.getChildren().add(lbDescription);
         vb.getChildren().add(lbComment);
         vb.getChildren().add(hbButton);
 
@@ -108,11 +121,11 @@ public class CardView extends Common_ControllerMethods {
 
     @FXML
     public void btnAction_CreateNewCard(ActionEvent e){
-        screen_changeNormal(e, Constants.FILE_FXML_CardCreator);
+        screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_CardCreator);
     }
 
     @FXML
     public void btnAction_GoBackToMainMenu(ActionEvent e){
-        screen_changeNormal(e, Constants.FILE_FXML_Main);
+        screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_Main);
     }
 }
