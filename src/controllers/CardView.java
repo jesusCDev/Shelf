@@ -2,6 +2,7 @@ package controllers;
 
 import ControllerUI.ColumnCreator;
 import ControllerUI.Common_ControllerMethods;
+import ControllerUI.ToastCreator;
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_MainCardManager_Info;
@@ -33,12 +34,13 @@ public class CardView extends Common_ControllerMethods {
     StackPane spToastMessanger;
 
     private FM_CardManager_XML cards;
+    private ToastCreator toast;
 
     public void initialize(){
 
         // Grab values from xml file
         cards = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_CardViewTextFileName, null), false);
-
+        toast = new ToastCreator(spToastMessanger);
         if(cards.getCards().size() > 0){
             createVBox();
         }
@@ -76,8 +78,7 @@ public class CardView extends Common_ControllerMethods {
             @Override
             public void handle(MouseEvent event) {
                 // TODO ADD HERE TO ADD TO CLIPBOARD
-                spToastMessanger.getChildren().add(new Button(card.getCardCopyData()));
-//                Timer t = new Timer()
+                toast.createToast(card.getCardCopyData());
                 writeToClipboard(card.getCardCopyData());
             }
         });
@@ -97,7 +98,7 @@ public class CardView extends Common_ControllerMethods {
             @Override
             public void handle(MouseEvent event) {
                 System.out.println("Favorited this");
-                spToastMessanger.getChildren().clear();
+                toast.deleteToast();
             }
         });
 
