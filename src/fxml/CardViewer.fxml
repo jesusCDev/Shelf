@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -14,12 +15,16 @@
          <left>
             <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" text="&lt;---" BorderPane.alignment="CENTER" />
          </left>
-         <right>
-            <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" text="+" BorderPane.alignment="CENTER" />
-         </right>
          <center>
             <Label text="Language Viewer" BorderPane.alignment="CENTER" />
          </center>
+         <right>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" text="+" />
+               </children>
+            </HBox>
+         </right>
       </BorderPane>
    </top>
    <center>

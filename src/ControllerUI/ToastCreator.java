@@ -24,7 +24,7 @@ public class ToastCreator {
         sp.getChildren().add(text);
 
         timeline = new Timeline(new KeyFrame(
-                Duration.millis(5000),
+                Duration.millis(3000),
                 ae -> deleteToast()));
         timeline.play();
 

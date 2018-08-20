@@ -58,7 +58,6 @@ public class CardView extends Common_ControllerMethods {
         }
         cc.addVBoxArrayContainersToArray(vbCol);
 
-        // Create Columns
         cc.createColumns();
     }
 

@@ -2,7 +2,13 @@ package ControllerUI;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
@@ -16,9 +22,39 @@ public class ColumnCreator {
 
     private ArrayList<VBox> vbContainer = new ArrayList<>();
 
+    private VBox createAddBtn(String cardFileName){
+        VBox vb = new VBox(new Label("Add"));
+        vb.setStyle("-fx-background-color: red;");
+        vb.setPrefWidth(colSize);
+        vb.setAlignment(Pos.CENTER);
+        return vb;
+    }
+
+    private VBox createEditBtn(String cardFileName){
+        VBox vb = new VBox(new Label("Edit"));
+        vb.setAlignment(Pos.CENTER);
+        return vb;
+    }
+
     public ColumnCreator(VBox container, int colSize){
         this.container = container;
         this.colSize = colSize;
+    }
+
+    public void createColumnsWithBtns(String cardFileName){
+        container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((800 / colSize)))));
+
+        container.widthProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
+                if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
+                    container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
+                    lastGridNumber = currentGirdColumbs;
+                }
+            }
+        });
+
     }
 
     public void createColumns(){
@@ -37,17 +73,21 @@ public class ColumnCreator {
         });
     }
 
+
+
     /**
      * Recreates gird pane every time the size of its container is changed
      * @param container its container (clears it and resets position)
      * @param colNum number of cols
      * @return retuns gridpane for which is add into the container
      */
-    private GridPane recreateGridPaneWithButtons(VBox container, int colNum){
+    private VBox recreateGridPaneWithButtons(VBox container, int colNum){
         // Clean up
         container.getChildren().clear();
         container.setAlignment(Pos.TOP_CENTER);
 
+        VBox newContainer = new VBox();
+        newContainer.getChildren().add(createAddBtn("hi"));
         // Grid pane and vbox settings
         GridPane gp = new GridPane();
         gp.setStyle("-fx-background-color: pink;");
@@ -71,7 +111,10 @@ public class ColumnCreator {
             }
             rows++;
         }while(true);
-        return gp;
+        newContainer.getChildren().addAll(gp);
+        newContainer.getChildren().add(createEditBtn("bye"));
+
+        return newContainer;
     }
 
     /**

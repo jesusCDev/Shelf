@@ -17,6 +17,7 @@ public interface Constants {
 
     String TEXT_PROJECT_TITLE = "Shelf Comments";
 
+    String PREF_SV_CardViewList = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_HoldsMultipleClassesThatAreOpen";
     String PREF_SV_MainPath = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_MainPath";
     String PREF_SV_FirstTimeUsingApp = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_firstTimeUsingApp";
     String PREF_SV_CardViewTextFileName = "pref_sv_Shelf_Key-QnAE&4^j%6dMrs[4_CardViewingTextFileName";
