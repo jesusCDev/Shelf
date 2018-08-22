@@ -1,4 +1,4 @@
-package ControllerUI;
+package ControllerUI.DefaultMethods;
 
 import assets.Constants;
 import javafx.event.ActionEvent;

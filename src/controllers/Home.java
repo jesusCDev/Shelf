@@ -1,7 +1,7 @@
 package controllers;
 
 import ControllerUI.ColumnCreator;
-import ControllerUI.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import FileHandler.FM_MainCardManager_Info;
 import FileHandler.FM_MainCardManager_XML;
 import assets.Constants;
@@ -23,11 +23,11 @@ import java.util.ArrayList;
 public class Home extends Common_ControllerMethods {
 
     @FXML
-    BorderPane bpAll;
+    BorderPane bpContainer_All;
     @FXML
-    VBox vbFav;
+    VBox vbContainer_Fav;
     @FXML
-    VBox vbMain;
+    VBox vbContainer_Main;
 
     // Grab values from xml file
     private FM_MainCardManager_XML mainCards;
@@ -50,14 +50,14 @@ public class Home extends Common_ControllerMethods {
         }
 
         if(mainCards.getFavCards().size() > 0) {
-            recreateCols(vbFav, mainCards.getFavCards(), false);
+            recreateCols(vbContainer_Fav, mainCards.getFavCards(), false);
         }else{
-            vbFav.getChildren().clear();
+            vbContainer_Fav.getChildren().clear();
         }
         if(mainCards.getNonFavCards().size() > 0) {
-            recreateCols(vbMain, mainCards.getNonFavCards(), false);
+            recreateCols(vbContainer_Main, mainCards.getNonFavCards(), false);
         }else{
-            vbMain.getChildren().clear();
+            vbContainer_Main.getChildren().clear();
         }
     }
 
@@ -130,14 +130,14 @@ public class Home extends Common_ControllerMethods {
 
 
                     if(mainCards.getFavCards().size() > 0) {
-                        recreateCols(vbFav, mainCards.getFavCards(), editMode);
+                        recreateCols(vbContainer_Fav, mainCards.getFavCards(), editMode);
                     }else{
-                        vbFav.getChildren().clear();
+                        vbContainer_Fav.getChildren().clear();
                     }
                     if(mainCards.getNonFavCards().size() > 0) {
-                        recreateCols(vbMain, mainCards.getNonFavCards(), editMode);
+                        recreateCols(vbContainer_Main, mainCards.getNonFavCards(), editMode);
                     }else{
-                        vbMain.getChildren().clear();
+                        vbContainer_Main.getChildren().clear();
                     }
                 }
             });
@@ -154,14 +154,14 @@ public class Home extends Common_ControllerMethods {
 
 
                     if(mainCards.getFavCards().size() > 0) {
-                        recreateCols(vbFav, mainCards.getFavCards(), editMode);
+                        recreateCols(vbContainer_Fav, mainCards.getFavCards(), editMode);
                     }else{
-                        vbFav.getChildren().clear();
+                        vbContainer_Fav.getChildren().clear();
                     }
                     if(mainCards.getNonFavCards().size() > 0) {
-                        recreateCols(vbMain, mainCards.getNonFavCards(), editMode);
+                        recreateCols(vbContainer_Main, mainCards.getNonFavCards(), editMode);
                     }else{
-                        vbMain.getChildren().clear();
+                        vbContainer_Main.getChildren().clear();
                     }
                 }
             });
@@ -174,7 +174,7 @@ public class Home extends Common_ControllerMethods {
                 @Override
                 public void handle(MouseEvent event) {
                     Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
-                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_CardViewer);
+                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_StackViewer);
                 }
             });
         }else{
@@ -184,7 +184,7 @@ public class Home extends Common_ControllerMethods {
                 public void handle(MouseEvent event) {
                     Constants.pref.putBoolean(Constants.PREF_SV_EditingCard, true);
                     Constants.pref.put(Constants.PREF_SV_CardViewTextFileName, cardId);
-                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_MainCardCreator);
+                    screen_changeNormalAlwaysOnTop(event, Constants.FILE_FXML_StackCreator);
                 }
             });
         }
@@ -194,25 +194,25 @@ public class Home extends Common_ControllerMethods {
     public void btnActionEditCards(ActionEvent btn){
         if(tracker == 1){
             if(mainCards.getFavCards().size() > 0) {
-                recreateCols(vbFav, mainCards.getFavCards(), true);
+                recreateCols(vbContainer_Fav, mainCards.getFavCards(), true);
             }else{
-                vbFav.getChildren().clear();
+                vbContainer_Fav.getChildren().clear();
             }
             if(mainCards.getNonFavCards().size() > 0) {
-                recreateCols(vbMain, mainCards.getNonFavCards(), true);
+                recreateCols(vbContainer_Main, mainCards.getNonFavCards(), true);
             }else{
-                vbMain.getChildren().clear();
+                vbContainer_Main.getChildren().clear();
             }
         }else{
             if(mainCards.getFavCards().size() > 0) {
-                recreateCols(vbFav, mainCards.getFavCards(), false);
+                recreateCols(vbContainer_Fav, mainCards.getFavCards(), false);
             }else{
-                vbFav.getChildren().clear();
+                vbContainer_Fav.getChildren().clear();
             }
             if(mainCards.getNonFavCards().size() > 0) {
-                recreateCols(vbMain, mainCards.getNonFavCards(), false);
+                recreateCols(vbContainer_Main, mainCards.getNonFavCards(), false);
             }else{
-                vbMain.getChildren().clear();
+                vbContainer_Main.getChildren().clear();
             }
         }
         tracker *= -1;
@@ -220,6 +220,6 @@ public class Home extends Common_ControllerMethods {
 
     @FXML
     public void btnActionCreateCard(ActionEvent btn){
-        screen_changeNormal(btn, Constants.FILE_FXML_MainCardCreator);
+        screen_changeNormal(btn, Constants.FILE_FXML_StackCreator);
     }
 }

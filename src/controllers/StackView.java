@@ -1,11 +1,10 @@
 package controllers;
 
 import ControllerUI.ColumnCreator;
-import ControllerUI.Common_ControllerMethods;
-import ControllerUI.ToastCreator;
+import ControllerUI.DefaultMethods.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.ToastCreator;
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
-import FileHandler.FM_MainCardManager_Info;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,11 +21,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
-import java.util.Timer;
 
-import static assets.Defaults.COMMENTS_JAVA;
-
-public class CardView extends Common_ControllerMethods {
+public class StackView extends Common_ControllerMethods {
 
     @FXML
     VBox vbContainer;

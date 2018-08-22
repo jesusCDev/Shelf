@@ -1,6 +1,6 @@
 package ControllerUI.FileFinder;
 
-import ControllerUI.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import assets.OutterFiles;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

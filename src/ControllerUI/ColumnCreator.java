@@ -14,6 +14,9 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
+/**
+ * This Class Handles The Cards In The Given Area and Their Resizing
+ */
 public class ColumnCreator {
 
     private int lastGridNumber = 2;

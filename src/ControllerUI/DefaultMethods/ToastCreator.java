@@ -1,4 +1,4 @@
-package ControllerUI;
+package ControllerUI.DefaultMethods;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

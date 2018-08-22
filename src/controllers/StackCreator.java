@@ -1,6 +1,6 @@
 package controllers;
 
-import ControllerUI.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_MainCardManager_Info;
 import FileHandler.FM_MainCardManager_XML;
@@ -14,7 +14,7 @@ import javafx.scene.control.TextField;
 
 import java.util.Random;
 
-public class MainCardCreator extends Common_ControllerMethods{
+public class StackCreator extends Common_ControllerMethods{
 
     @FXML
     Label lbCardTitle;

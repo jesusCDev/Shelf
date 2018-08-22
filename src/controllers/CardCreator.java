@@ -1,9 +1,8 @@
 package controllers;
 
-import ControllerUI.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_CardManager_Info;
-import FileHandler.FM_CardManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,11 +36,11 @@ public class CardCreator extends Common_ControllerMethods{
 
             cardXmlParser.getCards().add(card);
             cardXmlParser.updateXMLFile();
-            screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_CardViewer);
+            screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_StackViewer);
         }
     }
 
     public void btnAction_Cancel(ActionEvent btn){
-        screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_CardViewer);
+        screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_StackViewer);
     }
 }

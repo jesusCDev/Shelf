@@ -7,20 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/ControllerUI/FileFinder/SectionManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ControllerUI/StackView_Manager/StackManager.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ColumnCreator$1.class" afterPath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ColumnCreator$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ColumnCreator$2.class" afterPath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ColumnCreator$2.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ColumnCreator.class" afterPath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ColumnCreator.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/assets/Constants.class" afterPath="$PROJECT_DIR$/out/production/Shelf/assets/Constants.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView$1.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView$2.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/Common_ControllerMethods.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/Common_FilePathMethods.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/FileFinder/FileSetUp.class" afterPath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/FileFinder/FileSetUp.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/ControllerUI/ToastCreator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardCreator.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/CardCreator.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/CardView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/Home$1.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/Home$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/Home$2.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/Home$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/Home.class" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/Home.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/MainCardCreator.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/CardViewer.fxml" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/CardViewer.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/MainCardCreator.fxml" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/MainCardCreator.fxml" />
       <change beforePath="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" afterPath="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/ControllerUI/ToastCreator.java" afterPath="$PROJECT_DIR$/src/ControllerUI/ToastCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/ControllerUI/Common_ControllerMethods.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/ControllerUI/Common_FilePathMethods.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/ControllerUI/FileFinder/FileSetUp.java" afterPath="$PROJECT_DIR$/src/ControllerUI/FileFinder/FileSetUp.java" />
+      <change beforePath="$PROJECT_DIR$/src/ControllerUI/ToastCreator.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/assets/Constants.java" afterPath="$PROJECT_DIR$/src/assets/Constants.java" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CardView.java" afterPath="$PROJECT_DIR$/src/controllers/CardView.java" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/CardViewer.fxml" afterPath="$PROJECT_DIR$/src/fxml/CardViewer.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CardCreator.java" afterPath="$PROJECT_DIR$/src/controllers/CardCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CardView.java" afterPath="$PROJECT_DIR$/src/controllers/StackView.java" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/Home.java" afterPath="$PROJECT_DIR$/src/controllers/Home.java" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/MainCardCreator.java" afterPath="$PROJECT_DIR$/src/controllers/StackCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CardViewer.fxml" afterPath="$PROJECT_DIR$/src/fxml/StackView.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Main.fxml" afterPath="$PROJECT_DIR$/src/fxml/Home.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/MainCardCreator.fxml" afterPath="$PROJECT_DIR$/src/fxml/StackCreator.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,51 +95,18 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CardView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/CardView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="ColumnCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="-300">
+              <caret line="86" column="53" lean-forward="false" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="53" />
               <folding>
-                <element signature="e#4159#4160#0" expanded="true" />
-                <element signature="e#4194#4195#0" expanded="true" />
-                <element signature="e#4333#4334#0" expanded="true" />
-                <element signature="e#4371#4372#0" expanded="true" />
+                <element signature="e#4236#4237#0" expanded="true" />
+                <element signature="e#4271#4272#0" expanded="true" />
+                <element signature="e#4410#4411#0" expanded="true" />
+                <element signature="e#4448#4449#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SectionManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ControllerUI/FileFinder/SectionManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-              <folding>
-                <element signature="e#125#126#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -129,13 +114,96 @@
       <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="1220">
+              <caret line="184" column="83" lean-forward="true" selection-start-line="184" selection-start-column="83" selection-end-line="184" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7670#7671#0" expanded="true" />
-                <element signature="e#7747#7748#0" expanded="true" />
+                <element signature="e#7913#7914#0" expanded="true" />
+                <element signature="e#7987#7988#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StackCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/StackCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-135">
+              <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StackView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/StackView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-895">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/CardCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="38" column="75" lean-forward="false" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fxml/Home.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="776">
+              <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Common_ControllerMethods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_ControllerMethods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Common_FilePathMethods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_FilePathMethods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToastCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/ToastCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,7 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FM_Settings_Values</find>
       <find>Boolean.getBoolean(</find>
       <find>staff</find>
       <find>xmlDocument</find>
@@ -183,6 +250,7 @@
       <find>new Label</find>
       <find>Toast</find>
       <find>createCo</find>
+      <find>bpContainer_All</find>
     </findStrings>
     <replaceStrings>
       <replace>false</replace>
@@ -199,6 +267,7 @@
       <replace>card</replace>
       <replace>FM_CardManager_XML</replace>
       <replace>taCardDescription</replace>
+      <replace>vbContainer_Main</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -217,9 +286,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/controllers/FileSetUp.java" />
-        <option value="$PROJECT_DIR$/src/FileFinder/FileSetUp.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/CommonControles.java" />
         <option value="$PROJECT_DIR$/src/styles/styles.css" />
         <option value="$PROJECT_DIR$/src/ControllerUI/FileFinder/FileSetUp.fxml" />
         <option value="$PROJECT_DIR$/src/assets/OutterFiles.java" />
@@ -251,31 +317,34 @@
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Values.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Values.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/fxml/Main.fxml" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_XML.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Info.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
-        <option value="$PROJECT_DIR$/src/controllers/Home.java" />
         <option value="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
-        <option value="$PROJECT_DIR$/src/controllers/CardCreator.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/Common_ControllerMethods.java" />
         <option value="$PROJECT_DIR$/src/controllers/MainCardCreator.java" />
         <option value="$PROJECT_DIR$/src/fxml/CardViewer.fxml" />
         <option value="$PROJECT_DIR$/src/fxml/CardButtonView.fxml" />
         <option value="$PROJECT_DIR$/src/ControllerUI/ToastCreator.java" />
-        <option value="$PROJECT_DIR$/src/assets/Constants.java" />
         <option value="$PROJECT_DIR$/src/controllers/CardView.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/FileFinder/SectionManager.java" />
+        <option value="$PROJECT_DIR$/src/controllers/StackView.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/StackView_Manager/StackManager.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/ToastCreator.java" />
+        <option value="$PROJECT_DIR$/src/fxml/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/assets/Constants.java" />
+        <option value="$PROJECT_DIR$/src/controllers/CardCreator.java" />
+        <option value="$PROJECT_DIR$/src/controllers/Home.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="984" />
+    <option name="x" value="48" />
     <option name="y" value="27" />
-    <option name="width" value="926" />
+    <option name="width" value="1872" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -299,32 +368,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaFXApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
@@ -354,31 +405,13 @@
               <item name="Shelf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ControllerUI" type="462c0819:PsiDirectoryNode" />
-              <item name="FileFinder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FileHandler" type="462c0819:PsiDirectoryNode" />
+              <item name="DefaultMethods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shelf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
@@ -580,11 +613,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="49" y="77" width="1871" height="977" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="49" y="83" width="1871" height="981" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17224355" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24190894" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -622,22 +655,15 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/jdk1.8.0_151/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="440" column="25" lean-forward="false" selection-start-line="440" selection-start-column="25" selection-end-line="440" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ControllerUI.java" />
     <entry file="file://$PROJECT_DIR$/src/ControllerUI/FileFinder/FileSetUp.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/python_language.xml" />
@@ -754,13 +780,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler/FM_LanguageManager_XML.java" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/Common_FilePathMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/jdk1.8.0_151/src.zip!/org/w3c/dom/NodeList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -836,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2907">
           <caret line="168" column="5" lean-forward="false" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,24 +872,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/MainCardCreator.fxml">
+    <entry file="file://$PROJECT_DIR$/src/fxml/StackCreator.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CardCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -891,21 +899,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/MainCardCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1536#1537#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#3060#3061#0" expanded="false" />
-            <element signature="e#3126#3127#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/CardCreator.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="250" lean-forward="false" selection-start-line="10" selection-start-column="250" selection-end-line="10" selection-end-column="250" />
@@ -914,102 +911,123 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/StackView.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/Main.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/CardViewer.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fxml/CardButtonView.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/ToastCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FileFinder/SectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/StackView_Manager/StackManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7670#7671#0" expanded="true" />
-            <element signature="e#7747#7748#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/Common_ControllerMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1792">
-          <caret line="135" column="93" lean-forward="false" selection-start-line="135" selection-start-column="93" selection-end-line="135" selection-end-column="93" />
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/ToastCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="38">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CardView.java">
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_FilePathMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="-300">
+          <caret line="86" column="53" lean-forward="false" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="53" />
           <folding>
-            <element signature="e#4159#4160#0" expanded="true" />
-            <element signature="e#4194#4195#0" expanded="true" />
-            <element signature="e#4333#4334#0" expanded="true" />
-            <element signature="e#4371#4372#0" expanded="true" />
+            <element signature="e#4236#4237#0" expanded="true" />
+            <element signature="e#4271#4272#0" expanded="true" />
+            <element signature="e#4410#4411#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FileFinder/SectionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_ControllerMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="19">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/Home.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CardCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="38" column="75" lean-forward="false" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="184" column="83" lean-forward="true" selection-start-line="184" selection-start-column="83" selection-end-line="184" selection-end-column="83" />
           <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7913#7914#0" expanded="true" />
+            <element signature="e#7987#7988#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/StackCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/StackView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-895">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
