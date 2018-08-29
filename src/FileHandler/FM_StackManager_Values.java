@@ -1,9 +1,9 @@
 package FileHandler;
 
-public interface FM_MainCardManager_Values {
+public interface FM_StackManager_Values {
 
-    String ROOT = "Cards";
-    String CHILD = "Card";
+    String ROOT = "Stacks";
+    String CHILD = "Stack";
 
     String TITLE = "Title";
     String DESCRIPTION = "Description";

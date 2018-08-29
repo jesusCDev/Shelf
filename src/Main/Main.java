@@ -29,6 +29,11 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    @Override
+    public void stop(){
+        Constants.pref.put(Constants.PREF_SV_StackViewList, "");
+    }
+
 
     public static void main(String[] args) {
         launch(args);

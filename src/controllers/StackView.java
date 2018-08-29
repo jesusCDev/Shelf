@@ -35,7 +35,7 @@ public class StackView extends Common_ControllerMethods {
     public void initialize(){
 
         // Grab values from xml file
-        cards = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_CardViewTextFileName, null), false);
+        cards = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_StackViewTextFileName, null), false);
         toast = new ToastCreator(spToastMessanger);
         if(cards.getCards().size() > 0){
             createVBox();

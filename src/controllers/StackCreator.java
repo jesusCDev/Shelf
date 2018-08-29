@@ -1,9 +1,9 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import FileHandler.FM_CardManager_XML;
-import FileHandler.FM_MainCardManager_Info;
-import FileHandler.FM_MainCardManager_XML;
+import FileHandler.FM_StackManager_XML;
+import FileHandler.FM_StackManager_Info;
+import FileHandler.FM_StackManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,61 +17,61 @@ import java.util.Random;
 public class StackCreator extends Common_ControllerMethods{
 
     @FXML
-    Label lbCardTitle;
+    Label lbStackTitle;
     @FXML
-    TextField tfCardTitle;
+    TextField tfStackTitle;
     @FXML
-    TextArea taCardDescription;
+    TextArea taStackDescription;
     @FXML
-    Button btnCreateCard;
+    Button btnCreateStack;
 
-    private Boolean cardGettingEdited;
-    private String cardID;
-    private FM_MainCardManager_XML mainCardXmlParser;
+    private Boolean StackGettingEdited;
+    private String StackID;
+    private FM_StackManager_XML mainStackXmlParser;
 
     @FXML
     public void initialize(){
 
-        cardGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_EditingCard, false);
-        Constants.pref.putBoolean(Constants.PREF_SV_EditingCard, false);
+        StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
+        Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
 
-        if(cardGettingEdited){
-            cardID = Constants.pref.get(Constants.PREF_SV_CardViewTextFileName, null);
-            btnCreateCard.setText("Update");
+        if(StackGettingEdited){
+            StackID = Constants.pref.get(Constants.PREF_SV_StackViewTextFileName, null);
+            btnCreateStack.setText("Update");
 
-            mainCardXmlParser= new FM_MainCardManager_XML(false);
-            lbCardTitle.setText(mainCardXmlParser.getCard(cardID).getCardTitle());
-            tfCardTitle.setText(mainCardXmlParser.getCard(cardID).getCardTitle());
-            taCardDescription.setText(mainCardXmlParser.getCard(cardID).getCardDescription());
+            mainStackXmlParser= new FM_StackManager_XML(false);
+            lbStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
+            tfStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
+            taStackDescription.setText(mainStackXmlParser.getStack(StackID).getStackDescription());
         }
     }
 
     public void pm(String message){
         System.out.println(message);
     }
-    public void btnActionCreateCard(ActionEvent btn){
+    public void btnActionCreateStack(ActionEvent btn){
 
-        if(!tfCardTitle.getText().isEmpty() && !cardGettingEdited){
+        if(!tfStackTitle.getText().isEmpty() && !StackGettingEdited){
             // TODO When am i creating a new document
-            mainCardXmlParser = new FM_MainCardManager_XML(false);
+            mainStackXmlParser = new FM_StackManager_XML(false);
             pm("One");
-            FM_MainCardManager_Info card = new FM_MainCardManager_Info(tfCardTitle.getText(), taCardDescription.getText(), Boolean.toString(false), idCreator(16));
-            FM_CardManager_XML cardXmlParser = new FM_CardManager_XML(card.getCardID(), true);
-            cardXmlParser.createXMLFile();
+            FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), idCreator(16));
+            FM_StackManager_XML StackXmlParser = new FM_StackManager_XML(true);
+            StackXmlParser.createXMLFile();
             pm("Two");
-            pm(card.toString());
-            pm(mainCardXmlParser.toString());
-            mainCardXmlParser.getCards().add(card);
+            pm(stack.toString());
+            pm(mainStackXmlParser.toString());
+            mainStackXmlParser.getStacks().add(stack);
             pm("Three");
-            mainCardXmlParser.reorganizeCardAlphabetically();
-            mainCardXmlParser.updateXMLFile();
+            mainStackXmlParser.reorganizeStackAlphabetically();
+            mainStackXmlParser.updateXMLFile();
             screen_changeNormal(btn, Constants.FILE_FXML_Main);
-        }else if(!tfCardTitle.getText().isEmpty() && cardGettingEdited){
-            mainCardXmlParser.getCard(cardID).setCardTitle(tfCardTitle.getText());
-            mainCardXmlParser.getCard(cardID).setCardDescrption(taCardDescription.getText());
+        }else if(!tfStackTitle.getText().isEmpty() && StackGettingEdited){
+            mainStackXmlParser.getStack(StackID).setStackTitle(tfStackTitle.getText());
+            mainStackXmlParser.getStack(StackID).setStackDescrption(taStackDescription.getText());
 
-            mainCardXmlParser.reorganizeCardAlphabetically();
-            mainCardXmlParser.updateXMLFile();
+            mainStackXmlParser.reorganizeStackAlphabetically();
+            mainStackXmlParser.updateXMLFile();
             screen_changeNormal(btn, Constants.FILE_FXML_Main);
         }else{
             // TODO TELL USER TO ADD AT LEAST A TITLE
