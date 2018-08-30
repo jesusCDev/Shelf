@@ -37,7 +37,6 @@ public class Home extends Common_ControllerMethods implements Constants{
 
     @FXML
     public void initialize(){
-
         // TODO CHECK IF FILES STILL EXIST IN THE FOLDER, IF THEY DONT, THEN DON'T SHOW IT TO THE USER AS AN OPTION
         pref.put(PREF_SV_MainPath, "/home/jesuscdev/Projects-Programming/Stuff");
 
@@ -61,7 +60,6 @@ public class Home extends Common_ControllerMethods implements Constants{
     }
 
     // TODO CHANGE THIS LATER ON
-    @FXML
     public void addNewStack(ActionEvent e){
         screen_changeNormal(e, FILE_FXML_StackCreator);
     }
@@ -82,5 +80,10 @@ public class Home extends Common_ControllerMethods implements Constants{
     public void btnActionCreateStack(ActionEvent btn){
         pref.put(PREF_SV_StackViewList, "");
         screen_changeNormal(btn, FILE_FXML_StackCreator);
+    }
+
+
+    public void pop(String message){
+        System.out.println("\n" + message + "\n");
     }
 }

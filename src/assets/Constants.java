@@ -31,4 +31,5 @@ public interface Constants {
     String TEXT_FileChooserError = "An Error Has Occured";
 
     Preferences pref = Preferences.userRoot();
+
 }

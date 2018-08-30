@@ -122,6 +122,7 @@ public class StackView extends Common_ControllerMethods {
 
     @FXML
     public void btnAction_GoBackToMainMenu(ActionEvent e){
+        Constants.pref.put(PREF_SV_StackViewList, "");
         screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_Main);
     }
 }

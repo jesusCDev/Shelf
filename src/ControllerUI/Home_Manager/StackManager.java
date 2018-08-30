@@ -18,6 +18,8 @@ import java.util.ArrayList;
 
 public class StackManager implements Constants {
 
+    private static int StackSize = 400;
+
     private String[] selectedStacksID;
     private FM_StackManager_XML stacks;
     private VBox vbContainer_Fav;
@@ -38,18 +40,26 @@ public class StackManager implements Constants {
         }
     }
 
+    private boolean checkIfFileIsSelected(String stackID){
+        for(String id: selectedStacksID){
+            if(stackID.equalsIgnoreCase(id)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     private void recreateCols(VBox vb, ArrayList<FM_StackManager_Info> stacks, boolean editMode){
         vb.getChildren().clear();
         // Column Creator class will generate resizable columns
-        int buttonSize = 400; // px
-        ColumnCreator cc = new ColumnCreator(vb, buttonSize);
+        ColumnCreator cc = new ColumnCreator(vb, StackSize);
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
 
         for(FM_StackManager_Info stack: stacks){
-            vbCol.add(createVBoxCreateMainBtn(stack.getStackTitle(), stack.getStackDescription(), stack.getStackID(), buttonSize, editMode));
+            vbCol.add(createVBoxCreateMainBtn(stack.getStackTitle(), stack.getStackDescription(), stack.getStackID(), StackSize, editMode));
         }
         cc.addVBoxArrayContainersToArray(vbCol);
 
@@ -94,6 +104,11 @@ public class StackManager implements Constants {
         vb.getChildren().add(lbSummary);
         vb.getChildren().add(hbButton);
 
+        if(checkIfFileIsSelected(stackId)){
+            vb.setDisable(true);
+            btn.setDisable(true);
+        }
+
         return vb;
     }
 
@@ -107,41 +122,20 @@ public class StackManager implements Constants {
                     stacks.changeStackFavStats(stackId);
                     stacks.updateXMLFile();
 
-
-                    if(stacks.getFavStacks().size() > 0) {
-                        recreateCols(vbContainer_Fav, stacks.getFavStacks(), editMode);
-                    }else{
-                        vbContainer_Fav.getChildren().clear();
-                    }
-                    if(stacks.getNonFavStacks().size() > 0) {
-                        recreateCols(vbContainer_Main, stacks.getNonFavStacks(), editMode);
-                    }else{
-                        vbContainer_Main.getChildren().clear();
-                    }
+                    recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
+                    recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
                 }
             });
         }else{
             btn.setText("Delete");
-
             btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    // TODO DELTE CARD FROM FILE
-                    // TODO DELTE CARD IN FOLDER
                     stacks.deleteStack(stackId);
                     stacks.updateXMLFile();
 
-
-                    if(stacks.getFavStacks().size() > 0) {
-                        recreateCols(vbContainer_Fav, stacks.getFavStacks(), editMode);
-                    }else{
-                        vbContainer_Fav.getChildren().clear();
-                    }
-                    if(stacks.getNonFavStacks().size() > 0) {
-                        recreateCols(vbContainer_Main, stacks.getNonFavStacks(), editMode);
-                    }else{
-                        vbContainer_Main.getChildren().clear();
-                    }
+                    recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
+                    recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
                 }
             });
         }
@@ -169,5 +163,9 @@ public class StackManager implements Constants {
                 }
             });
         }
+    }
+
+    private void pop(String message){
+        System.out.println("\n" + message + "\n");
     }
 }
