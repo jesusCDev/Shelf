@@ -7,11 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ControllerUI/DefaultCard.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ControllerUI/DefaultFilesCreator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ControllerUI/DefaultStackContainer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/DefaultStackValues.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/ControllerUI/Home_Manager/StackManager.java" afterPath="$PROJECT_DIR$/src/ControllerUI/Home_Manager/StackManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Constants.java" afterPath="$PROJECT_DIR$/src/assets/Constants.java" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Home.java" afterPath="$PROJECT_DIR$/src/controllers/Home.java" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StackView.java" afterPath="$PROJECT_DIR$/src/controllers/StackView.java" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Defaults.java" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +72,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Home.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="505">
@@ -87,12 +88,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="StackView.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/controllers/StackView.java">
+          <file leaf-file-name="DefaultFilesCreator.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultFilesCreator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="38">
-                  <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+                <state relative-caret-position="76">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DefaultStackValues.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/assets/DefaultStackValues.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="911">
+                  <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DefaultCard.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultCard.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="57">
+                  <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#335#336#0" expanded="true" />
+                    <element signature="e#363#364#0" expanded="true" />
+                    <element signature="e#393#394#0" expanded="true" />
+                    <element signature="e#420#421#0" expanded="true" />
+                    <element signature="e#457#458#0" expanded="true" />
+                    <element signature="e#491#492#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -101,10 +131,25 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="StackManager.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DefaultStackContainer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultStackContainer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#179#180#0" expanded="true" />
+                    <element signature="e#215#216#0" expanded="true" />
+                    <element signature="e#255#256#0" expanded="true" />
+                    <element signature="e#284#285#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="StackManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ControllerUI/Home_Manager/StackManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="760">
+                <state relative-caret-position="19">
                   <caret line="61" column="127" lean-forward="false" selection-start-line="61" selection-start-column="127" selection-end-line="61" selection-end-column="127" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -130,7 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>languageSummary</find>
       <find>settingsDocument</find>
       <find>FM_LanguageManager_XML</find>
       <find>Language</find>
@@ -159,6 +203,7 @@
       <find>create</find>
       <find>SelectedStacksID</find>
       <find>Click</find>
+      <find>String Comment</find>
       <find>pop</find>
     </findStrings>
     <replaceStrings>
@@ -181,6 +226,7 @@
       <replace>stack</replace>
       <replace>Stack</replace>
       <replace>selectedStacksID</replace>
+      <replace>String comment</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -199,11 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Resources/HTML_language_data.xml" />
-        <option value="$PROJECT_DIR$/src/Resources/XML_language_data.xml" />
-        <option value="$PROJECT_DIR$/src/Resources/C++_language_data.xml" />
-        <option value="$PROJECT_DIR$/src/Resources/C#_language_data.xml" />
-        <option value="$PROJECT_DIR$/src/Resources/Go_language_data.xml" />
         <option value="$PROJECT_DIR$/src/Resources/Ruby_language_data.xml" />
         <option value="$PROJECT_DIR$/src/Resources/PHP_language_data.xml" />
         <option value="$PROJECT_DIR$/src/Resources/Swift_language_data.xml" />
@@ -215,7 +256,6 @@
         <option value="$PROJECT_DIR$/src/FileHandler/FM_LanguageManager_XML.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/CommonMethods.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/CommonFilePathMethods.java" />
-        <option value="$PROJECT_DIR$/src/assets/Defaults.java" />
         <option value="$PROJECT_DIR$/src/controllers/LanguageView.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/MenuCardHandler.java" />
         <option value="$PROJECT_DIR$/src/FileHandler/FM_MainCardManager_Values.java" />
@@ -250,6 +290,12 @@
         <option value="$PROJECT_DIR$/src/controllers/StackView.java" />
         <option value="$PROJECT_DIR$/src/controllers/Home.java" />
         <option value="$PROJECT_DIR$/src/ControllerUI/Home_Manager/StackManager.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultFilesCreator.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultCard.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultContainer.java" />
+        <option value="$PROJECT_DIR$/src/assets/Defaults.java" />
+        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultStackContainer.java" />
+        <option value="$PROJECT_DIR$/src/assets/DefaultStackValues.java" />
       </list>
     </option>
   </component>
@@ -523,7 +569,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="348" y="327" width="1911" height="1001" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32895753" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842758" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16679937" sideWeight="0.6703755" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -563,24 +609,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FileFinder/FileSetUp.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resources/python_language.xml" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FileFinder/FileSetUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Manager_Languages.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -720,13 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Defaults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="93" lean-forward="false" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
         </state>
       </provider>
     </entry>
@@ -896,6 +917,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/Home_Manager/StackManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="61" column="127" lean-forward="false" selection-start-line="61" selection-start-column="127" selection-end-line="61" selection-end-column="127" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5996#5997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
@@ -910,14 +943,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/Home_Manager/StackManager.java">
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultFilesCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="61" column="127" lean-forward="false" selection-start-line="61" selection-start-column="127" selection-end-line="61" selection-end-column="127" />
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultStackContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/DefaultStackValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="911">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5939#5940#0" expanded="true" />
-            <element signature="e#5996#5997#0" expanded="true" />
           </folding>
         </state>
       </provider>
