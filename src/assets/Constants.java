@@ -5,7 +5,6 @@ import java.util.prefs.Preferences;
 public interface Constants {
 
     String DOC_Stack_XML = "Stack.xml";
-    String DOC_Card_XML = "Cards.xml";
 
     String FILE_FXML_Main = "/fxml/Home.fxml";
     String FILE_FXML_FileSetup = "/ControllerUI/FileFinder/FileSetUp.fxml";

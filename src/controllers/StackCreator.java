@@ -46,23 +46,16 @@ public class StackCreator extends Common_ControllerMethods{
         }
     }
 
-    public void pm(String message){
-        System.out.println(message);
-    }
     public void btnActionCreateStack(ActionEvent btn){
 
         if(!tfStackTitle.getText().isEmpty() && !StackGettingEdited){
             // TODO When am i creating a new document
+            // TODO WHY THE HELL ARE THERE TWO OF THE SAME CLASSES LIKE THIS?!?!?!?!?!?!?!?!?!?!?
             mainStackXmlParser = new FM_StackManager_XML(false);
-            pm("One");
-            FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), idCreator(16));
             FM_StackManager_XML StackXmlParser = new FM_StackManager_XML(true);
+            FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), StackXmlParser.idCreator(16));
             StackXmlParser.createXMLFile();
-            pm("Two");
-            pm(stack.toString());
-            pm(mainStackXmlParser.toString());
             mainStackXmlParser.getStacks().add(stack);
-            pm("Three");
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();
             screen_changeNormal(btn, Constants.FILE_FXML_Main);
@@ -80,15 +73,5 @@ public class StackCreator extends Common_ControllerMethods{
 
     public void btnActionCancel(ActionEvent btn){
         screen_changeNormal(btn, Constants.FILE_FXML_Main);
-    }
-
-    private String idCreator(int length){
-        StringBuilder sb = new StringBuilder();
-        Random ranNum = new Random();
-
-        for(int i = 0; i < length; i++){
-            sb.append(ranNum.nextInt(Integer.MAX_VALUE));
-        }
-        return sb.toString();
     }
 }

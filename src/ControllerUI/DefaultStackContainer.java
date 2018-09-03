@@ -4,13 +4,25 @@ import java.util.ArrayList;
 
 public class DefaultStackContainer {
 
-    private DefaultCard[] stacks;
+    private String stackTitle;
+    private String stackDescription;
+    private DefaultCard[] cards;
 
-    public DefaultStackContainer(DefaultCard[] stacks){
-        this.stacks = stacks;
+    public DefaultStackContainer(String stackTitle, String stackDescription, DefaultCard[] cards){
+        this.stackTitle = stackTitle;
+        this.stackDescription = stackDescription;
+        this.cards = cards;
     }
 
-    public DefaultCard[] getStacks() {
-        return stacks;
+    public String getStackTitle(){
+        return stackTitle;
+    }
+
+    public String getStackDescription(){
+        return stackDescription;
+    }
+
+    public DefaultCard[] getCards() {
+        return cards;
     }
 }

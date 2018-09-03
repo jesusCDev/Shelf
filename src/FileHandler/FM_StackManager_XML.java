@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class FM_StackManager_XML extends FM_XMLParser {
 
@@ -21,7 +22,7 @@ public class FM_StackManager_XML extends FM_XMLParser {
     private File xmlDocument;
 
     public FM_StackManager_XML(boolean creatingANewDocument){
-        xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + File.separator + Constants.DOC_Stack_XML);
+        xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + Constants.DOC_Stack_XML);
         if(!creatingANewDocument){
             getXMLInfo();
         }
@@ -175,5 +176,15 @@ public class FM_StackManager_XML extends FM_XMLParser {
             }
         }
         return null;
+    }
+
+    public String idCreator(int length){
+        StringBuilder sb = new StringBuilder();
+        Random ranNum = new Random();
+
+        for(int i = 0; i < length; i++){
+            sb.append(ranNum.nextInt(Integer.MAX_VALUE));
+        }
+        return sb.toString();
     }
 }

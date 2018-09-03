@@ -1,6 +1,9 @@
 package ControllerUI.FileFinder;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
+import ControllerUI.FirstTimeSetUp;
+import FileHandler.FM_StackManager_XML;
+import assets.Constants;
 import assets.OutterFiles;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,34 +52,17 @@ public class FileSetUp extends Common_ControllerMethods {
 
     @FXML
     public void btn_submitFileDestination(ActionEvent e){
-        screen_changeNormal(e, FILE_FXML_Main);
-//
-//        if(!tf_FileLocation.getText().isEmpty()){
-//            File dir = new File(tf_FileLocation.getText() + File.separator + OutterFiles.DIR_MainFolder);
-//            boolean dirMade = false;
-//            if(!dir.exists()){
-//                dirMade = dir.mkdir();
-//            }
-//
-//            if(dirMade){
-//                // create directories
-//                createDirectoreis(dir.getAbsolutePath(),  OutterFiles.PROJECT_DIRECTORIES);
-//                // Create Default Languages
-//
-//                // Save values
-//                // Change Screens
-//                screen_changeNormal(e, FILE_FXML_Main);
-//            }else{
-//                toast_Message(TEXT_FileChooserError);
-//            }
-//        } else {
-//            toast_Message("Set A Directory Folder");
-//        }
-    }
 
-    private void createDirectoreis(String path, String[] dirs){
-        for(String dir: dirs){
-            new File(path + File.separator + dir).mkdir();
+        if(!tf_FileLocation.getText().isEmpty()){
+            FirstTimeSetUp fts = new FirstTimeSetUp();
+            String mainFilePath = fts.fixFilePath(tf_FileLocation.getText());
+
+            if(fts.createStackXMLFile(mainFilePath)){
+                fts.setMainPathValue(mainFilePath);
+                fts.setFirstTimePref(true);
+                fts.createDefaultStacks();
+                screen_changeNormal(e, FILE_FXML_Main);
+            }
         }
     }
 }

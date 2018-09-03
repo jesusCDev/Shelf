@@ -38,18 +38,9 @@ public class Home extends Common_ControllerMethods implements Constants{
     @FXML
     public void initialize(){
         // TODO CHECK IF FILES STILL EXIST IN THE FOLDER, IF THEY DONT, THEN DON'T SHOW IT TO THE USER AS AN OPTION
-        pref.put(PREF_SV_MainPath, "/home/jesuscdev/Projects-Programming/Stuff");
+        pref.put(PREF_SV_MainPath, "/home/jesuscdev/Projects-Programming/Stuff/");
 
-        if(pref.getBoolean(PREF_SV_FirstTimeUsingApp, true)){
-
-            // Create Files of already predefined comments
-            stacks = new FM_StackManager_XML(true);
-            stacks.createXMLFile();
-
-            pref.putBoolean(PREF_SV_FirstTimeUsingApp, false);
-        }else{
-            stacks = new FM_StackManager_XML(false);
-        }
+        stacks = new FM_StackManager_XML(false);
 
         // make sure they are solid and unclickable
         sm = new StackManager(vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));

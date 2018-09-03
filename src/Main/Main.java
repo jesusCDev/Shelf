@@ -18,6 +18,11 @@ public class Main extends Application {
             // make sure they complete this before passing in the value
             Constants.pref.putBoolean(Constants.PREF_SV_FirstTimeUsingApp, false);
         }else{
+            // TODO CHECK IF THE FILE IS STILL HERE, CHECK IF IT WORKS
+            // TODO CHECK OTHER FILES IF THEY WORK
+            if(!checkIfMainFileExistAndWorks()){
+
+            }
             xmlFile = Constants.FILE_FXML_Main;
         }
 
@@ -37,5 +42,9 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    private boolean checkIfMainFileExistAndWorks(){
+        return true;
     }
 }
