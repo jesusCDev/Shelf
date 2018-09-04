@@ -52,9 +52,9 @@ public class StackCreator extends Common_ControllerMethods{
             // TODO When am i creating a new document
             // TODO WHY THE HELL ARE THERE TWO OF THE SAME CLASSES LIKE THIS?!?!?!?!?!?!?!?!?!?!?
             mainStackXmlParser = new FM_StackManager_XML(false);
-            FM_StackManager_XML StackXmlParser = new FM_StackManager_XML(true);
-            FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), StackXmlParser.idCreator(16));
-            StackXmlParser.createXMLFile();
+//            FM_StackManager_XML StackXmlParser = new FM_StackManager_XML(true);
+            FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), mainStackXmlParser.idCreator(16));
+//            StackXmlParser.createXMLFile();
             mainStackXmlParser.getStacks().add(stack);
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();

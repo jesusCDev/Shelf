@@ -1,4 +1,4 @@
-package ControllerUI;
+package ControllerUI.FirstTimeSetUp;
 
 public class DefaultCard {
     private String title;

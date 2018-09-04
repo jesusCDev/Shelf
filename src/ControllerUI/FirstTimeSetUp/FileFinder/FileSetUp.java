@@ -1,9 +1,7 @@
-package ControllerUI.FileFinder;
+package ControllerUI.FirstTimeSetUp.FileFinder;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.FirstTimeSetUp;
-import FileHandler.FM_StackManager_XML;
-import assets.Constants;
+import ControllerUI.FirstTimeSetUp.FirstTimeSetUp;
 import assets.OutterFiles;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +9,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import javax.swing.*;
-import java.io.File;
 
 public class FileSetUp extends Common_ControllerMethods {
 

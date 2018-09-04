@@ -25,6 +25,9 @@ public class StackManager implements Constants {
     private VBox vbContainer_Fav;
     private VBox vbContainer_Main;
 
+    private ColumnCreator ccFav;
+    private ColumnCreator ccMain;
+
     public StackManager(VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks, String[] selectedStacksID){
         this.vbContainer_Fav = vbContainer_Fav;
         this.vbContainer_Main = vbContainer_Main;
@@ -32,9 +35,31 @@ public class StackManager implements Constants {
         this.selectedStacksID = selectedStacksID;
     }
 
-    public void recreateColsAndCheck(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode){
+    public void recreateColsAndCheckFav(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode){
+        removeListener(ccFav);
         if(numOfStacks != 0){
-            recreateCols(vb, stacks, editMode);
+            pop("Ran Listener - Fav");
+            ccFav = new ColumnCreator(vb, StackSize);
+            recreateCols(vb, stacks, editMode, ccFav);
+        }else{
+            vb.getChildren().clear();
+        }
+    }
+
+    private void removeListener(ColumnCreator cc){
+        try{
+            cc.removeListener();
+        }catch (NullPointerException e){
+
+        }
+    }
+
+    public void recreateColsAndCheckMain(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode){
+        removeListener(ccMain);
+        if(numOfStacks != 0){
+            pop("Ran Listener - Main");
+            ccMain = new ColumnCreator(vb, StackSize);
+            recreateCols(vb, stacks, editMode, ccMain);
         }else{
             vb.getChildren().clear();
         }
@@ -50,17 +75,19 @@ public class StackManager implements Constants {
     }
 
 
-    private void recreateCols(VBox vb, ArrayList<FM_StackManager_Info> stacks, boolean editMode){
+    private void recreateCols(VBox vb, ArrayList<FM_StackManager_Info> stacks, boolean editMode, ColumnCreator cc){
         vb.getChildren().clear();
-        // Column Creator class will generate resizable columns
-        ColumnCreator cc = new ColumnCreator(vb, StackSize);
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
 
+        // Column Creator class will generate resizable columns
+        cc.addListener();
+
         for(FM_StackManager_Info stack: stacks){
             vbCol.add(createVBoxCreateMainBtn(stack.getStackTitle(), stack.getStackDescription(), stack.getStackID(), StackSize, editMode));
         }
+
         cc.addVBoxArrayContainersToArray(vbCol);
 
         // Create Columns
@@ -121,9 +148,8 @@ public class StackManager implements Constants {
                 public void handle(MouseEvent event) {
                     stacks.changeStackFavStats(stackId);
                     stacks.updateXMLFile();
-
-                    recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
-                    recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
+                    recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
+                    recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
                 }
             });
         }else{
@@ -131,11 +157,11 @@ public class StackManager implements Constants {
             btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
+
                     stacks.deleteStack(stackId);
                     stacks.updateXMLFile();
-
-                    recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
-                    recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
+                    recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
+                    recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
                 }
             });
         }

@@ -1,7 +1,4 @@
-package assets;
-
-import ControllerUI.DefaultCard;
-import ControllerUI.DefaultStackContainer;
+package ControllerUI.FirstTimeSetUp;
 
 public class DefaultStackValues {
 

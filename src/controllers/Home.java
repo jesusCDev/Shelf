@@ -1,22 +1,13 @@
 package controllers;
 
-import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.Home_Manager.StackManager;
-import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
-
-import java.util.ArrayList;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 
 
 // TODO SET SO IT IS NOT ALWAYS ON TOP UNLESS IT IS IN CARD VIEW
@@ -42,12 +33,14 @@ public class Home extends Common_ControllerMethods implements Constants{
 
         stacks = new FM_StackManager_XML(false);
 
+        // TODO CREATE A NEW STACK MANAGER THAT WILL HANDLE EACH CONTAINER DIFFERENTLY.. TRYING TO HANDLE ALL AT THE SAME TIME DOESN'T WORK
+
         // make sure they are solid and unclickable
         sm = new StackManager(vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));
 
         // Create Cols
-        sm.recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false);
-        sm.recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false);
+        sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false);
+        sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false);
     }
 
     // TODO CHANGE THIS LATER ON
@@ -58,11 +51,11 @@ public class Home extends Common_ControllerMethods implements Constants{
     @FXML
     public void btnActionEditStacks(ActionEvent btn){
         if(tracker == 1){
-            sm.recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), true);
-            sm.recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), true);
+            sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), true);
+            sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), true);
         }else{
-            sm.recreateColsAndCheck(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false);
-            sm.recreateColsAndCheck(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false);
+            sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false);
+            sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false);
         }
         tracker *= -1;
     }

@@ -15,8 +15,6 @@ public class Main extends Application {
         String xmlFile;
         if(Constants.pref.getBoolean(Constants.PREF_SV_FirstTimeUsingApp, true)){
             xmlFile = Constants.FILE_FXML_FileSetup;
-            // make sure they complete this before passing in the value
-            Constants.pref.putBoolean(Constants.PREF_SV_FirstTimeUsingApp, false);
         }else{
             // TODO CHECK IF THE FILE IS STILL HERE, CHECK IF IT WORKS
             // TODO CHECK OTHER FILES IF THEY WORK

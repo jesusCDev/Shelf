@@ -1,4 +1,4 @@
-package ControllerUI.FileFinder;
+package ControllerUI.FirstTimeSetUp.FileFinder;
 
 public class SectionManager {
 

@@ -7,7 +7,7 @@ public interface Constants {
     String DOC_Stack_XML = "Stack.xml";
 
     String FILE_FXML_Main = "/fxml/Home.fxml";
-    String FILE_FXML_FileSetup = "/ControllerUI/FileFinder/FileSetUp.fxml";
+    String FILE_FXML_FileSetup = "/ControllerUI/FirstTimeSetUp/FileFinder/FileSetUp.fxml";
     String FILE_FXML_StackViewer = "/fxml/StackView.fxml";
     String FILE_FXML_StackCreator = "/fxml/StackCreator.fxml";
     String FILE_FXML_CardCreator = "/fxml/CardCreator.fxml";

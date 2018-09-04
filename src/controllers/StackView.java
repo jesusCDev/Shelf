@@ -46,6 +46,7 @@ public class StackView extends Common_ControllerMethods {
         // Column Creator class will generate resizable columns
         int buttonSize = 400; // px
         ColumnCreator cc = new ColumnCreator(vbContainer, buttonSize);
+        cc.addListener();
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();

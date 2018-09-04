@@ -1,11 +1,10 @@
-package ControllerUI;
+package ControllerUI.FirstTimeSetUp;
 
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
-import assets.DefaultStackValues;
 
 import java.io.File;
 

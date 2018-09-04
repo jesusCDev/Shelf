@@ -19,11 +19,20 @@ import java.util.ArrayList;
  */
 public class ColumnCreator {
 
+    ChangeListener cl;
     private int lastGridNumber = 2;
     private VBox container;
     private int colSize;
 
     private ArrayList<VBox> vbContainer = new ArrayList<>();
+
+    public ColumnCreator(){
+
+    }
+
+    public void setDefault(VBox vb){
+
+    }
 
     public ColumnCreator(VBox container, int colSize){
         this.container = container;
@@ -31,37 +40,8 @@ public class ColumnCreator {
     }
 
     public void createColumns(){
-
         container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((800 / colSize)))));
-
-        container.widthProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
-                if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
-                    container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
-                    lastGridNumber = currentGirdColumbs;
-                }
-            }
-        });
     }
-
-
-//    public void createColumnsWithBtns(String cardFileName){
-//        container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((800 / colSize)))));
-//
-//        container.widthProperty().addListener(new ChangeListener<Number>() {
-//            @Override
-//            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-//                int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
-//                if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
-//                    container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
-//                    lastGridNumber = currentGirdColumbs;
-//                }
-//            }
-//        });
-//
-//    }
 
 
     /**
@@ -76,7 +56,6 @@ public class ColumnCreator {
         container.setAlignment(Pos.TOP_CENTER);
 
         VBox newContainer = new VBox();
-//        newContainer.getChildren().add(createAddBtn("hi"));
         // Grid pane and vbox settings
         GridPane gp = new GridPane();
         gp.setStyle("-fx-background-color: pink;");
@@ -101,9 +80,38 @@ public class ColumnCreator {
             rows++;
         }while(true);
         newContainer.getChildren().addAll(gp);
-//        newContainer.getChildren().add(createEditBtn("bye"));
 
         return newContainer;
+    }
+
+    public void removeListener(){
+        container.widthProperty().removeListener(cl);
+    }
+
+    public void addListener(){
+        cl = new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                if(vbContainer.size() > 0){
+                    int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
+                    if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
+                        container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
+                        lastGridNumber = currentGirdColumbs;
+                    }
+                }else{
+                    container.getChildren().clear();
+                }
+            }
+        };
+
+        container.widthProperty().addListener(cl);
+    }
+    /**
+     * Adds multiple contains to grid
+     * @param vb
+     */
+    public void addVBoxArrayContainersToArray(ArrayList<VBox> vb){
+        vbContainer.addAll(vb);
     }
 //
 //    private VBox createAddBtn(String cardFileName){
@@ -128,11 +136,20 @@ public class ColumnCreator {
         vbContainer.add(vb);
     }
 
-    /**
-     * Adds multiple contains to grid
-     * @param vb
-     */
-    public void addVBoxArrayContainersToArray(ArrayList<VBox> vb){
-        vbContainer.addAll(vb);
-    }
+
+//    public void createColumnsWithBtns(String cardFileName){
+//        container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((800 / colSize)))));
+//
+//        container.widthProperty().addListener(new ChangeListener<Number>() {
+//            @Override
+//            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+//                int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
+//                if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
+//                    container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
+//                    lastGridNumber = currentGirdColumbs;
+//                }
+//            }
+//        });
+//
+//    }
 }
