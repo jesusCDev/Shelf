@@ -19,7 +19,7 @@ public class StackView_StackManager {
         createStackCols(vbAll, stackContainers);
     }
 
-    public void createStackCols(VBox vbAll, ArrayList<VBox> stackContainers){
+    private void createStackCols(VBox vbAll, ArrayList<VBox> stackContainers){
         ColumnCreator cc = new ColumnCreator(vbAll, 400);
         cc.addListener();
         cc.addVBoxArrayContainersToArray(stackContainers);

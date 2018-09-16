@@ -58,7 +58,6 @@ public class ColumnCreator {
         VBox newContainer = new VBox();
         // Grid pane and vbox settings
         GridPane gp = new GridPane();
-        gp.setStyle("-fx-background-color: pink;");
         gp.setAlignment(Pos.TOP_CENTER);
         gp.setHgap(10.0);
         gp.setVgap(10.0);

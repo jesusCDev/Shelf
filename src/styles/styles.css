@@ -11,20 +11,24 @@
 .label{
     /* Set font here */
 }
-.background-main{
-    -fx-background-color: white;
-}
-.background-header{
-
-}
-.background-footer{
-
+.background{
+    -fx-background-color: #FAFAFA;
 }
 .container{
     -fx-padding: 10px;
     -fx-background-color: transparent;
 }
 
+/****************************************************************************************
+// Color Sets
+* -fx-color-DarkBlue: #1565C0;
+* -fx-color-LightBlue: #82B1FF;
+# -fx-color-GreyBlue: #455A64;
+
+* -fx-color-White: #FFFFFF;
+* -fx-color-Grey: #FAFAFA;
+* -fx-color-LightGrey: #BDBDBD;
+****************************************************************************************/
 
 /****************************************************************************************
 // BUTTON STYLES
