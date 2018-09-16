@@ -1,6 +1,7 @@
 package ControllerUI.StackView_Manager;
 
 import ControllerUI.ColumnCreator;
+import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.DefaultMethods.ToastCreator;
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
@@ -14,7 +15,6 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -24,21 +24,55 @@ public class StackView_CardManager {
 
     private FM_CardManager_XML cards;
     private ToastCreator toast;
+    private VBox vbContainer;
+    private static int btnSize = Constants.stackSize; // px
 
-    VBox vbContainer;
-    StackPane spToastMessanger;
-
-    public StackView_CardManager(VBox vbContainer, StackPane spToastMessanger, String stackID){
+    public StackView_CardManager(VBox vbContainer, String stackID){
         this.vbContainer = vbContainer;
-        this.spToastMessanger = spToastMessanger;
-
-
         // Grab values from xml file
         cards = new FM_CardManager_XML(stackID, false);
-        toast = new ToastCreator(spToastMessanger);
+        vbContainer.getChildren().add(create_createCardBtn(stackID, btnSize));
         if(cards.getCards().size() > 0){
-            createStack(800);
+            vbContainer.getChildren().add(createStack(800));
         }
+        vbContainer.getChildren().add(create_EditStackBtn(stackID, btnSize));
+    }
+
+    public VBox getContainer(){
+        return vbContainer;
+    }
+
+    private VBox create_createCardBtn(String stackID, double btnSize){
+        VBox vb = new VBox();
+        vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Constants.pref.put(Constants.PREF_SV_SelectedStack, stackID);
+                Common_ControllerMethods ccm = new Common_ControllerMethods();
+                ccm.screen_changeNormal(event, Constants.FILE_FXML_CardCreator);
+            }
+        });
+        vb.setAlignment(Pos.CENTER);
+        vb.getChildren().add(new Label("+"));
+        vb.setPrefWidth(btnSize);
+        return vb;
+    }
+
+    private void btnAction_CreateCard(String stackID){
+
+    }
+
+    private VBox create_EditStackBtn(String stackID, double btnSize){
+        VBox vb = new VBox();
+
+        vb.setAlignment(Pos.CENTER);
+        vb.getChildren().add(new Label("Edit"));
+        vb.setPrefWidth(btnSize);
+        return vb;
+    }
+
+    private void btnAction_EditCards(String stackID){
+
     }
 
     private VBox createVBoxCreateMainBtn(FM_CardManager_Info card, int buttonSize){
@@ -91,20 +125,21 @@ public class StackView_CardManager {
         return vb;
     }
 
-    private void createStack(double windowSize){
+    private VBox createStack(double windowSize){
         // Column Creator class will generate resizable columns
-        int buttonSize = 400; // px
-        ColumnCreator cc = new ColumnCreator(vbContainer, buttonSize);
+        ColumnCreator cc = new ColumnCreator(new VBox(), btnSize);
         cc.addListener();
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
         for(int i = 0; i < cards.getCards().size(); i++){
-            vbCol.add(createVBoxCreateMainBtn(cards.getCards().get(i), buttonSize));
+            vbCol.add(createVBoxCreateMainBtn(cards.getCards().get(i), btnSize));
         }
         cc.addVBoxArrayContainersToArray(vbCol);
 
         cc.createColumns(windowSize);
+
+        return cc.getContainer();
     }
 
 

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class Home_StackManager implements Constants {
 
-    private static int StackSize = 400;
+    private static int StackSize = Constants.stackSize;
 
     private String[] selectedStacksID;
     private FM_StackManager_XML stacks;

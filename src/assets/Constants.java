@@ -4,6 +4,8 @@ import java.util.prefs.Preferences;
 
 public interface Constants {
 
+    int stackSize = 300;
+
     String DOC_Stack_XML = "Stack.xml";
 
     String FILE_FXML_Main = "/fxml/Home.fxml";

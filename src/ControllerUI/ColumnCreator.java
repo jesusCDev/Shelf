@@ -40,11 +40,6 @@ public class ColumnCreator {
     }
 
     public void createColumns(double windowSize){
-        //
-        // TODO FOR SOME REASON APP WONT RUN WHEN  I ASK FOR THE CUTTONS SIZE
-        // TODO PASS IN THE FIRST NUMBER AND THEN START PASSING IN THE CURRENT VALUES
-        //
-
         container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((windowSize / colSize)))));
     }
 
@@ -118,20 +113,6 @@ public class ColumnCreator {
     public void addVBoxArrayContainersToArray(ArrayList<VBox> vb){
         vbContainer.addAll(vb);
     }
-//
-//    private VBox createAddBtn(String cardFileName){
-//        VBox vb = new VBox(new Label("Add"));
-//        vb.setStyle("-fx-background-color: red;");
-//        vb.setPrefWidth(colSize);
-//        vb.setAlignment(Pos.CENTER);
-//        return vb;
-//    }
-//
-//    private VBox createEditBtn(String cardFileName){
-//        VBox vb = new VBox(new Label("Edit"));
-//        vb.setAlignment(Pos.CENTER);
-//        return vb;
-//    }
 
     /**
      * Adds container to grid
@@ -141,20 +122,7 @@ public class ColumnCreator {
         vbContainer.add(vb);
     }
 
-
-//    public void createColumnsWithBtns(String cardFileName){
-//        container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((800 / colSize)))));
-//
-//        container.widthProperty().addListener(new ChangeListener<Number>() {
-//            @Override
-//            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-//                int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
-//                if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
-//                    container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
-//                    lastGridNumber = currentGirdColumbs;
-//                }
-//            }
-//        });
-//
-//    }
+    public VBox getContainer(){
+        return container;
+    }
 }

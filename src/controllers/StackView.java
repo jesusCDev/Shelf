@@ -4,6 +4,7 @@ import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.DefaultMethods.ToastCreator;
 import ControllerUI.StackView_Manager.StackView_CardManager;
+import ControllerUI.StackView_Manager.StackView_StackManager;
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
 import assets.Constants;
@@ -31,22 +32,11 @@ public class StackView extends Common_ControllerMethods {
     StackPane spToastMessanger;
 
     public void initialize(){
-        String[] selectedStackIDs = Constants.pref.get(PREF_SV_StackViewList, null).split(",");
-
-        for(String value: selectedStackIDs){
-            System.out.println(value);
-            StackView_CardManager svcm = new StackView_CardManager(vbContainer, spToastMessanger, value);
-        }
+        new StackView_StackManager(vbContainer, spToastMessanger,
+                Constants.pref.get(PREF_SV_StackViewList, null).split(","));
     }
-
-    private void btnAction_CreateNewCard(){
-        // todo ADD THIS LATER ON
-//        pref.put(PREF_SV_SelectedStack, "sTACKid");
-    }
-
 
     // BUTTON ACTIONS
-
     @FXML
     public void btnAction_CreateNewCard(ActionEvent e){
         screen_changeNormal(e, Constants.FILE_FXML_StackSelector);

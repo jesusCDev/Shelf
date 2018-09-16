@@ -2,9 +2,9 @@ package ControllerUI;
 
 import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
+import assets.Constants;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -12,7 +12,6 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.*;
-import java.util.prefs.Preferences;
 
 import static assets.Constants.PREF_SV_StackViewList;
 import static assets.Constants.pref;
@@ -21,7 +20,7 @@ public class StackSelector_StackManager {
 
     private VBox vb_FavStacksContainer;
     private VBox vb_NonFavStacksContainer;
-    private static int stackViewSize = 200;
+    private static int stackViewSize = Constants.stackSize;
 
     private Stack<FM_StackManager_Info> selectedStackIDs = new Stack<>();
     private FM_StackManager_XML stacks;
@@ -101,7 +100,6 @@ public class StackSelector_StackManager {
 
         if(numOfStacks != 0){
             cc = new ColumnCreator(vb, stackViewSize);
-
             vb.getChildren().clear();
 
             // Add columns to Column Creator
@@ -140,12 +138,14 @@ public class StackSelector_StackManager {
 
         if (stack.isSelected()){
             spContainer.getChildren().add(setSelected(vbAll, stack));
-            vbStack.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    setBtnAction_UnSelectCard(stack.getStackID());
-                }
-            });
+            if((stack.getSelectedOrder() != 1) || (selectedStackIDs.size() > 1)){
+                vbStack.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        setBtnAction_UnSelectCard(stack.getStackID());
+                    }
+                });
+            }
         }else{
             vbStack.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
@@ -165,6 +165,8 @@ public class StackSelector_StackManager {
     private Pane setSelected(VBox vbAll, FM_StackManager_Info stack){
         vbAll.setStyle("-fx-background-color: blue;");
         Pane p = new Pane();
+        p.setStyle("-fx-background-radius: 30;");
+        p.setStyle("-fx-border-radius: 30;");
         p.getChildren().add(new Label(Integer.toString(stack.getSelectedOrder())));
 
         p.prefHeight(Pane.USE_COMPUTED_SIZE);
