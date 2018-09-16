@@ -39,8 +39,13 @@ public class ColumnCreator {
         this.colSize = colSize;
     }
 
-    public void createColumns(){
-        container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((800 / colSize)))));
+    public void createColumns(double windowSize){
+        //
+        // TODO FOR SOME REASON APP WONT RUN WHEN  I ASK FOR THE CUTTONS SIZE
+        // TODO PASS IN THE FIRST NUMBER AND THEN START PASSING IN THE CURRENT VALUES
+        //
+
+        container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((windowSize / colSize)))));
     }
 
 

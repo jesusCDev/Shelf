@@ -16,7 +16,7 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
-public class StackManager implements Constants {
+public class Home_StackManager implements Constants {
 
     private static int StackSize = 400;
 
@@ -28,19 +28,18 @@ public class StackManager implements Constants {
     private ColumnCreator ccFav;
     private ColumnCreator ccMain;
 
-    public StackManager(VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks, String[] selectedStacksID){
+    public Home_StackManager(VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks, String[] selectedStacksID){
         this.vbContainer_Fav = vbContainer_Fav;
         this.vbContainer_Main = vbContainer_Main;
         this.stacks = stacks;
         this.selectedStacksID = selectedStacksID;
     }
 
-    public void recreateColsAndCheckFav(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode){
+    public void recreateColsAndCheckFav(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode, double windowSize){
         removeListener(ccFav);
         if(numOfStacks != 0){
-            pop("Ran Listener - Fav");
             ccFav = new ColumnCreator(vb, StackSize);
-            recreateCols(vb, stacks, editMode, ccFav);
+            recreateCols(vb, stacks, editMode, ccFav, windowSize);
         }else{
             vb.getChildren().clear();
         }
@@ -54,28 +53,18 @@ public class StackManager implements Constants {
         }
     }
 
-    public void recreateColsAndCheckMain(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode){
+    public void recreateColsAndCheckMain(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode, double windowSize){
         removeListener(ccMain);
         if(numOfStacks != 0){
-            pop("Ran Listener - Main");
             ccMain = new ColumnCreator(vb, StackSize);
-            recreateCols(vb, stacks, editMode, ccMain);
+            recreateCols(vb, stacks, editMode, ccMain, windowSize);
         }else{
             vb.getChildren().clear();
         }
     }
 
-    private boolean checkIfFileIsSelected(String stackID){
-        for(String id: selectedStacksID){
-            if(stackID.equalsIgnoreCase(id)){
-                return true;
-            }
-        }
-        return false;
-    }
 
-
-    private void recreateCols(VBox vb, ArrayList<FM_StackManager_Info> stacks, boolean editMode, ColumnCreator cc){
+    private void recreateCols(VBox vb, ArrayList<FM_StackManager_Info> stacks, boolean editMode, ColumnCreator cc, double windowSize){
         vb.getChildren().clear();
 
         // Add columns to Column Creator
@@ -91,7 +80,7 @@ public class StackManager implements Constants {
         cc.addVBoxArrayContainersToArray(vbCol);
 
         // Create Columns
-        cc.createColumns();
+        cc.createColumns(windowSize);
     }
 
     /**
@@ -131,11 +120,6 @@ public class StackManager implements Constants {
         vb.getChildren().add(lbSummary);
         vb.getChildren().add(hbButton);
 
-        if(checkIfFileIsSelected(stackId)){
-            vb.setDisable(true);
-            btn.setDisable(true);
-        }
-
         return vb;
     }
 
@@ -148,8 +132,8 @@ public class StackManager implements Constants {
                 public void handle(MouseEvent event) {
                     stacks.changeStackFavStats(stackId);
                     stacks.updateXMLFile();
-                    recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
-                    recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
+                    recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode, vbContainer_Fav.getWidth());
+                    recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode, vbContainer_Main.getWidth());
                 }
             });
         }else{
@@ -160,22 +144,21 @@ public class StackManager implements Constants {
 
                     stacks.deleteStack(stackId);
                     stacks.updateXMLFile();
-                    recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode);
-                    recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode);
+                    recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), editMode, vbContainer_Fav.getWidth());
+                    recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), editMode, vbContainer_Main.getWidth());
                 }
             });
         }
     }
 
     private void setVbAction(VBox vb, String stackId, boolean editMode){
-        pref.put(PREF_SV_StackViewTextFileName, stackId);
         Common_ControllerMethods ccm = new Common_ControllerMethods();
 
         if(!editMode){
             vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    pref.put(PREF_SV_StackViewList, pref.get(PREF_SV_StackViewList, "") + stackId);
+                    pref.put(PREF_SV_StackViewList,stackId);
                     ccm.screen_changeNormalAlwaysOnTop(event, FILE_FXML_StackViewer);
                 }
             });
@@ -185,6 +168,7 @@ public class StackManager implements Constants {
                 @Override
                 public void handle(MouseEvent event) {
                     pref.putBoolean(PREF_SV_Editing, true);
+                    pref.put(PREF_SV_SelectedStack, stackId);
                     ccm.screen_changeNormalAlwaysOnTop(event, FILE_FXML_StackCreator);
                 }
             });

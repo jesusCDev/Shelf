@@ -7,6 +7,9 @@ public class FM_StackManager_Info {
     private String stackFavoriteStatus;
     private String stackID;
 
+    private boolean selected = false;
+    private int selectedOrder;
+
     public FM_StackManager_Info(){}
 
     public FM_StackManager_Info(String stackTitle, String stackDescription, String stackFavoriteStatus, String stackID){
@@ -42,4 +45,20 @@ public class FM_StackManager_Info {
         return stackID;
     }
 
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+
+    public int getSelectedOrder() {
+        return selectedOrder;
+    }
+
+    public void setSelectedOrder(int selectedOrder) {
+        this.selectedOrder = selectedOrder;
+    }
 }

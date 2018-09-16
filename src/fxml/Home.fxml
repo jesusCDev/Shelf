@@ -9,21 +9,21 @@
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="812.0" prefWidth="873.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Home">
    <center>
-      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <content>
-            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: yellow;">
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" style="-fx-background-color: yellow;">
                <children>
                   <Label text="Favorites" />
-                  <VBox fx:id="vbContainer_Fav" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: green;">
+                  <VBox fx:id="vbContainer_Fav" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" style="-fx-background-color: green;">
                    <padding>
                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                    </padding>
                </VBox>
                   <Label text="Languages" />
-                  <VBox fx:id="vbContainer_Main" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: green;">
+                  <VBox fx:id="vbContainer_Main" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" style="-fx-background-color: green;">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>

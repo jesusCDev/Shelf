@@ -31,7 +31,7 @@ public class CardCreator extends Common_ControllerMethods{
 
     public void btnAction_CreateCard(ActionEvent btn){
         if(!taCardCopyData.getText().isEmpty()){
-            FM_CardManager_XML cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_StackViewTextFileName, null), false);
+            FM_CardManager_XML cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_SelectedStack, null), false);
             FM_CardManager_Info card = new FM_CardManager_Info(tfCardTitle.getText(), taCardDescription.getText(), taCardCopyData.getText());
 
             cardXmlParser.getCards().add(card);

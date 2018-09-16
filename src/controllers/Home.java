@@ -1,7 +1,7 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.Home_Manager.StackManager;
+import ControllerUI.Home_Manager.Home_StackManager;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
@@ -24,10 +24,11 @@ public class Home extends Common_ControllerMethods implements Constants{
     // Grab values from xml file
     private FM_StackManager_XML stacks;
     private int tracker = 1;
-    private StackManager sm;
+    private Home_StackManager sm;
 
     @FXML
     public void initialize(){
+
         // TODO CHECK IF FILES STILL EXIST IN THE FOLDER, IF THEY DONT, THEN DON'T SHOW IT TO THE USER AS AN OPTION
         pref.put(PREF_SV_MainPath, "/home/jesuscdev/Projects-Programming/Stuff/");
 
@@ -36,11 +37,11 @@ public class Home extends Common_ControllerMethods implements Constants{
         // TODO CREATE A NEW STACK MANAGER THAT WILL HANDLE EACH CONTAINER DIFFERENTLY.. TRYING TO HANDLE ALL AT THE SAME TIME DOESN'T WORK
 
         // make sure they are solid and unclickable
-        sm = new StackManager(vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));
+        sm = new Home_StackManager(vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));
 
         // Create Cols
-        sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false);
-        sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false);
+        sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false, 800);
+        sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false, 800);
     }
 
     // TODO CHANGE THIS LATER ON
@@ -51,11 +52,11 @@ public class Home extends Common_ControllerMethods implements Constants{
     @FXML
     public void btnActionEditStacks(ActionEvent btn){
         if(tracker == 1){
-            sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), true);
-            sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), true);
+            sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), true, vbContainer_Fav.getWidth());
+            sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), true, vbContainer_Main.getWidth());
         }else{
-            sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false);
-            sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false);
+            sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false, vbContainer_Fav.getWidth());
+            sm.recreateColsAndCheckMain(vbContainer_Main, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), false, vbContainer_Main.getWidth());
         }
         tracker *= -1;
     }

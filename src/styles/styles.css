@@ -11,8 +11,14 @@
 .label{
     /* Set font here */
 }
-.background{
+.background-main{
     -fx-background-color: white;
+}
+.background-header{
+
+}
+.background-footer{
+
 }
 .container{
     -fx-padding: 10px;

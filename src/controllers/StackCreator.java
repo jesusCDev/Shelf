@@ -1,6 +1,7 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
+import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_StackManager_XML;
 import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
@@ -34,12 +35,12 @@ public class StackCreator extends Common_ControllerMethods{
 
         StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
         Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
+        mainStackXmlParser= new FM_StackManager_XML(false);
 
         if(StackGettingEdited){
-            StackID = Constants.pref.get(Constants.PREF_SV_StackViewTextFileName, null);
+            StackID = Constants.pref.get(Constants.PREF_SV_SelectedStack, null);
             btnCreateStack.setText("Update");
 
-            mainStackXmlParser= new FM_StackManager_XML(false);
             lbStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
             tfStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
             taStackDescription.setText(mainStackXmlParser.getStack(StackID).getStackDescription());
@@ -49,15 +50,16 @@ public class StackCreator extends Common_ControllerMethods{
     public void btnActionCreateStack(ActionEvent btn){
 
         if(!tfStackTitle.getText().isEmpty() && !StackGettingEdited){
-            // TODO When am i creating a new document
-            // TODO WHY THE HELL ARE THERE TWO OF THE SAME CLASSES LIKE THIS?!?!?!?!?!?!?!?!?!?!?
-            mainStackXmlParser = new FM_StackManager_XML(false);
 //            FM_StackManager_XML StackXmlParser = new FM_StackManager_XML(true);
             FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), mainStackXmlParser.idCreator(16));
 //            StackXmlParser.createXMLFile();
             mainStackXmlParser.getStacks().add(stack);
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();
+
+            FM_CardManager_XML cardFile = new FM_CardManager_XML(stack.getStackID(), true);
+            cardFile.createXMLFile();
+
             screen_changeNormal(btn, Constants.FILE_FXML_Main);
         }else if(!tfStackTitle.getText().isEmpty() && StackGettingEdited){
             mainStackXmlParser.getStack(StackID).setStackTitle(tfStackTitle.getText());
