@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class CardCreator extends Common_ControllerMethods{
 
@@ -17,10 +18,12 @@ public class CardCreator extends Common_ControllerMethods{
     TextArea taCardDescription;
     @FXML
     TextArea taCardCopyData;
+    @FXML
+    BorderPane bpContainer_All;
 
     @FXML
     public void initialize(){
-
+        screen_SetSize(bpContainer_All);
     }
 
     @FXML
@@ -36,11 +39,11 @@ public class CardCreator extends Common_ControllerMethods{
 
             cardXmlParser.getCards().add(card);
             cardXmlParser.updateXMLFile();
-            screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_StackViewer);
+            screen_changeDynamic(btn, Constants.FILE_FXML_StackViewer, bpContainer_All);
         }
     }
 
     public void btnAction_Cancel(ActionEvent btn){
-        screen_changeNormalAlwaysOnTop(btn, Constants.FILE_FXML_StackViewer);
+        screen_changeDynamic(btn, Constants.FILE_FXML_StackViewer, bpContainer_All);
     }
 }

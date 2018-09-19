@@ -14,6 +14,7 @@ public class ToastCreator {
     private StackPane sp;
     public ToastCreator(StackPane sp){
         this.sp = sp;
+        sp.getStyleClass().add("bottom-toast");
     }
 
     public void createToast(String message){
@@ -32,6 +33,10 @@ public class ToastCreator {
 
     public void deleteToast(){
         sp.getChildren().clear();
-        timeline.stop();
+        try{
+            timeline.stop();
+        } catch(NullPointerException e){
+
+        }
     }
 }

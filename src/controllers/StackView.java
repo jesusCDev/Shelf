@@ -1,28 +1,13 @@
 package controllers;
 
-import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.ToastCreator;
-import ControllerUI.StackView_Manager.StackView_CardManager;
-import ControllerUI.StackView_Manager.StackView_StackManager;
-import FileHandler.FM_CardManager_Info;
-import FileHandler.FM_CardManager_XML;
+import ControllerUI.Managers.StackView_StackManager;
 import assets.Constants;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.input.Clipboard;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-
-import java.util.ArrayList;
 
 public class StackView extends Common_ControllerMethods {
 
@@ -30,8 +15,11 @@ public class StackView extends Common_ControllerMethods {
     VBox vbContainer;
     @FXML
     StackPane spToastMessanger;
+    @FXML
+    BorderPane bpContainer_All;
 
     public void initialize(){
+        screen_SetSize(bpContainer_All);
         new StackView_StackManager(vbContainer, spToastMessanger,
                 Constants.pref.get(PREF_SV_StackViewList, null).split(","));
     }
@@ -39,7 +27,7 @@ public class StackView extends Common_ControllerMethods {
     // BUTTON ACTIONS
     @FXML
     public void btnAction_CreateNewCard(ActionEvent e){
-        screen_changeNormal(e, Constants.FILE_FXML_StackSelector);
+        screen_changeDynamic(e, Constants.FILE_FXML_StackSelector, bpContainer_All);
 
 //        screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_CardCreator);
     }
@@ -47,6 +35,6 @@ public class StackView extends Common_ControllerMethods {
     @FXML
     public void btnAction_GoBackToMainMenu(ActionEvent e){
         Constants.pref.put(PREF_SV_StackViewList, "");
-        screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_Main);
+        screen_changeDynamic(e, Constants.FILE_FXML_Main, bpContainer_All);
     }
 }

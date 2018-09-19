@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 import java.util.Random;
 
@@ -25,6 +26,8 @@ public class StackCreator extends Common_ControllerMethods{
     TextArea taStackDescription;
     @FXML
     Button btnCreateStack;
+    @FXML
+    BorderPane bpContainer_All;
 
     private Boolean StackGettingEdited;
     private String StackID;
@@ -32,6 +35,8 @@ public class StackCreator extends Common_ControllerMethods{
 
     @FXML
     public void initialize(){
+
+        screen_SetSize(bpContainer_All);
 
         StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
         Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
@@ -60,20 +65,20 @@ public class StackCreator extends Common_ControllerMethods{
             FM_CardManager_XML cardFile = new FM_CardManager_XML(stack.getStackID(), true);
             cardFile.createXMLFile();
 
-            screen_changeNormal(btn, Constants.FILE_FXML_Main);
+            screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
         }else if(!tfStackTitle.getText().isEmpty() && StackGettingEdited){
             mainStackXmlParser.getStack(StackID).setStackTitle(tfStackTitle.getText());
             mainStackXmlParser.getStack(StackID).setStackDescrption(taStackDescription.getText());
 
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();
-            screen_changeNormal(btn, Constants.FILE_FXML_Main);
+            screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
         }else{
             // TODO TELL USER TO ADD AT LEAST A TITLE
         }
     }
 
     public void btnActionCancel(ActionEvent btn){
-        screen_changeNormal(btn, Constants.FILE_FXML_Main);
+        screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
     }
 }

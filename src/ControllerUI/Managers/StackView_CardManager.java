@@ -1,4 +1,4 @@
-package ControllerUI.StackView_Manager;
+package ControllerUI.Managers;
 
 import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
@@ -15,6 +15,7 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -23,12 +24,16 @@ public class StackView_CardManager {
 
 
     private FM_CardManager_XML cards;
+    private VBox vbAll;
     private ToastCreator toast;
     private VBox vbContainer;
     private static int btnSize = Constants.stackSize; // px
 
-    public StackView_CardManager(VBox vbContainer, String stackID){
+    public StackView_CardManager(VBox vbAll, VBox vbContainer, String stackID, StackPane spToast){
+        toast = new ToastCreator(spToast);
+        this.vbAll = vbAll;
         this.vbContainer = vbContainer;
+
         // Grab values from xml file
         cards = new FM_CardManager_XML(stackID, false);
         vbContainer.getChildren().add(create_createCardBtn(stackID, btnSize));
@@ -58,21 +63,19 @@ public class StackView_CardManager {
         return vb;
     }
 
-    private void btnAction_CreateCard(String stackID){
-
-    }
-
     private VBox create_EditStackBtn(String stackID, double btnSize){
         VBox vb = new VBox();
+        vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println("Should i add a new screen or somehting here?");
+            }
+        });
 
         vb.setAlignment(Pos.CENTER);
         vb.getChildren().add(new Label("Edit"));
         vb.setPrefWidth(btnSize);
         return vb;
-    }
-
-    private void btnAction_EditCards(String stackID){
-
     }
 
     private VBox createVBoxCreateMainBtn(FM_CardManager_Info card, int buttonSize){
@@ -84,17 +87,20 @@ public class StackView_CardManager {
             @Override
             public void handle(MouseEvent event) {
                 // TODO ADD HERE TO ADD TO CLIPBOARD
+                toast.deleteToast();
                 toast.createToast(card.getCardCopyData());
                 writeToClipboard(card.getCardCopyData());
             }
         });
 
         Label lbTitle = new Label(card.getCardTitle());
+        lbTitle.getStyleClass().add("card_title_1");
         Label lbDescription = new Label(card.getCardDescription());
+        lbDescription.getStyleClass().add("card_title_2");
 
-        // Create Comment
-        Label lbComment = new Label(card.getCardCopyData());
-
+        // Create Data
+        Label lbData = new Label(card.getCardCopyData());
+        lbData.getStyleClass().add("card_title_3");
         // create favorite buttons
         HBox hbButton = new HBox();
         // TODO ADD AN ICON HERE
@@ -119,7 +125,7 @@ public class StackView_CardManager {
         // Add vb
         vb.getChildren().add(lbTitle);
         vb.getChildren().add(lbDescription);
-        vb.getChildren().add(lbComment);
+        vb.getChildren().add(lbData);
         vb.getChildren().add(hbButton);
 
         return vb;
@@ -128,7 +134,7 @@ public class StackView_CardManager {
     private VBox createStack(double windowSize){
         // Column Creator class will generate resizable columns
         ColumnCreator cc = new ColumnCreator(new VBox(), btnSize);
-        cc.addListener();
+        cc.addListenerWithOutSideCotnainer(vbAll);
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
@@ -143,10 +149,10 @@ public class StackView_CardManager {
     }
 
 
-    private void writeToClipboard(String comment){
+    private void writeToClipboard(String data){
         final Clipboard clipboard = Clipboard.getSystemClipboard();
         final ClipboardContent content = new ClipboardContent();
-        content.putString(comment);
+        content.putString(data);
         clipboard.setContent(content);
     }
 }

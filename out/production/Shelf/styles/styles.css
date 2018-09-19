@@ -4,6 +4,7 @@
 .root{
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
 }
 .button{
     -fx-cursor: hand;
@@ -12,15 +13,53 @@
     /* Set font here */
 }
 .background{
-    -fx-background-color: #FAFAFA;
+    -fx-background-color: #131025;
 }
 .container{
-    -fx-padding: 10px;
-    -fx-background-color: transparent;
+    -fx-background-color: #131025;
+}
+
+.selectedStack{
+    -fx-background-color: #322E61;
+}
+
+.outlabels{
+    -fx-text-fill: white;
+}
+.title_1{
+    -fx-font-size: 20px;
+}
+.title_2{
+    -fx-font-size: 15px;
+}
+.title_13{
+    -fx-font-size: 10px;
+}
+
+.card_title_1{
+    -fx-font-weight: bold;
+    -fx-text-fill: #6157AC;
+}
+.card_title_2{
+    -fx-font-weight: lighter;
+    -fx-text-fill: #000000;
+}
+.card_title_3{
+    -fx-text-fill: #BDBDBD;
 }
 
 /****************************************************************************************
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
 // Color Sets
+
+Purple 1: #131025
+Purple 2: #5351A9
+Purple 3: #322E61
+
+Purple Lettering: #6157AC
+
+
 * -fx-color-DarkBlue: #1565C0;
 * -fx-color-LightBlue: #82B1FF;
 # -fx-color-GreyBlue: #455A64;
@@ -30,40 +69,6 @@
 * -fx-color-LightGrey: #BDBDBD;
 ****************************************************************************************/
 
-/****************************************************************************************
-// BUTTON STYLES
-****************************************************************************************/
-
-/***** Cancel Buttons *****/
-
-.btn-cancel-important{
-    -fx-background-color: red;
+.bottom-toast{
+    -fx-background-color: Grey;
 }
-.btn-cancel-minor{
-    -fx-background-color: transparent;
-}
-.btn-cancel-minor: hover {
-    -fx-text-fill: red;
-}
-
-/***** Submit/Add Buttons *****/
-.btn-add{
-
-}
-.btn-accept{
-
-}
-/***** Preview/Back Buttons *****/
-.btn-change-screen{
-
-}
-/****************************************************************************************
-// TEXT FIELD STYLES
-****************************************************************************************/
-.text-field{
-    -fx-background-color: rgba(0,0,0,0.1);
-}
-
-/****************************************************************************************
-// LIST VIEW STYLES
-****************************************************************************************/

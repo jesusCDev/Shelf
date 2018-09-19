@@ -26,14 +26,6 @@ public class ColumnCreator {
 
     private ArrayList<VBox> vbContainer = new ArrayList<>();
 
-    public ColumnCreator(){
-
-    }
-
-    public void setDefault(VBox vb){
-
-    }
-
     public ColumnCreator(VBox container, int colSize){
         this.container = container;
         this.colSize = colSize;
@@ -58,6 +50,7 @@ public class ColumnCreator {
         VBox newContainer = new VBox();
         // Grid pane and vbox settings
         GridPane gp = new GridPane();
+
         gp.setAlignment(Pos.TOP_CENTER);
         gp.setHgap(10.0);
         gp.setVgap(10.0);
@@ -86,7 +79,24 @@ public class ColumnCreator {
     public void removeListener(){
         container.widthProperty().removeListener(cl);
     }
+    public void addListenerWithOutSideCotnainer(VBox vbAll){
+        cl = new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                if(vbContainer.size() > 0){
+                    int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
+                    if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
+                        container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
+                        lastGridNumber = currentGirdColumbs;
+                    }
+                }else{
+                    container.getChildren().clear();
+                }
+            }
+        };
 
+        vbAll.widthProperty().addListener(cl);
+    }
     public void addListener(){
         cl = new ChangeListener<Number>() {
             @Override

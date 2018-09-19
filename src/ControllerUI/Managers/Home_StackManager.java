@@ -1,4 +1,4 @@
-package ControllerUI.Home_Manager;
+package ControllerUI.Managers;
 
 import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
@@ -86,10 +86,10 @@ public class Home_StackManager implements Constants {
     /**
      * Creates the Containers that will be shown in the columns in the container
      * @param title
-     * @param summary
+     * @param description
      * @return
      */
-    private VBox createVBoxCreateMainBtn(String title, String summary, String stackId, int buttonSize, boolean editMode){
+    private VBox createVBoxCreateMainBtn(String title, String description, String stackId, int buttonSize, boolean editMode){
 
         VBox vb = new VBox();
 
@@ -97,9 +97,11 @@ public class Home_StackManager implements Constants {
         setVbAction(vb, stackId, editMode);
         // Create title
         Label lbTitle = new Label(title);
+        lbTitle.getStyleClass().add("card_title_1");
 
-        // create summarytitle
-        Label lbSummary = new Label(summary);
+        // create descriptiontitle
+        Label lbDescription = new Label(description);
+        lbDescription.getStyleClass().add("card_title_2");
         // create favorite buttons
         HBox hbButton = new HBox();
         // TODO ADD AN ICON HERE
@@ -117,7 +119,7 @@ public class Home_StackManager implements Constants {
 
         // Add vb
         vb.getChildren().add(lbTitle);
-        vb.getChildren().add(lbSummary);
+        vb.getChildren().add(lbDescription);
         vb.getChildren().add(hbButton);
 
         return vb;

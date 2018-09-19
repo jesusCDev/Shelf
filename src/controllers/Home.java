@@ -1,7 +1,7 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.Home_Manager.Home_StackManager;
+import ControllerUI.Managers.Home_StackManager;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
 import javafx.event.ActionEvent;
@@ -29,12 +29,12 @@ public class Home extends Common_ControllerMethods implements Constants{
     @FXML
     public void initialize(){
 
+        screen_SetSize(bpContainer_All);
+
         // TODO CHECK IF FILES STILL EXIST IN THE FOLDER, IF THEY DONT, THEN DON'T SHOW IT TO THE USER AS AN OPTION
         pref.put(PREF_SV_MainPath, "/home/jesuscdev/Projects-Programming/Stuff/");
 
         stacks = new FM_StackManager_XML(false);
-
-        // TODO CREATE A NEW STACK MANAGER THAT WILL HANDLE EACH CONTAINER DIFFERENTLY.. TRYING TO HANDLE ALL AT THE SAME TIME DOESN'T WORK
 
         // make sure they are solid and unclickable
         sm = new Home_StackManager(vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));
@@ -64,7 +64,7 @@ public class Home extends Common_ControllerMethods implements Constants{
     @FXML
     public void btnActionCreateStack(ActionEvent btn){
         pref.put(PREF_SV_StackViewList, "");
-        screen_changeNormal(btn, FILE_FXML_StackCreator);
+        screen_changeDynamic(btn, FILE_FXML_StackCreator, bpContainer_All);
     }
 
 

@@ -1,4 +1,4 @@
-package ControllerUI.StackView_Manager;
+package ControllerUI.Managers;
 
 import ControllerUI.ColumnCreator;
 import javafx.scene.layout.StackPane;
@@ -10,11 +10,13 @@ public class StackView_StackManager {
 
     public StackView_StackManager(VBox vbAll, StackPane spToast, String[] selectedStackIDs){
 
+
         ArrayList<VBox> stackContainers = new ArrayList<>();
 
         for(String stackID: selectedStackIDs){
-            stackContainers.add(new StackView_CardManager(new VBox(), stackID).getContainer());
+            stackContainers.add(new StackView_CardManager(vbAll, new VBox(), stackID, spToast).getContainer());
         }
+
 
         createStackCols(vbAll, stackContainers);
     }

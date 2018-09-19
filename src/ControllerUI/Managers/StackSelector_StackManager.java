@@ -1,5 +1,6 @@
-package ControllerUI;
+package ControllerUI.Managers;
 
+import ControllerUI.ColumnCreator;
 import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
