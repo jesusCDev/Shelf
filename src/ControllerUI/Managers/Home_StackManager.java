@@ -92,6 +92,7 @@ public class Home_StackManager implements Constants {
     private VBox createVBoxCreateMainBtn(String title, String description, String stackId, int buttonSize, boolean editMode){
 
         VBox vb = new VBox();
+        vb.getStyleClass().add("stack");
 
         // Clicking on vb field sends user to Stack view
         setVbAction(vb, stackId, editMode);
@@ -114,8 +115,6 @@ public class Home_StackManager implements Constants {
 
         // Set sb Styles
         vb.setPrefWidth(buttonSize);
-        vb.setStyle("-fx-background-color: white;");
-        vb.paddingProperty().setValue(new Insets(10));
 
         // Add vb
         vb.getChildren().add(lbTitle);

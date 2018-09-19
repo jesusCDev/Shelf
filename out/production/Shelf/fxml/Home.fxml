@@ -9,30 +9,34 @@
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="812.0" prefWidth="873.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Home">
    <center>
-      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="container" BorderPane.alignment="CENTER">
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" BorderPane.alignment="CENTER">
          <content>
             <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="container">
                <children>
                   <Label text="Favorites">
                      <styleClass>
+                        <String fx:value="title_2" />
                         <String fx:value="outlabels" />
-                        <String fx:value="title2" />
                      </styleClass></Label>
                   <VBox fx:id="vbContainer_Fav" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0">
                </VBox>
                   <Label text="Languages">
                      <styleClass>
+                        <String fx:value="title_2" />
                         <String fx:value="outlabels" />
-                        <String fx:value="title2" />
                      </styleClass></Label>
                   <VBox fx:id="vbContainer_Main" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0">
                   </VBox>
                </children></VBox>
          </content>
+         <styleClass>
+            <String fx:value="container" />
+            <String fx:value="title_2" />
+         </styleClass>
       </ScrollPane>
    </center>
    <top>
-      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header" BorderPane.alignment="CENTER">
          <right>
             <Button mnemonicParsing="false" onAction="#btnActionCreateStack" text="Add" BorderPane.alignment="CENTER" />
          </right>
@@ -43,7 +47,7 @@
             <Label text="Shelf" BorderPane.alignment="CENTER">
                <styleClass>
                   <String fx:value="outlabels" />
-                  <String fx:value="title1" />
+                  <String fx:value="title_1" />
                </styleClass></Label>
          </center>
       </BorderPane>

@@ -10,30 +10,22 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="400.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StackCreator">
-   <bottom>
-      <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button mnemonicParsing="false" onAction="#btnActionCancel" text="Cancel" />
-            <Button fx:id="btnCreateStack" mnemonicParsing="false" onAction="#btnActionCreateStack" text="Create" />
-         </children>
-      </HBox>
-   </bottom>
    <top>
-      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" styleClass="header" BorderPane.alignment="CENTER">
          <children>
             <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
                   <Label fx:id="lbStackTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" text="New Stack">
                      <styleClass>
                         <String fx:value="outlabels" />
-                        <String fx:value="title1" />
+                        <String fx:value="title_1" />
                      </styleClass></Label>
                </children>
             </HBox>
          </children></HBox>
    </top>
    <center>
-      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="270.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="270.0" prefWidth="600.0" styleClass="body" BorderPane.alignment="CENTER">
          <children>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
@@ -47,6 +39,12 @@
                   <TextArea fx:id="taStackDescription" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnActionCancel" text="Cancel" />
+                  <Button fx:id="btnCreateStack" mnemonicParsing="false" onAction="#btnActionCreateStack" text="Create" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>

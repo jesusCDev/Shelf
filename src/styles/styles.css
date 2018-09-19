@@ -1,52 +1,3 @@
-/****************************************************************************************
-// RESETS
-****************************************************************************************/
-.root{
-    -fx-focus-color: transparent;
-    -fx-faint-focus-color: transparent;
-    -fx-background-color: transparent;
-}
-.button{
-    -fx-cursor: hand;
-}
-.label{
-    /* Set font here */
-}
-.background{
-    -fx-background-color: #131025;
-}
-.container{
-    -fx-background-color: #131025;
-}
-
-.selectedStack{
-    -fx-background-color: #322E61;
-}
-
-.outlabels{
-    -fx-text-fill: white;
-}
-.title_1{
-    -fx-font-size: 20px;
-}
-.title_2{
-    -fx-font-size: 15px;
-}
-.title_13{
-    -fx-font-size: 10px;
-}
-
-.card_title_1{
-    -fx-font-weight: bold;
-    -fx-text-fill: #6157AC;
-}
-.card_title_2{
-    -fx-font-weight: lighter;
-    -fx-text-fill: #000000;
-}
-.card_title_3{
-    -fx-text-fill: #BDBDBD;
-}
 
 /****************************************************************************************
     -fx-padding: 10px;
@@ -69,6 +20,98 @@ Purple Lettering: #6157AC
 * -fx-color-LightGrey: #BDBDBD;
 ****************************************************************************************/
 
-.bottom-toast{
-    -fx-background-color: Grey;
+
+/****************************************************************************************
+// RESETS
+****************************************************************************************/
+.root{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+}
+.header{
+    -fx-padding: 10 10 10 10;
+}
+.body{
+    -fx-padding: 0 10 0 10;
+}
+.footer{
+    -fx-padding: 0 0 0 0;
+}
+.button{
+    -fx-cursor: hand;
+}
+.label{
+    /* Set font here */
+}
+.background{
+    -fx-background-color: #131025;
+}
+.container{
+    -fx-background-color: #131025;
+}
+
+.selectedStack{
+    -fx-effect: dropshadow(three-pass-box, #322E61, 10, 0, 0, 0);
+}
+
+.outlabels{
+    -fx-text-fill: white;
+}
+.title_1{
+    -fx-font-size: 20px;
+}
+.title_2{
+    -fx-font-size: 15px;
+}
+.title_3{
+    -fx-font-size: 10px;
+}
+.stackSelected_indication{
+    -fx-padding: 5px;
+    -fx-background-color: #322E61;
+    -fx-border-radius: 100 100 100 100;
+    -fx-background-radius: 100 100 100 100;
+}
+.stack{
+    -fx-background-color: white;
+    -fx-padding: 10px;
+}
+.card{
+    -fx-background-color: white;
+    -fx-padding: 10px;
+}
+.card_title_1{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6157AC;
+}
+.card_title_2{
+    -fx-font-size: 14px;
+    -fx-font-weight: lighter;
+    -fx-text-fill: #000000;
+}
+.card_title_3{
+    -fx-font-size: 12px;
+    -fx-text-fill: #BDBDBD;
+}
+.toast{
+    -fx-background-color: #5351A9;
+}
+.toast .label{
+    -fx-text-fill: White;
+    -fx-font-size: 16px;
+    -fx-padding: 5 0 5 0;
+}
+.btnAddCard{
+    -fx-background-color: white;
+}
+.btnAddCard .label{
+    -fx-font-size: 16px;
+}
+.btnEditCardStack{
+    -fx-background-color: white;
+}
+.btnEditCardStack .label{
+    -fx-font-size: 16px;
 }

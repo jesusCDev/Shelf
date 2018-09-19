@@ -13,7 +13,7 @@
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StackSelector">
    <top>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane styleClass="header" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -32,7 +32,7 @@
                <children>
                   <Label text="Stack Selector">
                      <styleClass>
-                        <String fx:value="title1" />
+                        <String fx:value="title_1" />
                         <String fx:value="outlabels" />
                      </styleClass></Label>
                </children>
@@ -46,7 +46,7 @@
       </GridPane>
    </top>
    <center>
-       <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="container" BorderPane.alignment="CENTER">
+       <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
            <content>
                <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="container">
                    <children>
@@ -66,6 +66,10 @@
                        </VBox>
                    </children></VBox>
            </content>
+         <styleClass>
+            <String fx:value="container" />
+            <String fx:value="body" />
+         </styleClass>
        </ScrollPane>
    </center>
 </BorderPane>

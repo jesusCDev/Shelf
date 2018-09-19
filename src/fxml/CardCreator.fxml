@@ -10,30 +10,22 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardCreator">
-   <bottom>
-      <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button mnemonicParsing="false" onAction="#btnAction_Cancel" text="Cancel" />
-            <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" text="Create" />
-         </children>
-      </HBox>
-   </bottom>
    <top>
-      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" styleClass="header" BorderPane.alignment="CENTER">
          <children>
             <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
                   <Label fx:id="lbCardTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" text="New Card">
                      <styleClass>
                         <String fx:value="outlabels" />
-                        <String fx:value="title1" />
+                        <String fx:value="title_1" />
                      </styleClass></Label>
                </children>
             </HBox>
          </children></HBox>
    </top>
    <center>
-      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="600.0" styleClass="body" BorderPane.alignment="CENTER">
          <children>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
@@ -49,15 +41,21 @@
             </VBox>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                <children>
-                  <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0">
+                  <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
                      <children>
-                        <Label text="Data:" />
-                        <Button mnemonicParsing="false" onAction="#btnAction_ShowUserInfo" text="?" />
+                        <Button mnemonicParsing="false" onAction="#btnAction_Cancel" text="Cancel" />
+                        <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" text="Create" />
                      </children>
                   </HBox>
                   <TextArea fx:id="taCardCopyData" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <Label text="Data:" />
+                  <Button mnemonicParsing="false" onAction="#btnAction_ShowUserInfo" text="?" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>

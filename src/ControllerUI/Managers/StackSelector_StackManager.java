@@ -124,14 +124,18 @@ public class StackSelector_StackManager {
 
         VBox vbAll = new VBox();
         vbAll.getChildren().clear();
+        vbAll.getStyleClass().add("stack");
 
-        vbAll.setStyle("-fx-background-color: white;");
         StackPane spContainer = new StackPane();
 
         VBox vbStack = new VBox();
 
-        vbStack.getChildren().add(new Label(stack.getStackTitle()));
-        vbStack.getChildren().add(new Label(stack.getStackDescription()));
+        Label lbStackTitle = new Label(stack.getStackTitle());
+        lbStackTitle.getStyleClass().add("card_title_1");
+        vbStack.getChildren().add(lbStackTitle);
+        Label lbStackDescription = new Label(stack.getStackDescription());
+        lbStackDescription.getStyleClass().add("card_title_2");
+        vbStack.getChildren().add(lbStackDescription);
         vbStack.setFillWidth(true);
 
         spContainer.getChildren().add(vbStack);
@@ -164,10 +168,8 @@ public class StackSelector_StackManager {
     }
 
     private Pane setSelected(VBox vbAll, FM_StackManager_Info stack){
-        vbAll.setStyle("-fx-background-color: blue;");
         Pane p = new Pane();
-        p.setStyle("-fx-background-radius: 30;");
-        p.setStyle("-fx-border-radius: 30;");
+        p.getStyleClass().add("stackSelected_indication");
         p.getChildren().add(new Label(Integer.toString(stack.getSelectedOrder())));
 
         p.prefHeight(Pane.USE_COMPUTED_SIZE);
@@ -175,7 +177,6 @@ public class StackSelector_StackManager {
         p.setMaxHeight(Pane.USE_PREF_SIZE);
         p.setMaxWidth(Pane.USE_PREF_SIZE);
 
-        p.setStyle("-fx-background-color: green;");
         StackPane.setAlignment(p, Pos.TOP_RIGHT);
         return p;
     }

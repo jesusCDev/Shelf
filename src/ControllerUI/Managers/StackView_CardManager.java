@@ -49,6 +49,7 @@ public class StackView_CardManager {
 
     private VBox create_createCardBtn(String stackID, double btnSize){
         VBox vb = new VBox();
+        vb.getStyleClass().add("btnAddCard");
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -65,6 +66,7 @@ public class StackView_CardManager {
 
     private VBox create_EditStackBtn(String stackID, double btnSize){
         VBox vb = new VBox();
+        vb.getStyleClass().add("btnEditCardStack");
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -81,6 +83,7 @@ public class StackView_CardManager {
     private VBox createVBoxCreateMainBtn(FM_CardManager_Info card, int buttonSize){
 
         VBox vb = new VBox();
+        vb.getStyleClass().add("card");
 
         // Clicking on vb field sends user to language view
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -101,32 +104,13 @@ public class StackView_CardManager {
         // Create Data
         Label lbData = new Label(card.getCardCopyData());
         lbData.getStyleClass().add("card_title_3");
-        // create favorite buttons
-        HBox hbButton = new HBox();
-        // TODO ADD AN ICON HERE
-        // Clicking the favorite btn allows user to add their most used language to the top
-        Button btn = new Button("=");
-        btn.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                System.out.println("Favorited this");
-                toast.deleteToast();
-            }
-        });
-
-        hbButton.getChildren().add(btn);
-        hbButton.setAlignment(Pos.TOP_RIGHT);
-
         // Set sb Styles
         vb.setPrefWidth(buttonSize);
-        vb.setStyle("-fx-background-color: white;");
-        vb.paddingProperty().setValue(new Insets(10));
 
         // Add vb
         vb.getChildren().add(lbTitle);
         vb.getChildren().add(lbDescription);
         vb.getChildren().add(lbData);
-        vb.getChildren().add(hbButton);
 
         return vb;
     }

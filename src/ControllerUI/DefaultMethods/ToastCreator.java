@@ -2,27 +2,26 @@ package ControllerUI.DefaultMethods;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class ToastCreator {
 
-    Text text;
     Timeline timeline;
 
     private StackPane sp;
     public ToastCreator(StackPane sp){
         this.sp = sp;
-        sp.getStyleClass().add("bottom-toast");
     }
 
     public void createToast(String message){
         sp.getChildren().clear();
 
-        text = new Text(message);
-        text.setStyle("-fx-font-size: 0");
-        sp.getChildren().add(text);
+        Label toastMessage = new Label(message);
+        toastMessage.setStyle("-fx-font-size: 0");
+        sp.getChildren().add(toastMessage);
 
         timeline = new Timeline(new KeyFrame(
                 Duration.millis(3000),
