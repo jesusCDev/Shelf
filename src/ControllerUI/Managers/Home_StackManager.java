@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -92,6 +93,7 @@ public class Home_StackManager implements Constants {
     private VBox createVBoxCreateMainBtn(String title, String description, String stackId, int buttonSize, boolean editMode){
 
         VBox vb = new VBox();
+        vb.setMinHeight(Region.USE_COMPUTED_SIZE);
         vb.getStyleClass().add("stack");
 
         // Clicking on vb field sends user to Stack view

@@ -19,8 +19,6 @@ public class FM_CardManager_XML extends FM_XMLParser{
     public FM_CardManager_XML(String cardName, boolean creatingNewProject){
         xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + cardName + ".xml");
 
-        System.out.println(xmlDocument.getAbsoluteFile());
-
         if(!creatingNewProject){
             getXMLInfo();
         }

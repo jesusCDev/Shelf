@@ -34,6 +34,8 @@ public class StackView_CardManager {
         this.vbAll = vbAll;
         this.vbContainer = vbContainer;
 
+        vbContainer.setSpacing(5);
+
         // Grab values from xml file
         cards = new FM_CardManager_XML(stackID, false);
         vbContainer.getChildren().add(create_createCardBtn(stackID, btnSize));

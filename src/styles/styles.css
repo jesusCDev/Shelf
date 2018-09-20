@@ -104,14 +104,18 @@ Purple Lettering: #6157AC
     -fx-padding: 5 0 5 0;
 }
 .btnAddCard{
-    -fx-background-color: white;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
 }
 .btnAddCard .label{
+    -fx-text-fill: white;
     -fx-font-size: 16px;
 }
 .btnEditCardStack{
-    -fx-background-color: white;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
 }
 .btnEditCardStack .label{
+    -fx-text-fill: white;
     -fx-font-size: 16px;
 }
