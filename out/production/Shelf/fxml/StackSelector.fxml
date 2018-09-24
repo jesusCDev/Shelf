@@ -25,7 +25,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnAction_Cancel" text="Cancel" />
+                  <Button mnemonicParsing="false" onAction="#btnAction_Cancel" styleClass="btnDefault" text="Cancel" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
@@ -39,7 +39,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnAction_Done" text="Done" />
+                  <Button mnemonicParsing="false" onAction="#btnAction_Done" styleClass="btnDefault" text="Done" />
                </children>
             </HBox>
          </children>
@@ -48,23 +48,27 @@
    <center>
        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
            <content>
-               <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="container">
+               <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
                    <children>
                        <Label text="Favorites">
                      <styleClass>
-                        <String fx:value="title2" />
+                        <String fx:value="title_2" />
                         <String fx:value="outlabels" />
                      </styleClass></Label>
-                       <VBox fx:id="vb_FavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+                       <VBox fx:id="vb_FavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="vbContainer">
                        </VBox>
                        <Label text="Languages">
                      <styleClass>
                         <String fx:value="title2" />
                         <String fx:value="outlabels" />
                      </styleClass></Label>
-                       <VBox fx:id="vb_NonFavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+                       <VBox fx:id="vb_NonFavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="vbContainer">
                        </VBox>
-                   </children></VBox>
+                   </children>
+               <styleClass>
+                  <String fx:value="container" />
+                  <String fx:value="vbContainer" />
+               </styleClass></VBox>
            </content>
          <styleClass>
             <String fx:value="container" />

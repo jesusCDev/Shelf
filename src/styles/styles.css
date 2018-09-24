@@ -54,7 +54,19 @@ Purple Lettering: #6157AC
 .selectedStack{
     -fx-effect: dropshadow(three-pass-box, #322E61, 10, 0, 0, 0);
 }
+.lbHintText{
+    -fx-text-size: 10px;
+    -fx-text-fill: #E4EAED;
+}
 
+.text-field{
+    -fx-border-radius: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.text-area{
+    -fx-border-radius: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
 .outlabels{
     -fx-text-fill: white;
 }
@@ -68,10 +80,14 @@ Purple Lettering: #6157AC
     -fx-font-size: 10px;
 }
 .stackSelected_indication{
-    -fx-padding: 5px;
+    -fx-padding: 10px;
+    -fx-text-fill: white;
     -fx-background-color: #322E61;
     -fx-border-radius: 100 100 100 100;
     -fx-background-radius: 100 100 100 100;
+}
+.stackSelected_indication .label{
+    -fx-text-fill: white;
 }
 .stack{
     -fx-background-color: white;
@@ -80,6 +96,12 @@ Purple Lettering: #6157AC
 .card{
     -fx-background-color: white;
     -fx-padding: 10px;
+}
+.card: hover{
+    -fx-cursor: hand;
+}
+.stack: hover{
+    -fx-cursor: hand;
 }
 .card_title_1{
     -fx-font-size: 16px;
@@ -103,19 +125,39 @@ Purple Lettering: #6157AC
     -fx-font-size: 16px;
     -fx-padding: 5 0 5 0;
 }
-.btnAddCard{
+.btnFav{
+    -fx-background-color: transparent;
+    -fx-border-color: #6157AC;
+    -fx-text-fill: #6157AC;
+    -fx-font-size: 14px;
+}
+.btnFav: hover{
+    -fx-text-fill: white;
+    -fx-border-color: #322E61;
+    -fx-background-color: #322E61;
+}
+.btnFav: pressed{
+    -fx-text-fill: white;
+    -fx-background-color: #5351A9;
+}
+
+.btnDefault{
     -fx-background-color: transparent;
     -fx-border-color: white;
-}
-.btnAddCard .label{
-    -fx-text-fill: white;
+    -fx-text-fill: White;
     -fx-font-size: 16px;
 }
-.btnEditCardStack{
-    -fx-background-color: transparent;
-    -fx-border-color: white;
-}
-.btnEditCardStack .label{
-    -fx-text-fill: white;
+.btnDefault .label{
+    -fx-text-fill: White;
     -fx-font-size: 16px;
+}
+.btnDefault: hover{
+    -fx-cursor: hand;
+    -fx-background-color: #322E61;
+}
+.btnDefault: pressed{
+    -fx-background-color: #5351A9;
+}
+.vbContainer{
+ -fx-spacing: 5;
 }

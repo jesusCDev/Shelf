@@ -14,20 +14,20 @@ public class StackView extends Common_ControllerMethods {
     @FXML
     VBox vbContainer;
     @FXML
-    StackPane spToastMessanger;
+    StackPane spToast;
     @FXML
     BorderPane bpContainer_All;
 
     public void initialize(){
         screen_SetSize(bpContainer_All);
-        new StackView_StackManager(vbContainer, spToastMessanger,
+        new StackView_StackManager(bpContainer_All, vbContainer, spToast,
                 Constants.pref.get(PREF_SV_StackViewList, null).split(","));
     }
 
     // BUTTON ACTIONS
     @FXML
     public void btnAction_CreateNewCard(ActionEvent e){
-        screen_changeDynamic(e, Constants.FILE_FXML_StackSelector, bpContainer_All);
+        screen_changeDynamicAlwaysOffTop(e, Constants.FILE_FXML_StackSelector, bpContainer_All);
 
 //        screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_CardCreator);
     }
@@ -35,6 +35,6 @@ public class StackView extends Common_ControllerMethods {
     @FXML
     public void btnAction_GoBackToMainMenu(ActionEvent e){
         Constants.pref.put(PREF_SV_StackViewList, "");
-        screen_changeDynamic(e, Constants.FILE_FXML_Main, bpContainer_All);
+        screen_changeDynamicAlwaysOffTop(e, Constants.FILE_FXML_Main, bpContainer_All);
     }
 }

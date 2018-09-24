@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -28,8 +29,10 @@ public class StackView_CardManager {
     private ToastCreator toast;
     private VBox vbContainer;
     private static int btnSize = Constants.stackSize; // px
+    private BorderPane bpAll;
 
-    public StackView_CardManager(VBox vbAll, VBox vbContainer, String stackID, StackPane spToast){
+    public StackView_CardManager(BorderPane bpAll, VBox vbAll, VBox vbContainer, String stackID, StackPane spToast){
+        this.bpAll = bpAll;
         toast = new ToastCreator(spToast);
         this.vbAll = vbAll;
         this.vbContainer = vbContainer;
@@ -51,13 +54,13 @@ public class StackView_CardManager {
 
     private VBox create_createCardBtn(String stackID, double btnSize){
         VBox vb = new VBox();
-        vb.getStyleClass().add("btnAddCard");
+        vb.getStyleClass().add("btnDefault");
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 Constants.pref.put(Constants.PREF_SV_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
-                ccm.screen_changeNormal(event, Constants.FILE_FXML_CardCreator);
+                ccm.screen_changeDynamicAlwaysOffTop(event, Constants.FILE_FXML_CardCreator, bpAll);
             }
         });
         vb.setAlignment(Pos.CENTER);
@@ -68,7 +71,8 @@ public class StackView_CardManager {
 
     private VBox create_EditStackBtn(String stackID, double btnSize){
         VBox vb = new VBox();
-        vb.getStyleClass().add("btnEditCardStack");
+        vb.getStyleClass().add("vbContainer");
+        vb.getStyleClass().add("btnDefault");
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -91,8 +95,6 @@ public class StackView_CardManager {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                // TODO ADD HERE TO ADD TO CLIPBOARD
-                toast.deleteToast();
                 toast.createToast(card.getCardCopyData());
                 writeToClipboard(card.getCardCopyData());
             }

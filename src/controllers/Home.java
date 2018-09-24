@@ -37,7 +37,7 @@ public class Home extends Common_ControllerMethods implements Constants{
         stacks = new FM_StackManager_XML(false);
 
         // make sure they are solid and unclickable
-        sm = new Home_StackManager(vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));
+        sm = new Home_StackManager(bpContainer_All, vbContainer_Fav, vbContainer_Main, stacks, pref.get(PREF_SV_StackViewList, "").split(","));
 
         // Create Cols
         sm.recreateColsAndCheckFav(vbContainer_Fav, stacks.getFavStacks(), stacks.getFavStacks().size(), false, 800);

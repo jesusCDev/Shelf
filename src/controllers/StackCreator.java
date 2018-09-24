@@ -1,6 +1,7 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.ToastCreator;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_StackManager_XML;
 import FileHandler.FM_StackManager_Info;
@@ -13,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
 import java.util.Random;
 
@@ -28,10 +30,13 @@ public class StackCreator extends Common_ControllerMethods{
     Button btnCreateStack;
     @FXML
     BorderPane bpContainer_All;
+    @FXML
+    StackPane spToast;
 
     private Boolean StackGettingEdited;
     private String StackID;
     private FM_StackManager_XML mainStackXmlParser;
+    private ToastCreator toast;
 
     @FXML
     public void initialize(){
@@ -41,6 +46,9 @@ public class StackCreator extends Common_ControllerMethods{
         StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
         Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
         mainStackXmlParser= new FM_StackManager_XML(false);
+
+
+        toast = new ToastCreator(spToast);
 
         if(StackGettingEdited){
             StackID = Constants.pref.get(Constants.PREF_SV_SelectedStack, null);
@@ -74,7 +82,7 @@ public class StackCreator extends Common_ControllerMethods{
             mainStackXmlParser.updateXMLFile();
             screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
         }else{
-            // TODO TELL USER TO ADD AT LEAST A TITLE
+            toast.createToast("Fill In Title Field");
         }
     }
 

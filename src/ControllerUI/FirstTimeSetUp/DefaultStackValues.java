@@ -121,7 +121,7 @@ public class DefaultStackValues {
     private static DefaultStackContainer commentBlockJavaScriptCSS = new DefaultStackContainer(commentBLock_Title_JavaScriptCSS, commentBLock_Description_JavaScriptCSS, commentBlockJavaScriptCSS_Cards);
 
     // PYTHON
-    private static String commentBLock_Title_Python = "Java Comments";
+    private static String commentBLock_Title_Python = "Python Comments";
     private static String commentBLock_Description_Python = "Basic Comment Separators";
     private static String commentBlock_Title_1_Python = "Title Comment 1";
     private static String commentBlock_Code_1_Python =
@@ -152,6 +152,15 @@ public class DefaultStackValues {
 
     private static DefaultStackContainer commentBlockPython= new DefaultStackContainer(commentBLock_Title_Python, commentBLock_Description_Python, commentBlockPython_Cards);
 
+    private static String loremIpsum_Title = "LoremIpsum Text";
+    private static String loremIpsum_Description = "Fake use to fill up content blocks.";
+
+    private static String loremIpsum_Title_Long = "Lorem Ipsum Long Title";
+    private static String loremIpsum_Title_Medium = "Lorem Ipsum Medium Title";
+    private static String loremIpsum_Title_Short = "Lorem Ipsum Short Title";
+    private static String loremIpsum_Description_Long = "Lorem Ipsum Long Description";
+    private static String loremIpsum_Description_Medium = "Lorem Ipsum Medium Description";
+    private static String loremIpsum_Description_Short = "Lorem Ipsum Short Description";
 
     // CONTAINS ALL STACKS
     public static DefaultStackContainer[] stacks = {commentBlockHTML, commentBlockJava, commentBlockJavaScriptCSS, commentBlockPython, debuggingbLockJava};

@@ -129,6 +129,7 @@ public class StackSelector_StackManager {
         StackPane spContainer = new StackPane();
 
         VBox vbStack = new VBox();
+        vbStack.getStyleClass().add("vbContainer");
 
         Label lbStackTitle = new Label(stack.getStackTitle());
         lbStackTitle.getStyleClass().add("card_title_1");
@@ -167,8 +168,9 @@ public class StackSelector_StackManager {
         return vbAll;
     }
 
-    private Pane setSelected(VBox vbAll, FM_StackManager_Info stack){
-        Pane p = new Pane();
+    private VBox setSelected(VBox vbAll, FM_StackManager_Info stack){
+        VBox p = new VBox();
+        p.setAlignment(Pos.CENTER);
         p.getStyleClass().add("stackSelected_indication");
         p.getChildren().add(new Label(Integer.toString(stack.getSelectedOrder())));
 

@@ -1,6 +1,7 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
+import ControllerUI.DefaultMethods.ToastCreator;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_CardManager_Info;
 import assets.Constants;
@@ -9,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
 public class CardCreator extends Common_ControllerMethods{
 
@@ -20,16 +22,16 @@ public class CardCreator extends Common_ControllerMethods{
     TextArea taCardCopyData;
     @FXML
     BorderPane bpContainer_All;
+    @FXML
+    StackPane spToast;
+    private ToastCreator toast;
 
     @FXML
     public void initialize(){
-        screen_SetSize(bpContainer_All);
-    }
 
-    @FXML
-    public void btnAction_ShowUserInfo(ActionEvent e){
-        // TODO COPY DATA WILL SAVED ONTOP YOUR CLIPBOARD TO BE ABLE TO PASTE INTO YOUR CODE
-        // TODO SHOW SYMBOL THAT ONLY THESE FIELDS ARE REQUIRED TO BE  (MAYBE START EVERY PROGRAM WITH ONLY DEFAULT LOOK;
+        screen_SetSize(bpContainer_All);
+
+        toast = new ToastCreator(spToast);
     }
 
     public void btnAction_CreateCard(ActionEvent btn){
@@ -40,6 +42,8 @@ public class CardCreator extends Common_ControllerMethods{
             cardXmlParser.getCards().add(card);
             cardXmlParser.updateXMLFile();
             screen_changeDynamic(btn, Constants.FILE_FXML_StackViewer, bpContainer_All);
+        }else{
+            toast.createToast("Fill in Data Filed");
         }
     }
 

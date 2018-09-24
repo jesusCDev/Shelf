@@ -13,7 +13,7 @@
    <top>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
          <left>
-            <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" text="&lt;---" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" styleClass="btnDefault" text="&lt;---" BorderPane.alignment="CENTER" />
          </left>
          <center>
             <Label text="Language Viewer" BorderPane.alignment="CENTER">
@@ -25,7 +25,7 @@
          <right>
             <HBox BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" text="+" />
+                  <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" styleClass="btnDefault" text="+" />
                </children>
             </HBox>
          </right>
@@ -38,7 +38,11 @@
    <center>
        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" BorderPane.alignment="CENTER">
          <content>
-             <VBox fx:id="vbContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="container" />
+             <VBox fx:id="vbContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0">
+               <styleClass>
+                  <String fx:value="container" />
+                  <String fx:value="vbContainer" />
+               </styleClass></VBox>
          </content>
          <styleClass>
             <String fx:value="container" />
@@ -47,10 +51,6 @@
       </ScrollPane>
    </center>
    <bottom>
-      <StackPane fx:id="spToastMessanger" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
-         <styleClass>
-            <String fx:value="footer" />
-            <String fx:value="toast" />
-         </styleClass></StackPane>
+      <StackPane fx:id="spToast" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="footer" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

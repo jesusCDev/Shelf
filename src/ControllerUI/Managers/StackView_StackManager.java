@@ -1,6 +1,7 @@
 package ControllerUI.Managers;
 
 import ControllerUI.ColumnCreator;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
@@ -8,13 +9,13 @@ import java.util.ArrayList;
 
 public class StackView_StackManager {
 
-    public StackView_StackManager(VBox vbAll, StackPane spToast, String[] selectedStackIDs){
+    public StackView_StackManager(BorderPane bpAll, VBox vbAll, StackPane spToast, String[] selectedStackIDs){
 
 
         ArrayList<VBox> stackContainers = new ArrayList<>();
 
         for(String stackID: selectedStackIDs){
-            stackContainers.add(new StackView_CardManager(vbAll, new VBox(), stackID, spToast).getContainer());
+            stackContainers.add(new StackView_CardManager(bpAll, vbAll, new VBox(), stackID, spToast).getContainer());
         }
 
 

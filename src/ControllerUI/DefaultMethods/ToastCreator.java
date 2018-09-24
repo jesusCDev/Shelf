@@ -14,11 +14,13 @@ public class ToastCreator {
     private StackPane sp;
     public ToastCreator(StackPane sp){
         this.sp = sp;
+        sp.getStyleClass().add("toast");
     }
 
     public void createToast(String message){
-        sp.getChildren().clear();
+        deleteToast();
 
+        sp.getChildren().clear();
         Label toastMessage = new Label(message);
         toastMessage.setStyle("-fx-font-size: 0");
         sp.getChildren().add(toastMessage);
@@ -30,12 +32,12 @@ public class ToastCreator {
 
     }
 
-    public void deleteToast(){
+    private void deleteToast(){
         sp.getChildren().clear();
         try{
             timeline.stop();
         } catch(NullPointerException e){
-
+            e.printStackTrace();
         }
     }
 }

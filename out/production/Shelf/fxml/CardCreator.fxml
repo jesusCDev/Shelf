@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardCreator">
@@ -25,38 +26,57 @@
          </children></HBox>
    </top>
    <center>
-      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="600.0" styleClass="body" BorderPane.alignment="CENTER">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="vbContainer">
                <children>
-                  <Label text="Title:" />
+                  <Label text="Title:">
+                     <styleClass>
+                        <String fx:value="title_2" />
+                        <String fx:value="outlabels" />
+                     </styleClass></Label>
                   <TextField fx:id="tfCardTitle" />
                </children>
             </VBox>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="vbContainer">
                <children>
-                  <Label text="Description:" />
+                  <Label text="Description:">
+                     <styleClass>
+                        <String fx:value="title_2" />
+                        <String fx:value="outlabels" />
+                     </styleClass></Label>
                   <TextArea fx:id="taCardDescription" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="vbContainer">
                <children>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+                  <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0" styleClass="vbContainer">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#btnAction_Cancel" text="Cancel" />
-                        <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" text="Create" />
+                        <Label text="Data: *">
+                           <styleClass>
+                              <String fx:value="title_2" />
+                              <String fx:value="outlabels" />
+                           </styleClass></Label>
+                        <Label styleClass="lbHintText" text="Text That Will Be Copied To Clipboard" />
                      </children>
                   </HBox>
                   <TextArea fx:id="taCardCopyData" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
-            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0">
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="vbContainer">
                <children>
-                  <Label text="Data:" />
-                  <Button mnemonicParsing="false" onAction="#btnAction_ShowUserInfo" text="?" />
+                  <Button mnemonicParsing="false" onAction="#btnAction_Cancel" styleClass="btnDefault" text="Cancel" />
+                  <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" styleClass="btnDefault" text="Create" />
                </children>
             </HBox>
          </children>
+         <styleClass>
+            <String fx:value="body" />
+            <String fx:value="vbContainer" />
+         </styleClass>
       </VBox>
    </center>
+   <bottom>
+      <StackPane fx:id="spToast" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

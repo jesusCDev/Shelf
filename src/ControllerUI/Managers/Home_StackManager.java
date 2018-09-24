@@ -11,6 +11,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
@@ -25,11 +26,13 @@ public class Home_StackManager implements Constants {
     private FM_StackManager_XML stacks;
     private VBox vbContainer_Fav;
     private VBox vbContainer_Main;
+    private BorderPane bpAll;
 
     private ColumnCreator ccFav;
     private ColumnCreator ccMain;
 
-    public Home_StackManager(VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks, String[] selectedStacksID){
+    public Home_StackManager(BorderPane bpAll, VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks, String[] selectedStacksID){
+        this.bpAll = bpAll;
         this.vbContainer_Fav = vbContainer_Fav;
         this.vbContainer_Main = vbContainer_Main;
         this.stacks = stacks;
@@ -93,8 +96,9 @@ public class Home_StackManager implements Constants {
     private VBox createVBoxCreateMainBtn(String title, String description, String stackId, int buttonSize, boolean editMode){
 
         VBox vb = new VBox();
-        vb.setMinHeight(Region.USE_COMPUTED_SIZE);
+
         vb.getStyleClass().add("stack");
+        vb.getStyleClass().add("vbContainer");
 
         // Clicking on vb field sends user to Stack view
         setVbAction(vb, stackId, editMode);
@@ -110,6 +114,7 @@ public class Home_StackManager implements Constants {
         // TODO ADD AN ICON HERE
         // Clicking the favorite btn allows user to add their most used Stack to the top
         Button btn = new Button();
+        btn.getStyleClass().add("btnFav");
         setBtnAction(btn, stackId, editMode);
 
         hbButton.getChildren().add(btn);
@@ -162,7 +167,7 @@ public class Home_StackManager implements Constants {
                 @Override
                 public void handle(MouseEvent event) {
                     pref.put(PREF_SV_StackViewList,stackId);
-                    ccm.screen_changeNormalAlwaysOnTop(event, FILE_FXML_StackViewer);
+                    ccm.screen_changeDynamicAlwaysOnTop(event, FILE_FXML_StackViewer, bpAll);
                 }
             });
         }else{
@@ -172,7 +177,7 @@ public class Home_StackManager implements Constants {
                 public void handle(MouseEvent event) {
                     pref.putBoolean(PREF_SV_Editing, true);
                     pref.put(PREF_SV_SelectedStack, stackId);
-                    ccm.screen_changeNormalAlwaysOnTop(event, FILE_FXML_StackCreator);
+                    ccm.screen_changeDynamic(event, FILE_FXML_StackCreator, bpAll);
                 }
             });
         }

@@ -32,11 +32,11 @@ public class StackSelector extends Common_ControllerMethods{
     }
 
     public void btnAction_Cancel(ActionEvent e){
-        screen_changeDynamic(e, Constants.FILE_FXML_StackViewer, bpContainer_All);
+        screen_changeDynamicAlwaysOnTop(e, Constants.FILE_FXML_StackViewer, bpContainer_All);
     }
 
     public void btnAction_Done(ActionEvent e){
         ss.saveSelectedStacks();
-        screen_changeDynamic(e, Constants.FILE_FXML_StackViewer, bpContainer_All);
+        screen_changeDynamicAlwaysOnTop(e, Constants.FILE_FXML_StackViewer, bpContainer_All);
     }
 }

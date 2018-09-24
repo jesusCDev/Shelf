@@ -11,23 +11,27 @@
    <center>
       <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="container">
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0">
                <children>
                   <Label text="Favorites">
                      <styleClass>
                         <String fx:value="title_2" />
                         <String fx:value="outlabels" />
                      </styleClass></Label>
-                  <VBox fx:id="vbContainer_Fav" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0">
+                  <VBox fx:id="vbContainer_Fav" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="vbContainer">
                </VBox>
                   <Label text="Languages">
                      <styleClass>
                         <String fx:value="title_2" />
                         <String fx:value="outlabels" />
                      </styleClass></Label>
-                  <VBox fx:id="vbContainer_Main" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0">
+                  <VBox fx:id="vbContainer_Main" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="vbContainer">
                   </VBox>
-               </children></VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="container" />
+                  <String fx:value="vbContainer" />
+               </styleClass></VBox>
          </content>
          <styleClass>
             <String fx:value="container" />
@@ -38,10 +42,10 @@
    <top>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="header" BorderPane.alignment="CENTER">
          <right>
-            <Button mnemonicParsing="false" onAction="#btnActionCreateStack" text="Add" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnActionCreateStack" styleClass="btnDefault" text="Add" BorderPane.alignment="CENTER" />
          </right>
          <left>
-            <Button mnemonicParsing="false" onAction="#btnActionEditStacks" text="Edit" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnActionEditStacks" styleClass="btnDefault" text="Edit" BorderPane.alignment="CENTER" />
          </left>
          <center>
             <Label text="Shelf" BorderPane.alignment="CENTER">

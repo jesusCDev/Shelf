@@ -40,8 +40,8 @@ public class Common_ControllerMethods implements Constants{
     protected void screen_SetSize(BorderPane bodyPane){
 
         if(!pref.getBoolean(PREF_SV_ScreenMax, false)){
-            bodyPane.setPrefWidth(pref.getDouble(PREF_SV_ScreenWidth, 0.0));
-            bodyPane.setPrefHeight(pref.getDouble(PREF_SV_ScreenHeight, 0.0));
+            bodyPane.setPrefWidth(pref.getDouble(PREF_SV_ScreenWidth, 800.0));
+            bodyPane.setPrefHeight(pref.getDouble(PREF_SV_ScreenHeight, 800.0));
         }
     }
 
@@ -79,6 +79,110 @@ public class Common_ControllerMethods implements Constants{
         Scene scene = new Scene(loader);
         scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+
+        if (stage.isFullScreen()) {
+            stage.setMaximized(true);
+            pref.putBoolean(PREF_SV_ScreenMax, true);
+        }else{
+            pref.putBoolean(PREF_SV_ScreenMax, false);
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void screen_changeDynamicAlwaysOnTop(MouseEvent e, String fxmlScreen, BorderPane bpAll){
+        changeDynamic_SaveWidth(bpAll);
+
+        Parent loader = null;
+        try {
+            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+        Scene scene = new Scene(loader);
+        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setAlwaysOnTop(true);
+
+        if (stage.isFullScreen()) {
+            stage.setMaximized(true);
+            pref.putBoolean(PREF_SV_ScreenMax, true);
+        }else{
+            pref.putBoolean(PREF_SV_ScreenMax, false);
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void screen_changeDynamicAlwaysOnTop(ActionEvent e, String fxmlScreen, BorderPane bpAll){
+        changeDynamic_SaveWidth(bpAll);
+
+        Parent loader = null;
+        try {
+            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+        Scene scene = new Scene(loader);
+        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setAlwaysOnTop(true);
+
+        if (stage.isFullScreen()) {
+            stage.setMaximized(true);
+            pref.putBoolean(PREF_SV_ScreenMax, true);
+        }else{
+            pref.putBoolean(PREF_SV_ScreenMax, false);
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void screen_changeDynamicAlwaysOffTop(MouseEvent e, String fxmlScreen, BorderPane bpAll){
+        changeDynamic_SaveWidth(bpAll);
+
+        Parent loader = null;
+        try {
+            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+        Scene scene = new Scene(loader);
+        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setAlwaysOnTop(false);
+
+        if (stage.isFullScreen()) {
+            stage.setMaximized(true);
+            pref.putBoolean(PREF_SV_ScreenMax, true);
+        }else{
+            pref.putBoolean(PREF_SV_ScreenMax, false);
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void screen_changeDynamicAlwaysOffTop(ActionEvent e, String fxmlScreen, BorderPane bpAll){
+        changeDynamic_SaveWidth(bpAll);
+
+        Parent loader = null;
+        try {
+            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+
+        Scene scene = new Scene(loader);
+        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setAlwaysOnTop(false);
 
         if (stage.isFullScreen()) {
             stage.setMaximized(true);
