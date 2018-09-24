@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="bpAll" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardEditor">
+   <top>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="lbTitle" text="Label">
+                     <styleClass>
+                        <String fx:value="title_1" />
+                        <String fx:value="outlabels" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAction_GoBackToStackView" styleClass="btnDefault" text="Cancel" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAction_SaveValuesGoBackToStackView" styleClass="btnDefault" text="Save" />
+               </children>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="container" />
+            <String fx:value="header" />
+         </styleClass>
+      </GridPane>
+   </top>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+         <content>
+            <ListView fx:id="lvCardContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="container" />
+         </content>
+         <styleClass>
+            <String fx:value="container" />
+            <String fx:value="body" />
+         </styleClass>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <StackPane fx:id="spToast" styleClass="footer" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

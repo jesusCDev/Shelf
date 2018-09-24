@@ -1,5 +1,6 @@
 package ControllerUI.Managers;
 
+import ControllerUI.CardEditor_ListViewCardManager;
 import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.DefaultMethods.ToastCreator;
@@ -76,7 +77,12 @@ public class StackView_CardManager {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                System.out.println("Should i add a new screen or somehting here?");
+
+                new CardEditor_ListViewCardManager(stackID);
+
+                Constants.pref.put(Constants.PREF_SV_SelectedStack, stackID);
+                Common_ControllerMethods ccm = new Common_ControllerMethods();
+                ccm.screen_changeDynamicAlwaysOffTop(event, Constants.FILE_FXML_CardEditor, bpAll);
             }
         });
 

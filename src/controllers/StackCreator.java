@@ -44,9 +44,7 @@ public class StackCreator extends Common_ControllerMethods{
         screen_SetSize(bpContainer_All);
 
         StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
-        Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
         mainStackXmlParser= new FM_StackManager_XML(false);
-
 
         toast = new ToastCreator(spToast);
 
@@ -57,6 +55,8 @@ public class StackCreator extends Common_ControllerMethods{
             lbStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
             tfStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
             taStackDescription.setText(mainStackXmlParser.getStack(StackID).getStackDescription());
+
+            Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
         }
     }
 

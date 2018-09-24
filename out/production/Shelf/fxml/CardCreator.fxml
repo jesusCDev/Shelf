@@ -66,7 +66,7 @@
             <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="vbContainer">
                <children>
                   <Button mnemonicParsing="false" onAction="#btnAction_Cancel" styleClass="btnDefault" text="Cancel" />
-                  <Button fx:id="btnCreateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" styleClass="btnDefault" text="Create" />
+                  <Button fx:id="btnCreateUpdateCard" mnemonicParsing="false" onAction="#btnAction_CreateCard" styleClass="btnDefault" text="Create" />
                </children>
             </HBox>
          </children>

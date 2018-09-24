@@ -13,7 +13,7 @@
    <top>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
          <left>
-            <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" styleClass="btnDefault" text="&lt;---" BorderPane.alignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" styleClass="btnDefault" text="Cancel" BorderPane.alignment="CENTER" />
          </left>
          <center>
             <Label text="Language Viewer" BorderPane.alignment="CENTER">

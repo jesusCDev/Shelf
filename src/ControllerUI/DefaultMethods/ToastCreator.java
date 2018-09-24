@@ -37,7 +37,6 @@ public class ToastCreator {
         try{
             timeline.stop();
         } catch(NullPointerException e){
-            e.printStackTrace();
         }
     }
 }
