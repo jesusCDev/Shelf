@@ -58,6 +58,9 @@ Purple Lettering: #6157AC
     -fx-text-size: 10px;
     -fx-text-fill: #E4EAED;
 }
+.card .hbox{
+    -fx-spacing: 10px;
+}
 .HBox{
     -fx-spacing: 10px;
 }
@@ -165,4 +168,13 @@ Purple Lettering: #6157AC
 }
 .vbContainer{
  -fx-spacing: 5;
+}
+.hbContainer{
+    -fx-spacing: 5;
+}
+.draggedCard{
+    -fx-border-color: #5351A9;
+}
+.selectedCard{
+    -fx-border-color: #5351A9;
 }
