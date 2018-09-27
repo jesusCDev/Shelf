@@ -39,13 +39,13 @@ public class CardCreator extends Common_ControllerMethods{
         screen_SetSize(bpContainer_All);
         toast = new ToastCreator(spToast);
 
-        editing = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
+        editing = Constants.pref.getBoolean(Constants.PREF_SV_Boolean_Editing, false);
 
         if(editing){
             btnCreateUpdateCard.setText("Update");
-            cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_SelectedStack, null), false);
-            card = cardXmlParser.getCards().get(Constants.pref.getInt(Constants.PREF_SV_SelectedCardPosition, 0));
-            Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
+            cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_String_SelectedStack, null), false);
+            card = cardXmlParser.getCards().get(Constants.pref.getInt(Constants.PREF_SV_String_SelectedCardPosition, 0));
+            Constants.pref.putBoolean(Constants.PREF_SV_Boolean_Editing, false);
 
             tfCardTitle.setText(card.getCardTitle());
             taCardDescription.setText(card.getCardDescription());
@@ -55,7 +55,7 @@ public class CardCreator extends Common_ControllerMethods{
 
     public void btnAction_CreateCard(ActionEvent btn){
         if(!taCardCopyData.getText().isEmpty() && !editing){
-            cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_SelectedStack, null), false);
+            cardXmlParser = new FM_CardManager_XML(Constants.pref.get(Constants.PREF_SV_String_SelectedStack, null), false);
             card = new FM_CardManager_Info(tfCardTitle.getText(), taCardDescription.getText(), taCardCopyData.getText());
 
             cardXmlParser.getCards().add(card);
@@ -69,18 +69,17 @@ public class CardCreator extends Common_ControllerMethods{
 
             screen_changeDynamic(btn, Constants.FILE_FXML_CardEditor, bpContainer_All);
         }else{
-            toast.createToast("Fill in Data Filed");
+            toast.createShortToast("Fill in Data Filed");
         }
     }
 
-    public void btnAction_Cancel(ActionEvent btn){
+    public void btnAction_Cancel(ActionEvent event){
         String scene;
 
         if(editing){
-            scene = Constants.FILE_FXML_CardEditor;
+            screen_changeDynamic(event, Constants.FILE_FXML_CardEditor, bpContainer_All);
         }else{
-            scene = Constants.FILE_FXML_StackViewer;
+            screen_checkAlwaysOnTop(Constants.PREF_SV_Boolean_AlwaysOnTop, event, FILE_FXML_StackViewer, bpContainer_All);
         }
-        screen_changeDynamic(btn, scene, bpContainer_All);
     }
 }

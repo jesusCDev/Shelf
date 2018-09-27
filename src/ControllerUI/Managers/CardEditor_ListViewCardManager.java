@@ -1,4 +1,4 @@
-package ControllerUI;
+package ControllerUI.Managers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.DefaultMethods.ToastCreator;
@@ -65,7 +65,7 @@ public class CardEditor_ListViewCardManager {
     }
 
     public void moveCard(int oldPosition, int newPosition){
-        toast.createToast(cards.get(oldPosition).getCardTitle() + " moved to position " + (newPosition + 1));
+        toast.createShortToast(cards.get(oldPosition).getCardTitle() + " moved to position " + (newPosition + 1));
 
         FM_CardManager_Info[] newCards = new FM_CardManager_Info[cards.size()];
 
@@ -107,8 +107,8 @@ public class CardEditor_ListViewCardManager {
     }
 
     private void editCard(MouseEvent e, int cardPosition){
-        Constants.pref.putBoolean(Constants.PREF_SV_Editing, true);
-        Constants.pref.putInt(Constants.PREF_SV_SelectedCardPosition, cardPosition);
+        Constants.pref.putBoolean(Constants.PREF_SV_Boolean_Editing, true);
+        Constants.pref.putInt(Constants.PREF_SV_String_SelectedCardPosition, cardPosition);
 
         Common_ControllerMethods ccm = new Common_ControllerMethods();
         ccm.screen_changeDynamicAlwaysOffTop(e, Constants.FILE_FXML_CardCreator, bpAll);

@@ -166,8 +166,8 @@ public class Home_StackManager implements Constants {
             vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    pref.put(PREF_SV_StackViewList,stackId);
-                    ccm.screen_changeDynamicAlwaysOnTop(event, FILE_FXML_StackViewer, bpAll);
+                    pref.put(PREF_SV_String_StackViewList,stackId);
+                    ccm.screen_checkAlwaysOnTop(Constants.PREF_SV_Boolean_AlwaysOnTop, event, FILE_FXML_StackViewer, bpAll);
                 }
             });
         }else{
@@ -175,8 +175,8 @@ public class Home_StackManager implements Constants {
             vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    pref.putBoolean(PREF_SV_Editing, true);
-                    pref.put(PREF_SV_SelectedStack, stackId);
+                    pref.putBoolean(PREF_SV_Boolean_Editing, true);
+                    pref.put(PREF_SV_String_SelectedStack, stackId);
                     ccm.screen_changeDynamic(event, FILE_FXML_StackCreator, bpAll);
                 }
             });

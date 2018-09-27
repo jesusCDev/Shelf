@@ -14,7 +14,7 @@ import javafx.scene.layout.VBox;
 
 import java.util.*;
 
-import static assets.Constants.PREF_SV_StackViewList;
+import static assets.Constants.PREF_SV_String_StackViewList;
 import static assets.Constants.pref;
 
 public class StackSelector_StackManager {
@@ -35,7 +35,7 @@ public class StackSelector_StackManager {
     }
 
     private void setSelectedStacks(){
-        for(String selectedStackID: pref.get(PREF_SV_StackViewList, null).split(",")){
+        for(String selectedStackID: pref.get(PREF_SV_String_StackViewList, null).split(",")){
             stacks.getStack(selectedStackID).setSelected(true);
             selectedStackIDs.push(stacks.getStack(selectedStackID));
         }
@@ -56,7 +56,7 @@ public class StackSelector_StackManager {
             sb.append(value.getStackID());
             sb.append(",");
         }
-        pref.put(PREF_SV_StackViewList, sb.toString());
+        pref.put(PREF_SV_String_StackViewList, sb.toString());
     }
 
     private void setBtnAction_UnSelectCard(String stackID){

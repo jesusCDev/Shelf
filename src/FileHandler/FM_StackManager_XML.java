@@ -22,7 +22,7 @@ public class FM_StackManager_XML extends FM_XMLParser {
     private File xmlDocument;
 
     public FM_StackManager_XML(boolean creatingANewDocument){
-        xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + Constants.DOC_Stack_XML);
+        xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, null) + Constants.DOC_Stack_XML);
         if(!creatingANewDocument){
             getXMLInfo();
         }
@@ -165,7 +165,7 @@ public class FM_StackManager_XML extends FM_XMLParser {
     }
 
     private void deleteStackTextFile(String stackName){
-        File f = new File(Constants.pref.get(Constants.PREF_SV_MainPath, null) + File.separator + stackName + ".xml");
+        File f = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, null) + File.separator + stackName + ".xml");
         f.delete();
     }
 

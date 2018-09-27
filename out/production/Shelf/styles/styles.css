@@ -36,7 +36,7 @@ Purple Lettering: #6157AC
     -fx-padding: 0 10 0 10;
 }
 .footer{
-    -fx-padding: 0 0 0 0;
+    -fx-padding: 10 10 10 10;
 }
 .button{
     -fx-cursor: hand;
@@ -153,11 +153,11 @@ Purple Lettering: #6157AC
     -fx-background-color: transparent;
     -fx-border-color: white;
     -fx-text-fill: White;
-    -fx-font-size: 16px;
+    -fx-font-size: 14px;
 }
 .btnDefault .label{
     -fx-text-fill: White;
-    -fx-font-size: 16px;
+    -fx-font-size: 14px;
 }
 .btnDefault: hover{
     -fx-cursor: hand;

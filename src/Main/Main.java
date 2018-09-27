@@ -1,7 +1,7 @@
 package Main;
 
-import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.Common_DefalutMethods;
+import ControllerUI.DefaultMethods.Common_DefaultMethods;
+import FileHandler.FM_FileChecker;
 import assets.Constants;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,18 +11,18 @@ import javafx.stage.Stage;
 
 public class Main extends Application implements Constants {
 
+    Common_DefaultMethods cdm = new Common_DefaultMethods();
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 
         String xmlFile;
-        if(pref.getBoolean(PREF_SV_FirstTimeUsingApp, true)){
+        FM_FileChecker ffc = new FM_FileChecker();
+        if(pref.getBoolean(PREF_SV_Boolean_FirstTimeUsingApp, true) && ffc.checkIfMainDocumentExistOrHasBeenMessWith()){
             xmlFile = FILE_FXML_FileSetup;
+            cdm.hardRest();
         }else{
-            // TODO CHECK IF THE FILE IS STILL HERE, CHECK IF IT WORKS
-            // TODO CHECK OTHER FILES IF THEY WORK
-            if(!checkIfMainFileExistAndWorks()){
-
-            }
+            ffc.checkIfStacksExistOrHaveBeenMessedWith();
             xmlFile = FILE_FXML_Main;
         }
 
@@ -36,7 +36,6 @@ public class Main extends Application implements Constants {
 
     @Override
     public void stop(){
-        Common_DefalutMethods cdm = new Common_DefalutMethods();
         cdm.resetValues();
     }
 
@@ -45,7 +44,4 @@ public class Main extends Application implements Constants {
         launch(args);
     }
 
-    private boolean checkIfMainFileExistAndWorks(){
-        return true;
-    }
 }

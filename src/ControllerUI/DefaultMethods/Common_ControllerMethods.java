@@ -37,6 +37,21 @@ public class Common_ControllerMethods implements Constants{
      // SCREEN METHODS
      *************************************************/
 
+    public void screen_checkAlwaysOnTop(String prefID, MouseEvent event, String fxmlScreen, BorderPane bpAll){
+        if(pref.getBoolean(prefID, false)){
+            screen_changeDynamicAlwaysOnTop(event, fxmlScreen, bpAll);
+        }else{
+            screen_changeDynamicAlwaysOffTop(event, fxmlScreen, bpAll);
+        }
+    }
+    public void screen_checkAlwaysOnTop(String prefID, ActionEvent event, String fxmlScreen, BorderPane bpAll){
+        if(pref.getBoolean(prefID, false)){
+            screen_changeDynamicAlwaysOnTop(event, fxmlScreen, bpAll);
+        }else{
+            screen_changeDynamicAlwaysOffTop(event, fxmlScreen, bpAll);
+        }
+    }
+
     protected void screen_SetSize(BorderPane bodyPane){
 
         if(!pref.getBoolean(PREF_SV_ScreenMax, false)){
@@ -331,7 +346,7 @@ public class Common_ControllerMethods implements Constants{
     }
 
     // PROGRAMMING METHODS
-    private void p(String message){
+    private void pop(String message){
         System.out.println(message);
     }
 }

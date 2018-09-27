@@ -3,38 +3,17 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StackView">
-   <top>
-      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
-         <left>
-            <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" styleClass="btnDefault" text="Cancel" BorderPane.alignment="CENTER" />
-         </left>
-         <center>
-            <Label text="Language Viewer" BorderPane.alignment="CENTER">
-               <styleClass>
-                  <String fx:value="title_1" />
-                  <String fx:value="outlabels" />
-               </styleClass></Label>
-         </center>
-         <right>
-            <HBox BorderPane.alignment="CENTER">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" styleClass="btnDefault" text="+" />
-               </children>
-            </HBox>
-         </right>
-         <styleClass>
-            <String fx:value="container" />
-            <String fx:value="header" />
-         </styleClass>
-      </BorderPane>
-   </top>
    <center>
        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" BorderPane.alignment="CENTER">
          <content>
@@ -53,4 +32,43 @@
    <bottom>
       <StackPane fx:id="spToast" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="footer" BorderPane.alignment="CENTER" />
    </bottom>
+   <top>
+      <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAction_GoBackToMainMenu" styleClass="btnDefault" text="Cancel" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="hbContainer" GridPane.columnIndex="2">
+               <children>
+                  <RadioButton fx:id="rbTurnOnOffAlwaysOnTop" mnemonicParsing="false" onAction="#rbTurnOnOffAlwaysOnTop" text="Always On Top" />
+                  <Button mnemonicParsing="false" onAction="#btnAction_CreateNewCard" styleClass="btnDefault" text="+" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="Language Viewer">
+                     <styleClass>
+                        <String fx:value="title_1" />
+                        <String fx:value="outlabels" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="header" />
+            <String fx:value="container" />
+         </styleClass>
+      </GridPane>
+   </top>
 </BorderPane>

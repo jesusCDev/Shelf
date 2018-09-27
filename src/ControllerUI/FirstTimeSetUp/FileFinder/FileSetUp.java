@@ -54,9 +54,9 @@ public class FileSetUp extends Common_ControllerMethods {
             FirstTimeSetUp fts = new FirstTimeSetUp();
             String mainFilePath = fts.fixFilePath(tf_FileLocation.getText());
 
-            if(fts.createStackXMLFile(mainFilePath)){
+            if(fts.createFolderForProject(mainFilePath)){
                 fts.setMainPathValue(mainFilePath);
-                fts.setFirstTimePref(true);
+                fts.setFirstTimePref(false);
                 fts.createDefaultStacks();
                 screen_changeNormal(e, FILE_FXML_Main);
             }

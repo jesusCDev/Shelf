@@ -17,7 +17,7 @@ public class ToastCreator {
         sp.getStyleClass().add("toast");
     }
 
-    public void createToast(String message){
+    public void createShortToast(String message){
         deleteToast();
 
         sp.getChildren().clear();
@@ -27,6 +27,21 @@ public class ToastCreator {
 
         timeline = new Timeline(new KeyFrame(
                 Duration.millis(3000),
+                ae -> deleteToast()));
+        timeline.play();
+
+    }
+
+    public void crearteLongToast(String message){
+        deleteToast();
+
+        sp.getChildren().clear();
+        Label toastMessage = new Label(message);
+        toastMessage.setStyle("-fx-font-size: 0");
+        sp.getChildren().add(toastMessage);
+
+        timeline = new Timeline(new KeyFrame(
+                Duration.millis(6000),
                 ae -> deleteToast()));
         timeline.play();
 

@@ -1,6 +1,5 @@
 package ControllerUI.Managers;
 
-import ControllerUI.CardEditor_ListViewCardManager;
 import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.DefaultMethods.ToastCreator;
@@ -8,15 +7,12 @@ import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
 import assets.Constants;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
@@ -59,7 +55,7 @@ public class StackView_CardManager {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Constants.pref.put(Constants.PREF_SV_SelectedStack, stackID);
+                Constants.pref.put(Constants.PREF_SV_String_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
                 ccm.screen_changeDynamicAlwaysOffTop(event, Constants.FILE_FXML_CardCreator, bpAll);
             }
@@ -80,7 +76,7 @@ public class StackView_CardManager {
 
                 new CardEditor_ListViewCardManager(stackID);
 
-                Constants.pref.put(Constants.PREF_SV_SelectedStack, stackID);
+                Constants.pref.put(Constants.PREF_SV_String_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
                 ccm.screen_changeDynamicAlwaysOffTop(event, Constants.FILE_FXML_CardEditor, bpAll);
             }
@@ -101,7 +97,7 @@ public class StackView_CardManager {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                toast.createToast(card.getCardCopyData());
+                toast.createShortToast(card.getCardCopyData());
                 writeToClipboard(card.getCardCopyData());
             }
         });

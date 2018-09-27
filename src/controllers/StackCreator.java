@@ -43,20 +43,20 @@ public class StackCreator extends Common_ControllerMethods{
 
         screen_SetSize(bpContainer_All);
 
-        StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Editing, false);
+        StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Boolean_Editing, false);
         mainStackXmlParser= new FM_StackManager_XML(false);
 
         toast = new ToastCreator(spToast);
 
         if(StackGettingEdited){
-            StackID = Constants.pref.get(Constants.PREF_SV_SelectedStack, null);
+            StackID = Constants.pref.get(Constants.PREF_SV_String_SelectedStack, null);
             btnCreateStack.setText("Update");
 
             lbStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
             tfStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
             taStackDescription.setText(mainStackXmlParser.getStack(StackID).getStackDescription());
 
-            Constants.pref.putBoolean(Constants.PREF_SV_Editing, false);
+            Constants.pref.putBoolean(Constants.PREF_SV_Boolean_Editing, false);
         }
     }
 
@@ -82,7 +82,7 @@ public class StackCreator extends Common_ControllerMethods{
             mainStackXmlParser.updateXMLFile();
             screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
         }else{
-            toast.createToast("Fill In Title Field");
+            toast.createShortToast("Fill In Title Field");
         }
     }
 
