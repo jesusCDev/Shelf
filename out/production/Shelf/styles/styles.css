@@ -35,9 +35,6 @@ Purple Lettering: #6157AC
 .body{
     -fx-padding: 0 10 0 10;
 }
-.footer{
-    -fx-padding: 10 10 10 10;
-}
 .button{
     -fx-cursor: hand;
 }

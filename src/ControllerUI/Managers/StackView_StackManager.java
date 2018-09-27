@@ -15,7 +15,7 @@ public class StackView_StackManager {
         ArrayList<VBox> stackContainers = new ArrayList<>();
 
         for(String stackID: selectedStackIDs){
-            stackContainers.add(new StackView_CardManager(bpAll, vbAll, new VBox(), stackID, spToast).getContainer());
+            stackContainers.add(new StackView_CardManager(bpAll, vbAll, new VBox(), stackID, spToast, selectedStackIDs.length).getContainer());
         }
 
 

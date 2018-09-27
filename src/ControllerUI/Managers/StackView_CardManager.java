@@ -5,6 +5,8 @@ import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import ControllerUI.DefaultMethods.ToastCreator;
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
+import FileHandler.FM_StackManager_Info;
+import FileHandler.FM_StackManager_XML;
 import assets.Constants;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -17,6 +19,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class StackView_CardManager {
 
@@ -27,8 +30,10 @@ public class StackView_CardManager {
     private VBox vbContainer;
     private static int btnSize = Constants.stackSize; // px
     private BorderPane bpAll;
+    private int numOfContainers = 0;
 
-    public StackView_CardManager(BorderPane bpAll, VBox vbAll, VBox vbContainer, String stackID, StackPane spToast){
+    public StackView_CardManager(BorderPane bpAll, VBox vbAll, VBox vbContainer, String stackID, StackPane spToast, int numOfContainers){
+        this.numOfContainers = numOfContainers;
         this.bpAll = bpAll;
         toast = new ToastCreator(spToast);
         this.vbAll = vbAll;
@@ -38,11 +43,27 @@ public class StackView_CardManager {
 
         // Grab values from xml file
         cards = new FM_CardManager_XML(stackID, false);
+        vbContainer.getChildren().add(create_stackTitle(stackID));
         vbContainer.getChildren().add(create_createCardBtn(stackID, btnSize));
         if(cards.getCards().size() > 0){
+            // TODO FOR SOME REASON THIS ISN'T BREAKING THE APP
+            System.out.println(bpAll.getWidth());
             vbContainer.getChildren().add(createStack(800));
         }
         vbContainer.getChildren().add(create_EditStackBtn(stackID, btnSize));
+    }
+
+    private VBox create_stackTitle(String stackID){
+        FM_StackManager_XML fsm = new FM_StackManager_XML(false);
+        String title =  fsm.getStack(stackID).getStackTitle();
+        VBox vb = new VBox();
+        Label lb = new Label(title);
+        lb.getStyleClass().add("outlabels");
+        lb.getStyleClass().add("title_2");
+        vb.setAlignment(Pos.CENTER);
+        vb.getChildren().add(lb);
+        vb.setStyle("-fx-border-color: transparent transparent white transparent");
+        return vb;
     }
 
     public VBox getContainer(){
@@ -124,7 +145,7 @@ public class StackView_CardManager {
     private VBox createStack(double windowSize){
         // Column Creator class will generate resizable columns
         ColumnCreator cc = new ColumnCreator(new VBox(), btnSize);
-        cc.addListenerWithOutSideCotnainer(vbAll);
+        cc.addListenerWithOutSideCotnainerContainers(vbAll, numOfContainers);
 
         // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();

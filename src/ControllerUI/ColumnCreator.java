@@ -79,6 +79,7 @@ public class ColumnCreator {
     public void removeListener(){
         container.widthProperty().removeListener(cl);
     }
+
     public void addListenerWithOutSideCotnainer(VBox vbAll){
         cl = new ChangeListener<Number>() {
             @Override
@@ -97,6 +98,26 @@ public class ColumnCreator {
 
         vbAll.widthProperty().addListener(cl);
     }
+
+    public void addListenerWithOutSideCotnainerContainers(VBox vbAll, int numOfContainers){
+        cl = new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                if(vbContainer.size() > 0){
+                    int currentGirdColumbs = ((int)Math.floor((newValue.intValue()/numOfContainers)/ colSize));
+                    if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
+                        container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
+                        lastGridNumber = currentGirdColumbs;
+                    }
+                }else{
+                    container.getChildren().clear();
+                }
+            }
+        };
+
+        vbAll.widthProperty().addListener(cl);
+    }
+
     public void addListener(){
         cl = new ChangeListener<Number>() {
             @Override

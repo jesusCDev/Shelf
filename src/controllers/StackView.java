@@ -37,8 +37,6 @@ public class StackView extends Common_ControllerMethods {
     @FXML
     public void btnAction_CreateNewCard(ActionEvent e){
         screen_changeDynamicAlwaysOffTop(e, Constants.FILE_FXML_StackSelector, bpContainer_All);
-
-//        screen_changeNormalTurnOfAlwaysOnTop(e, Constants.FILE_FXML_CardCreator);
     }
 
     @FXML
