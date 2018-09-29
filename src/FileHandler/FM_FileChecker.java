@@ -1,17 +1,25 @@
 package FileHandler;
 
 import assets.Constants;
+import assets.Constants_Prefs;
 import org.jdom2.input.JDOMParseException;
 
 import java.io.File;
 import java.util.ArrayList;
 
-public class FM_FileChecker {
+/**
+ * File Checker - Checks File Access and Removes Clutter
+ */
+public class FM_FileChecker implements Constants_Prefs{
 
+    /**
+     * Checks Main Document if it works
+     * @return
+     */
     public boolean checkIfMainDocumentExistOrHasBeenMessWith() {
-        if (new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, null)).exists()) {
+        if (new File(pref.get(PREF_SV_String_MainPath, null)).exists()) {
             try {
-                FM_StackManager_XML fsm = new FM_StackManager_XML(false);
+                new FM_StackManager_XML(false);
                 return true;
             }catch (Exception e){
                 return false;
@@ -20,6 +28,9 @@ public class FM_FileChecker {
         return false;
     }
 
+    /**
+     * Checks if stack exist and work
+     */
     public void checkIfStacksExistOrHaveBeenMessedWith(){
         FM_StackManager_XML fsm = new FM_StackManager_XML(false);
         for(FM_StackManager_Info stack: fsm.getStacks()){
@@ -31,11 +42,16 @@ public class FM_FileChecker {
         deleteAllOtherFiles(fsm.getStacks());
     }
 
+    /**
+     * Checks cards in stack
+     * @param stackID
+     * @return
+     */
     private boolean checkStack(String stackID){
-        File file = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, "") + stackID + ".xml");
+        File file = new File(pref.get(PREF_SV_String_MainPath, "") + stackID + ".xml");
         if(file.exists()){
             try{
-                FM_CardManager_XML fcm = new FM_CardManager_XML(stackID, false);
+                new FM_CardManager_XML(stackID, false);
                 return true;
             }catch (Exception e){
                 return false;
@@ -44,21 +60,35 @@ public class FM_FileChecker {
         return false;
     }
 
+    /**
+     * Deletes File if project isn't part of project
+     * @param fsm
+     */
     private void deleteAllOtherFiles(ArrayList<FM_StackManager_Info> fsm){
-        File mainDir = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, ""));
-        for(File file: mainDir.listFiles()){
-            if(!checkWithOfficalPaths(fsm, file.getAbsolutePath().toString())){
-                file.delete();
+        File mainDir = new File(pref.get(PREF_SV_String_MainPath, ""));
+        try {
+            for (File file : mainDir.listFiles()) {
+                if (!checkIfFileIsPartOfProject(fsm, file.getAbsolutePath().toString())) {
+                    file.delete();
+                }
             }
+        }catch (NullPointerException e){
+            e.printStackTrace();
         }
     }
 
-    private Boolean checkWithOfficalPaths(ArrayList<FM_StackManager_Info> fsm, String filePath){
-        if(filePath.equalsIgnoreCase(Constants.pref.get(Constants.PREF_SV_String_MainPath, "") + Constants.DOC_Stack_XML)){
+    /**
+     * Checks File if it is part of proejct
+     * @param fsm
+     * @param filePath
+     * @return
+     */
+    private Boolean checkIfFileIsPartOfProject(ArrayList<FM_StackManager_Info> fsm, String filePath){
+        if(filePath.equalsIgnoreCase(pref.get(PREF_SV_String_MainPath, "") + Constants.DOC_Stack_XML)){
             return true;
         }
         for(FM_StackManager_Info stack: fsm){
-            if(filePath.equalsIgnoreCase(Constants.pref.get(Constants.PREF_SV_String_MainPath, "") + stack.getStackID() + ".xml")){
+            if(filePath.equalsIgnoreCase(pref.get(PREF_SV_String_MainPath, "") + stack.getStackID() + ".xml")){
                 return true;
             }
         }

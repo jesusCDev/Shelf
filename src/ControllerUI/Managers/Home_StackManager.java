@@ -5,6 +5,7 @@ import ControllerUI.DefaultMethods.Common_ControllerMethods;
 import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
+import assets.Constants_Prefs;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -18,11 +19,12 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
-public class Home_StackManager implements Constants {
+/**
+ * Manager That Keep Track Of Stack Views
+ */
+public class Home_StackManager implements Constants_Prefs {
 
-    private static int StackSize = Constants.stackSize;
-
-    private String[] selectedStacksID;
+    private static int STACK_SIZE = Constants.STACK_SIZE;
     private FM_StackManager_XML stacks;
     private VBox vbContainer_Fav;
     private VBox vbContainer_Main;
@@ -31,64 +33,81 @@ public class Home_StackManager implements Constants {
     private ColumnCreator ccFav;
     private ColumnCreator ccMain;
 
-    public Home_StackManager(BorderPane bpAll, VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks, String[] selectedStacksID){
+    public Home_StackManager(BorderPane bpAll, VBox vbContainer_Fav, VBox vbContainer_Main, FM_StackManager_XML stacks){
         this.bpAll = bpAll;
         this.vbContainer_Fav = vbContainer_Fav;
         this.vbContainer_Main = vbContainer_Main;
         this.stacks = stacks;
-        this.selectedStacksID = selectedStacksID;
     }
 
+    /********** Col Methods **********/
+    /**
+     * Removes Listeners After Cols Have Been Recreated
+     * @param cc
+     */
+    private void removeListener(ColumnCreator cc){
+        cc.removeListener();
+    }
+    /**
+     * Recreates Cols For FAv
+     * @param vb
+     * @param stacks
+     * @param numOfStacks
+     * @param editMode
+     * @param windowSize
+     */
     public void recreateColsAndCheckFav(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode, double windowSize){
         removeListener(ccFav);
         if(numOfStacks != 0){
-            ccFav = new ColumnCreator(vb, StackSize);
+            ccFav = new ColumnCreator(vb, STACK_SIZE);
             recreateCols(vb, stacks, editMode, ccFav, windowSize);
         }else{
             vb.getChildren().clear();
         }
     }
 
-    private void removeListener(ColumnCreator cc){
-        try{
-            cc.removeListener();
-        }catch (NullPointerException e){
 
-        }
-    }
-
+    /**
+     * Recreates Col For Main
+     * @param vb
+     * @param stacks
+     * @param numOfStacks
+     * @param editMode
+     * @param windowSize
+     */
     public void recreateColsAndCheckMain(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, boolean editMode, double windowSize){
         removeListener(ccMain);
         if(numOfStacks != 0){
-            ccMain = new ColumnCreator(vb, StackSize);
+            ccMain = new ColumnCreator(vb, STACK_SIZE);
             recreateCols(vb, stacks, editMode, ccMain, windowSize);
         }else{
             vb.getChildren().clear();
         }
     }
 
-
+    /**
+     * Recreates Col
+     * @param vb
+     * @param stacks
+     * @param editMode
+     * @param cc
+     * @param windowSize
+     */
     private void recreateCols(VBox vb, ArrayList<FM_StackManager_Info> stacks, boolean editMode, ColumnCreator cc, double windowSize){
         vb.getChildren().clear();
-
-        // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
 
-        // Column Creator class will generate resizable columns
         cc.addListener();
-
         for(FM_StackManager_Info stack: stacks){
-            vbCol.add(createVBoxCreateMainBtn(stack.getStackTitle(), stack.getStackDescription(), stack.getStackID(), StackSize, editMode));
+            vbCol.add(createVBoxCreateMainBtn(stack.getStackTitle(), stack.getStackDescription(), stack.getStackID(), STACK_SIZE, editMode));
         }
-
         cc.addVBoxArrayContainersToArray(vbCol);
-
-        // Create Columns
         cc.createColumns(windowSize);
     }
 
+    /********** Stack Container **********/
     /**
-     * Creates the Containers that will be shown in the columns in the container
+     * Creates Views for Stacks
      * @param title
      * @param description
      * @return
@@ -99,20 +118,14 @@ public class Home_StackManager implements Constants {
 
         vb.getStyleClass().add("stack");
         vb.getStyleClass().add("vbContainer");
-
-        // Clicking on vb field sends user to Stack view
         setVbAction(vb, stackId, editMode);
-        // Create title
+
         Label lbTitle = new Label(title);
         lbTitle.getStyleClass().add("card_title_1");
 
-        // create descriptiontitle
         Label lbDescription = new Label(description);
         lbDescription.getStyleClass().add("card_title_2");
-        // create favorite buttons
         HBox hbButton = new HBox();
-        // TODO ADD AN ICON HERE
-        // Clicking the favorite btn allows user to add their most used Stack to the top
         Button btn = new Button();
         btn.getStyleClass().add("btnFav");
         setBtnAction(btn, stackId, editMode);
@@ -120,10 +133,7 @@ public class Home_StackManager implements Constants {
         hbButton.getChildren().add(btn);
         hbButton.setAlignment(Pos.TOP_RIGHT);
 
-        // Set sb Styles
         vb.setPrefWidth(buttonSize);
-
-        // Add vb
         vb.getChildren().add(lbTitle);
         vb.getChildren().add(lbDescription);
         vb.getChildren().add(hbButton);
@@ -131,7 +141,12 @@ public class Home_StackManager implements Constants {
         return vb;
     }
 
-
+    /**
+     * Recreates cols with btn actions depending on action
+     * @param btn
+     * @param stackId
+     * @param editMode
+     */
     private void setBtnAction(Button btn, String stackId, boolean editMode){
         if(!editMode){
             btn.setText("Fav");
@@ -159,31 +174,31 @@ public class Home_StackManager implements Constants {
         }
     }
 
+    /**
+     * Sets stack view action
+     * @param vb
+     * @param stackId
+     * @param editMode
+     */
     private void setVbAction(VBox vb, String stackId, boolean editMode){
         Common_ControllerMethods ccm = new Common_ControllerMethods();
-
         if(!editMode){
             vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     pref.put(PREF_SV_String_StackViewList,stackId);
-                    ccm.screen_checkAlwaysOnTop(Constants.PREF_SV_Boolean_AlwaysOnTop, event, FILE_FXML_StackViewer, bpAll);
+                    ccm.screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, event, Constants.FILE_FXML_StackViewer, bpAll);
                 }
             });
         }else{
-            // TODO THIS METHOD WILL BE FOR EDITING THE MAIN CARD
             vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     pref.putBoolean(PREF_SV_Boolean_Editing, true);
                     pref.put(PREF_SV_String_SelectedStack, stackId);
-                    ccm.screen_changeDynamic(event, FILE_FXML_StackCreator, bpAll);
+                    ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_StackCreator, event, bpAll, false);
                 }
             });
         }
-    }
-
-    private void pop(String message){
-        System.out.println("\n" + message + "\n");
     }
 }

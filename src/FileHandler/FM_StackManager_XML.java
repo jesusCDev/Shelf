@@ -1,6 +1,7 @@
 package FileHandler;
 
 import assets.Constants;
+import assets.Constants_Prefs;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.XMLOutputter;
@@ -15,14 +16,17 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class FM_StackManager_XML extends FM_XMLParser {
+/**
+ * Stack XML Document manager
+ */
+public class FM_StackManager_XML extends FM_XMLParser implements Constants_Prefs{
 
     private ArrayList<FM_StackManager_Info> stacks = new ArrayList<>();
 
     private File xmlDocument;
 
     public FM_StackManager_XML(boolean creatingANewDocument){
-        xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, null) + Constants.DOC_Stack_XML);
+        xmlDocument = new File(pref.get(PREF_SV_String_MainPath, null) + Constants.DOC_Stack_XML);
         if(!creatingANewDocument){
             getXMLInfo();
         }
@@ -165,7 +169,7 @@ public class FM_StackManager_XML extends FM_XMLParser {
     }
 
     private void deleteStackTextFile(String stackName){
-        File f = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, null) + File.separator + stackName + ".xml");
+        File f = new File(pref.get(PREF_SV_String_MainPath, null) + File.separator + stackName + ".xml");
         f.delete();
     }
 

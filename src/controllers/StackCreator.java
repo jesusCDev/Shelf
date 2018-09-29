@@ -1,12 +1,13 @@
 package controllers;
 
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.ToastCreator;
+import ControllerUI.DefaultMethods.UI_Feedback.SnackBar;
+import ControllerUI.DefaultMethods.UI_Feedback.Toast;
 import FileHandler.FM_CardManager_XML;
 import FileHandler.FM_StackManager_XML;
 import FileHandler.FM_StackManager_Info;
-import FileHandler.FM_StackManager_XML;
 import assets.Constants;
+import assets.Constants_Prefs;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,9 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
-import java.util.Random;
-
-public class StackCreator extends Common_ControllerMethods{
+public class StackCreator extends Common_ControllerMethods implements Constants_Prefs{
 
     @FXML
     Label lbStackTitle;
@@ -30,42 +29,49 @@ public class StackCreator extends Common_ControllerMethods{
     Button btnCreateStack;
     @FXML
     BorderPane bpContainer_All;
-    @FXML
-    StackPane spToast;
 
     private Boolean StackGettingEdited;
-    private String StackID;
+    private String stackID;
     private FM_StackManager_XML mainStackXmlParser;
-    private ToastCreator toast;
+    private Toast toast;
 
+    /**
+     * Sets default values
+     * Sets Up Toast
+     * Sets Values to fields if a card is being edited
+     */
     @FXML
     public void initialize(){
-
         screen_SetSize(bpContainer_All);
 
-        StackGettingEdited = Constants.pref.getBoolean(Constants.PREF_SV_Boolean_Editing, false);
+        StackGettingEdited = pref.getBoolean(PREF_SV_Boolean_Editing, false);
         mainStackXmlParser= new FM_StackManager_XML(false);
-
-        toast = new ToastCreator(spToast);
+        toast = new Toast();
 
         if(StackGettingEdited){
-            StackID = Constants.pref.get(Constants.PREF_SV_String_SelectedStack, null);
-            btnCreateStack.setText("Update");
+            btnCreateStack.setText(Constants.TEXT_Update);
+            pref.putBoolean(PREF_SV_Boolean_Editing, false);
+            FM_StackManager_Info stack = mainStackXmlParser.getStack(pref.get(PREF_SV_String_SelectedStack, ""));
 
-            lbStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
-            tfStackTitle.setText(mainStackXmlParser.getStack(StackID).getStackTitle());
-            taStackDescription.setText(mainStackXmlParser.getStack(StackID).getStackDescription());
-
-            Constants.pref.putBoolean(Constants.PREF_SV_Boolean_Editing, false);
+            lbStackTitle.setText(stack.getStackTitle());
+            tfStackTitle.setText(stack.getStackTitle());
+            taStackDescription.setText(stack.getStackDescription());
+            stackID = stack.getStackID();
         }
     }
 
-    public void btnActionCreateStack(ActionEvent btn){
+    /********** Onscreen Button Actions **********/
+
+    /**
+     * Creates Stack
+     * Updates Stack
+     */
+    @FXML
+    public void btnActionCreateStack(ActionEvent e){
 
         if(!tfStackTitle.getText().isEmpty() && !StackGettingEdited){
-//            FM_StackManager_XML StackXmlParser = new FM_StackManager_XML(true);
             FM_StackManager_Info stack = new FM_StackManager_Info(tfStackTitle.getText(), taStackDescription.getText(), Boolean.toString(false), mainStackXmlParser.idCreator(16));
-//            StackXmlParser.createXMLFile();
+
             mainStackXmlParser.getStacks().add(stack);
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();
@@ -73,20 +79,26 @@ public class StackCreator extends Common_ControllerMethods{
             FM_CardManager_XML cardFile = new FM_CardManager_XML(stack.getStackID(), true);
             cardFile.createXMLFile();
 
-            screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, bpContainer_All, false);
         }else if(!tfStackTitle.getText().isEmpty() && StackGettingEdited){
-            mainStackXmlParser.getStack(StackID).setStackTitle(tfStackTitle.getText());
-            mainStackXmlParser.getStack(StackID).setStackDescrption(taStackDescription.getText());
+            mainStackXmlParser.getStack(stackID).setStackTitle(tfStackTitle.getText());
+            mainStackXmlParser.getStack(stackID).setStackDescrption(taStackDescription.getText());
 
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();
-            screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
+
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, bpContainer_All, false);
         }else{
-            toast.createShortToast("Fill In Title Field");
+            toast.showMessage(Constants.TEXT_FillTitle, Constants.WINDOW_TITLE_Error);
         }
     }
 
-    public void btnActionCancel(ActionEvent btn){
-        screen_changeDynamic(btn, Constants.FILE_FXML_Main, bpContainer_All);
+    /**
+     * Returns user to Main Screen
+     * @param e
+     */
+    @FXML
+    public void btnActionCancel(ActionEvent e){
+        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, bpContainer_All, false);
     }
 }

@@ -1,7 +1,11 @@
 package ControllerUI.FirstTimeSetUp;
 
+import FileHandler.FM_CardManager_Info;
+import FileHandler.FM_StackManager_Info;
+
 public class DefaultStackValues {
 
+    /********** Java Comment Blocks **********/
     // JAVA
     private static String commentBLock_Title_Java = "Java Comments";
     private static String commentBLock_Description_Java = "Java Basic Comment Separators";
@@ -26,12 +30,13 @@ public class DefaultStackValues {
             "/********** SubSubTitle **********/";
     private static String commentBlock_Description_3_Java = "Titles Small Sections in Section";
 
-    private static DefaultCard[] commentBlockJava_Cards = {new DefaultCard(commentBlock_Title_1_Java, commentBlock_Code_1_Java, commentBlock_Description_1_Java),
-            new DefaultCard(commentBlock_Title_2_Java, commentBlock_Code_2_Java, commentBlock_Description_2_Java),
-            new DefaultCard(commentBlock_Title_3_Java, commentBlock_Code_3_Java, commentBlock_Description_3_Java)};
+    private static FM_CardManager_Info[] commentBlockJava_Cards = {new FM_CardManager_Info(commentBlock_Title_1_Java, commentBlock_Code_1_Java, commentBlock_Description_1_Java),
+            new FM_CardManager_Info(commentBlock_Title_2_Java, commentBlock_Code_2_Java, commentBlock_Description_2_Java),
+            new FM_CardManager_Info(commentBlock_Title_3_Java, commentBlock_Code_3_Java, commentBlock_Description_3_Java)};
 
-    private static DefaultStackContainer commentBlockJava = new DefaultStackContainer(commentBLock_Title_Java, commentBLock_Description_Java, commentBlockJava_Cards);
+    private static FM_StackManager_Info commentBlockJava = new FM_StackManager_Info(commentBLock_Title_Java, commentBLock_Description_Java, commentBlockJava_Cards);
 
+    /********** Java Debugging Code Blocks **********/
     // Java Debugging
     private static String commentBLock_Title_JavaDebugging = "Java Debugging";
     private static String commentBLock_Description_JavaDebugging = "Java Basic Debugging methods";
@@ -54,12 +59,13 @@ public class DefaultStackValues {
                     "}}";
     private static String debuggingBlock_Description_3_Java = "Quick method to print out values for array.";
 
-    private static DefaultCard[] debuggingBlockJava_Cards = {new DefaultCard(debuggingBlock_Title_1_Java, debuggingBlock_Code_1_Java, debuggingBlock_Description_1_Java),
-            new DefaultCard(debuggingBlock_Title_2_Java, debuggingBlock_Code_2_Java, debuggingBlock_Description_2_Java),
-            new DefaultCard(debuggingBlock_Title_3_Java, debuggingBlock_Code_3_Java, debuggingBlock_Description_3_Java)};
+    private static FM_CardManager_Info[] debuggingBlockJava_Cards = {new FM_CardManager_Info(debuggingBlock_Title_1_Java, debuggingBlock_Code_1_Java, debuggingBlock_Description_1_Java),
+            new FM_CardManager_Info(debuggingBlock_Title_2_Java, debuggingBlock_Code_2_Java, debuggingBlock_Description_2_Java),
+            new FM_CardManager_Info(debuggingBlock_Title_3_Java, debuggingBlock_Code_3_Java, debuggingBlock_Description_3_Java)};
 
-    private static DefaultStackContainer debuggingbLockJava = new DefaultStackContainer(commentBLock_Title_JavaDebugging, commentBLock_Description_JavaDebugging, debuggingBlockJava_Cards);
+    private static FM_StackManager_Info debuggingbLockJava = new FM_StackManager_Info(commentBLock_Title_JavaDebugging, commentBLock_Description_JavaDebugging, debuggingBlockJava_Cards);
 
+    /********** HTML Comment Block **********/
     // HTML - Templates?
     private static String commentBLock_Title_HTML = "HTML Comments";
     private static String commentBLock_Description_HTML = "HTML Basic Comment Separators";
@@ -84,12 +90,13 @@ public class DefaultStackValues {
             "<!--------------------------------- TITLE 3 --------------------------------->";
     private static String commentBlock_Description_3_HTML = "Separates Code";
 
-    private static DefaultCard[] commentBlockHTML_Cards = {new DefaultCard(commentBlock_Title_1_HTML, commentBlock_Code_1_HTML, commentBlock_Description_1_HTML),
-            new DefaultCard(commentBlock_Title_2_HTML, commentBlock_Code_2_HTML, commentBlock_Description_2_HTML),
-            new DefaultCard(commentBlock_Title_3_HTML, commentBlock_Code_3_HTML, commentBlock_Description_3_HTML),};
+    private static FM_CardManager_Info[] commentBlockHTML_Cards = {new FM_CardManager_Info(commentBlock_Title_1_HTML, commentBlock_Code_1_HTML, commentBlock_Description_1_HTML),
+            new FM_CardManager_Info(commentBlock_Title_2_HTML, commentBlock_Code_2_HTML, commentBlock_Description_2_HTML),
+            new FM_CardManager_Info(commentBlock_Title_3_HTML, commentBlock_Code_3_HTML, commentBlock_Description_3_HTML),};
 
-    private static DefaultStackContainer commentBlockHTML = new DefaultStackContainer(commentBLock_Title_HTML, commentBLock_Description_HTML, commentBlockHTML_Cards);
+    private static FM_StackManager_Info commentBlockHTML = new FM_StackManager_Info(commentBLock_Title_HTML, commentBLock_Description_HTML, commentBlockHTML_Cards);
 
+    /********** JavaScript/CSS Comment Block **********/
     // CSS JAVASCRIPT
     private static String commentBLock_Title_JavaScriptCSS = "JavaScript & CSS Comments";
     private static String commentBLock_Description_JavaScriptCSS = "Basic Comment Separators";
@@ -114,12 +121,13 @@ public class DefaultStackValues {
             "/******************************** TITLE 3 *************************************/";
     private static String commentBlock_Description_3_JavaScriptCSS = "Separates Code";
 
-    private static DefaultCard[] commentBlockJavaScriptCSS_Cards = {new DefaultCard(commentBlock_Title_1_JavaScriptCSS, commentBlock_Code_1_JavaScriptCSS, commentBlock_Description_1_JavaScriptCSS),
-            new DefaultCard(commentBlock_Title_2_JavaScriptCSS, commentBlock_Code_2_JavaScriptCSS, commentBlock_Description_2_JavaScriptCSS),
-            new DefaultCard(commentBlock_Title_3_JavaScriptCSS, commentBlock_Code_3_JavaScriptCSS, commentBlock_Description_3_JavaScriptCSS),};
+    private static FM_CardManager_Info[] commentBlockJavaScriptCSS_Cards = {new FM_CardManager_Info(commentBlock_Title_1_JavaScriptCSS, commentBlock_Code_1_JavaScriptCSS, commentBlock_Description_1_JavaScriptCSS),
+            new FM_CardManager_Info(commentBlock_Title_2_JavaScriptCSS, commentBlock_Code_2_JavaScriptCSS, commentBlock_Description_2_JavaScriptCSS),
+            new FM_CardManager_Info(commentBlock_Title_3_JavaScriptCSS, commentBlock_Code_3_JavaScriptCSS, commentBlock_Description_3_JavaScriptCSS),};
 
-    private static DefaultStackContainer commentBlockJavaScriptCSS = new DefaultStackContainer(commentBLock_Title_JavaScriptCSS, commentBLock_Description_JavaScriptCSS, commentBlockJavaScriptCSS_Cards);
+    private static FM_StackManager_Info commentBlockJavaScriptCSS = new FM_StackManager_Info(commentBLock_Title_JavaScriptCSS, commentBLock_Description_JavaScriptCSS, commentBlockJavaScriptCSS_Cards);
 
+    /********** Python Comment Block **********/
     // PYTHON
     private static String commentBLock_Title_Python = "Python Comments";
     private static String commentBLock_Description_Python = "Basic Comment Separators";
@@ -146,12 +154,13 @@ public class DefaultStackValues {
     private static String commentBlock_Description_3_Python = "Separates Code";
 
 
-    private static DefaultCard[] commentBlockPython_Cards = {new DefaultCard(commentBlock_Title_1_Python, commentBlock_Code_1_Python, commentBlock_Description_1_Python),
-            new DefaultCard(commentBlock_Title_2_Python, commentBlock_Code_2_Python, commentBlock_Description_2_Python),
-            new DefaultCard(commentBlock_Title_3_Python, commentBlock_Code_3_Python, commentBlock_Description_3_Python),};
+    private static FM_CardManager_Info[] commentBlockPython_Cards = {new FM_CardManager_Info(commentBlock_Title_1_Python, commentBlock_Code_1_Python, commentBlock_Description_1_Python),
+            new FM_CardManager_Info(commentBlock_Title_2_Python, commentBlock_Code_2_Python, commentBlock_Description_2_Python),
+            new FM_CardManager_Info(commentBlock_Title_3_Python, commentBlock_Code_3_Python, commentBlock_Description_3_Python),};
 
-    private static DefaultStackContainer commentBlockPython= new DefaultStackContainer(commentBLock_Title_Python, commentBLock_Description_Python, commentBlockPython_Cards);
+    private static FM_StackManager_Info commentBlockPython= new FM_StackManager_Info(commentBLock_Title_Python, commentBLock_Description_Python, commentBlockPython_Cards);
 
+    /********** LoremIpsum Text **********/
     private static String loremIpsum_Title = "LoremIpsum Text";
     private static String loremIpsum_Description = "Fake use to fill up content blocks.";
 
@@ -163,9 +172,9 @@ public class DefaultStackValues {
     private static String loremIpsum_Description_Short = "Lorem Ipsum Short Description";
 
 
-
+    /********** Comment Container **********/
     // CONTAINS ALL STACKS
-    public static DefaultStackContainer[] stacks = {commentBlockHTML, commentBlockJava, commentBlockJavaScriptCSS, commentBlockPython, debuggingbLockJava};
+    public static FM_StackManager_Info[] stacks = {commentBlockHTML, commentBlockJava, commentBlockJavaScriptCSS, commentBlockPython, debuggingbLockJava};
 
 }
 

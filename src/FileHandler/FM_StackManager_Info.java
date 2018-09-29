@@ -1,11 +1,15 @@
 package FileHandler;
 
+/**
+ * Stack Info Container
+ */
 public class FM_StackManager_Info {
 
     private String stackTitle = "";
     private String stackDescription = "";
-    private String stackFavoriteStatus;
+    private String stackFavoriteStatus = "False";
     private String stackID;
+    private FM_CardManager_Info[] cards;
 
     private boolean selected = false;
     private int selectedOrder;
@@ -17,6 +21,12 @@ public class FM_StackManager_Info {
         this.stackDescription = stackDescription;
         this.stackFavoriteStatus = stackFavoriteStatus;
         this.stackID = stackID;
+    }
+
+    public FM_StackManager_Info(String stackTitle, String stackDescription, FM_CardManager_Info[] cards){
+        this.stackTitle = stackTitle;
+        this.stackDescription = stackDescription;
+        this.cards = cards;
     }
 
     public void setStackTitle(String stackTitle){
@@ -45,6 +55,9 @@ public class FM_StackManager_Info {
         return stackID;
     }
 
+    public FM_CardManager_Info[] getCards() {
+        return cards;
+    }
 
     public boolean isSelected() {
         return selected;

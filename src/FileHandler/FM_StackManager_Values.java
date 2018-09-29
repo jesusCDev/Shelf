@@ -1,7 +1,9 @@
 package FileHandler;
 
+/**
+ * Stack XML Values
+ */
 public interface FM_StackManager_Values {
-
     String ROOT = "Stacks";
     String CHILD = "Stack";
 

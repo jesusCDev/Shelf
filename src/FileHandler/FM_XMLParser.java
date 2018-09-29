@@ -17,11 +17,7 @@ import java.util.List;
 
 public abstract class FM_XMLParser {
 
-	
-	
 	/********* GET AND SET PROJECT INFO **********/
-	
-	
 	// update XML file updateXMLFile
 	public abstract void updateXMLFile();	// Set XML values setXml()
     // get info from xml file
@@ -32,8 +28,6 @@ public abstract class FM_XMLParser {
 	public abstract void createXMLFile();
 	
 	/******** CREATE XML DOCUMENT ********/
-	
-	
 	protected void createXMLDocument(File xmlDocument, String rootElement) {
 		
 		try {
@@ -52,8 +46,6 @@ public abstract class FM_XMLParser {
 	
 	
 	/******* SET VALUES *********/
-	
-
 	protected void addChild_OneElement_OneValue(Element parent, String elementName, String textValue) {
 		Element child = new Element(elementName);
 		child.setText(textValue);
@@ -84,15 +76,24 @@ public abstract class FM_XMLParser {
 	
 	
 	/******* GET VALUES *********/
-	
-
+    /**
+     * Returns Data From A Certain Element
+     * @param el
+     * @param elementName
+     * @return
+     */
 	protected String getXMLData_WithOneElement(Element el, String elementName) {
 		return el.getChildText(elementName);
 	}
 
+    /**
+     * Returns Multiple values with different attributes
+     * @param doc
+     * @param attrName
+     * @param attrValues
+     * @return
+     */
 	protected String[][] getXMLData_WithOneElement_DifferentAttributeValues(Document doc, String attrName, String[] attrValues) {
-
-
 		int iter = 0;
         String[][] doubleArray = new String[attrValues.length][2];
 
@@ -115,7 +116,13 @@ public abstract class FM_XMLParser {
 
 		return newDoubleArray;
 	}
-	
+
+    /**
+     * Get Different Values From One Element
+     * @param el
+     * @param elementName
+     * @return
+     */
 	protected String[] getXMLData_WithOneElement_DifferentValues(Element el, String elementName) {
 		List<Element> lElements = el.getChildren(elementName);
 		String[] values = new String[lElements.size()];
@@ -126,6 +133,13 @@ public abstract class FM_XMLParser {
 		return values;
 	}
 
+    /**
+     * Returns Different values with with the same elements and same and different attributes.
+     * @param el
+     * @param elementName
+     * @param attributeName
+     * @return
+     */
 	protected  String[][] getXMLData_WithOneElement_DifferentValues_SameAttribute_DifferentAttributeValues(Element el, String elementName
     , String attributeName){
         List<Element> lElements = el.getChildren(elementName);
@@ -138,26 +152,24 @@ public abstract class FM_XMLParser {
         return values;
     }
 	
-	
-	/******** GET DOC ********/
-	
+    /********** GET DOC **********/
+    /**
+     * Creates JDOM Style Document
+     * @param xmlDocument
+     * @return
+     */
 	protected Document getDoc(File xmlDocument) {
-
 		SAXBuilder builder = new SAXBuilder();
 		Document doc = null;
 		try {
 			doc = builder.build(xmlDocument);
 		} catch (JDOMException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return doc;
 	}
-	
 
-	/******** FIXES ATTRIBUTES AND NAMES FOR XML ********/
-	
-	
+    /********** FIXES ATTRIBUTES AND NAMES FOR XML **********/
 	protected String trimString(String s){
 		String trimString = s.replaceAll("\\s", "_");
 		return trimString;

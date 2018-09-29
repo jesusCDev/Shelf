@@ -2,12 +2,12 @@ package ControllerUI.Managers;
 
 import ControllerUI.ColumnCreator;
 import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.ToastCreator;
+import ControllerUI.DefaultMethods.UI_Feedback.SnackBar;
 import FileHandler.FM_CardManager_Info;
 import FileHandler.FM_CardManager_XML;
-import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
+import assets.Constants_Prefs;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -19,40 +19,59 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
-import java.util.Stack;
 
-public class StackView_CardManager {
-
+/**
+ * Manges Cards In Stack Views
+ */
+public class StackView_CardManager implements Constants_Prefs{
 
     private FM_CardManager_XML cards;
     private VBox vbAll;
-    private ToastCreator toast;
+    private SnackBar sb;
     private VBox vbContainer;
-    private static int btnSize = Constants.stackSize; // px
+    private static int btnSize = Constants.STACK_SIZE;
     private BorderPane bpAll;
     private int numOfContainers = 0;
 
     public StackView_CardManager(BorderPane bpAll, VBox vbAll, VBox vbContainer, String stackID, StackPane spToast, int numOfContainers){
         this.numOfContainers = numOfContainers;
         this.bpAll = bpAll;
-        toast = new ToastCreator(spToast);
+        sb = new SnackBar(spToast);
         this.vbAll = vbAll;
         this.vbContainer = vbContainer;
 
         vbContainer.setSpacing(5);
 
-        // Grab values from xml file
         cards = new FM_CardManager_XML(stackID, false);
         vbContainer.getChildren().add(create_stackTitle(stackID));
         vbContainer.getChildren().add(create_createCardBtn(stackID, btnSize));
         if(cards.getCards().size() > 0){
-            // TODO FOR SOME REASON THIS ISN'T BREAKING THE APP
-            System.out.println(bpAll.getWidth());
-            vbContainer.getChildren().add(createStack(800));
+            vbContainer.getChildren().add(createStack(Constants.defaultWindowWidth));
         }
         vbContainer.getChildren().add(create_EditStackBtn(stackID, btnSize));
     }
 
+    public VBox getContainer(){
+        return vbContainer;
+    }
+
+    /**
+     * Saves Data Value To Clipboard
+     * @param data
+     */
+    private void writeToClipboard(String data){
+        final Clipboard clipboard = Clipboard.getSystemClipboard();
+        final ClipboardContent content = new ClipboardContent();
+        content.putString(data);
+        clipboard.setContent(content);
+    }
+
+    /********** Stack Views  **********/
+    /**
+     * Creates STack Title
+     * @param stackID
+     * @return
+     */
     private VBox create_stackTitle(String stackID){
         FM_StackManager_XML fsm = new FM_StackManager_XML(false);
         String title =  fsm.getStack(stackID).getStackTitle();
@@ -66,19 +85,21 @@ public class StackView_CardManager {
         return vb;
     }
 
-    public VBox getContainer(){
-        return vbContainer;
-    }
-
+    /**
+     * Creates Cards
+     * @param stackID
+     * @param btnSize
+     * @return
+     */
     private VBox create_createCardBtn(String stackID, double btnSize){
         VBox vb = new VBox();
         vb.getStyleClass().add("btnDefault");
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Constants.pref.put(Constants.PREF_SV_String_SelectedStack, stackID);
+                pref.put(PREF_SV_String_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
-                ccm.screen_changeDynamicAlwaysOffTop(event, Constants.FILE_FXML_CardCreator, bpAll);
+                ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_CardCreator, event, bpAll, false);
             }
         });
         vb.setAlignment(Pos.CENTER);
@@ -87,6 +108,12 @@ public class StackView_CardManager {
         return vb;
     }
 
+    /**
+     * Creates Edit Btn - Edit Current Stack
+     * @param stackID
+     * @param btnSize
+     * @return
+     */
     private VBox create_EditStackBtn(String stackID, double btnSize){
         VBox vb = new VBox();
         vb.getStyleClass().add("vbContainer");
@@ -94,12 +121,11 @@ public class StackView_CardManager {
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-
                 new CardEditor_ListViewCardManager(stackID);
 
-                Constants.pref.put(Constants.PREF_SV_String_SelectedStack, stackID);
+                pref.put(PREF_SV_String_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
-                ccm.screen_changeDynamicAlwaysOffTop(event, Constants.FILE_FXML_CardEditor, bpAll);
+                ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_CardEditor, event, bpAll, false);
             }
         });
 
@@ -109,16 +135,20 @@ public class StackView_CardManager {
         return vb;
     }
 
+    /**
+     * Creates Add Btn - Add Card To stack
+     * @param card
+     * @param buttonSize
+     * @return
+     */
     private VBox createVBoxCreateMainBtn(FM_CardManager_Info card, int buttonSize){
-
         VBox vb = new VBox();
         vb.getStyleClass().add("card");
 
-        // Clicking on vb field sends user to language view
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                toast.createShortToast(card.getCardCopyData());
+                sb.createSnackBar(card.getCardCopyData(), SnackBar.SHORT);
                 writeToClipboard(card.getCardCopyData());
             }
         });
@@ -128,13 +158,10 @@ public class StackView_CardManager {
         Label lbDescription = new Label(card.getCardDescription());
         lbDescription.getStyleClass().add("card_title_2");
 
-        // Create Data
         Label lbData = new Label(card.getCardCopyData());
         lbData.getStyleClass().add("card_title_3");
-        // Set sb Styles
         vb.setPrefWidth(buttonSize);
 
-        // Add vb
         vb.getChildren().add(lbTitle);
         vb.getChildren().add(lbDescription);
         vb.getChildren().add(lbData);
@@ -142,28 +169,24 @@ public class StackView_CardManager {
         return vb;
     }
 
+    /********** Stack **********/
+    /**
+     * Creates StackView
+     * @param windowSize
+     * @return
+     */
     private VBox createStack(double windowSize){
-        // Column Creator class will generate resizable columns
         ColumnCreator cc = new ColumnCreator(new VBox(), btnSize);
-        cc.addListenerWithOutSideCotnainerContainers(vbAll, numOfContainers);
+        cc.addListenerWithSideBySideContainers(vbAll, numOfContainers);
 
-        // Add columns to Column Creator
         ArrayList<VBox> vbCol = new ArrayList<>();
         for(int i = 0; i < cards.getCards().size(); i++){
             vbCol.add(createVBoxCreateMainBtn(cards.getCards().get(i), btnSize));
         }
+
         cc.addVBoxArrayContainersToArray(vbCol);
-
         cc.createColumns(windowSize);
-
         return cc.getContainer();
     }
 
-
-    private void writeToClipboard(String data){
-        final Clipboard clipboard = Clipboard.getSystemClipboard();
-        final ClipboardContent content = new ClipboardContent();
-        content.putString(data);
-        clipboard.setContent(content);
-    }
 }

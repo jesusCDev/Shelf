@@ -1,8 +1,6 @@
-package assets;
+package ControllerUI.FirstTimeSetUp.FileFinder;
 
-import java.io.File;
-
-public interface OutterFiles {
+public interface OuterFiles {
 
     String DIR_MainFolder = "Shelf_Program";
 
@@ -10,7 +8,7 @@ public interface OutterFiles {
 
     String[] PROJECT_DIRECTORIES = {DIR_LanguagesFolder};
 
-    String FILE_LanguageManager = "projects_languages.xml";
+    String FILE_LanguageManager = "Shelf.xml";
     String[] PROJECT_FILES = {FILE_LanguageManager};
 
     String File_ProjectInfo = "_language_data.xml";

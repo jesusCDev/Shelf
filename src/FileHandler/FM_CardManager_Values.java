@@ -1,7 +1,9 @@
 package FileHandler;
 
+/**
+ * FXML Values
+ */
 public interface FM_CardManager_Values {
-
     String ROOT = "Cards";
     String CHILD = "Card";
 

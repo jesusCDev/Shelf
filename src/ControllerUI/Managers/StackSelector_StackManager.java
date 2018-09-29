@@ -4,6 +4,7 @@ import ControllerUI.ColumnCreator;
 import FileHandler.FM_StackManager_Info;
 import FileHandler.FM_StackManager_XML;
 import assets.Constants;
+import assets.Constants_Prefs;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -14,14 +15,11 @@ import javafx.scene.layout.VBox;
 
 import java.util.*;
 
-import static assets.Constants.PREF_SV_String_StackViewList;
-import static assets.Constants.pref;
-
-public class StackSelector_StackManager {
+public class StackSelector_StackManager implements Constants_Prefs{
 
     private VBox vb_FavStacksContainer;
     private VBox vb_NonFavStacksContainer;
-    private static int stackViewSize = Constants.stackSize;
+    private static int stackViewSize = Constants.STACK_SIZE;
 
     private Stack<FM_StackManager_Info> selectedStackIDs = new Stack<>();
     private FM_StackManager_XML stacks;
@@ -34,8 +32,12 @@ public class StackSelector_StackManager {
         setSelectedStacks();
     }
 
+    /********** Set Default Methods **********/
+    /**
+     * Sets Selected Methods
+     */
     private void setSelectedStacks(){
-        for(String selectedStackID: pref.get(PREF_SV_String_StackViewList, null).split(",")){
+        for(String selectedStackID: pref.get(PREF_SV_String_StackViewList, null).split(Constants.SYMBOL_Comma)){
             stacks.getStack(selectedStackID).setSelected(true);
             selectedStackIDs.push(stacks.getStack(selectedStackID));
         }
@@ -49,12 +51,15 @@ public class StackSelector_StackManager {
         this.vb_NonFavStacksContainer = vb_NonFavStacksContainer;
     }
 
+    /********** Selected Card Methods **********/
+    /**
+     * Saves selected stacks
+     */
     public void saveSelectedStacks(){
         StringBuilder sb = new StringBuilder();
-
         for(FM_StackManager_Info value: selectedStackIDs){
             sb.append(value.getStackID());
-            sb.append(",");
+            sb.append(Constants.SYMBOL_Comma);
         }
         pref.put(PREF_SV_String_StackViewList, sb.toString());
     }
@@ -68,6 +73,15 @@ public class StackSelector_StackManager {
         createCols(vb_FavStacksContainer.getWidth());
     }
 
+    private void setBtnAction_SelectCard(String stackID){
+        stacks.getStack(stackID).setSelected(true);
+
+        selectedStackIDs.push(stacks.getStack(stackID));
+        resetStackOrders();
+
+        createCols(vb_FavStacksContainer.getWidth());
+    }
+
     private void resetStackOrders(){
         int i = 1;
         for(FM_StackManager_Info stack: selectedStackIDs){
@@ -76,17 +90,11 @@ public class StackSelector_StackManager {
         }
     }
 
-    private void setBtnAction_SelectCard(String stackID){
-        stacks.getStack(stackID).setSelected(true);
-
-        selectedStackIDs.push(stacks.getStack(stackID));
-        resetStackOrders();
-
-//        stacks.getStack(stackID).setSelectedOrder(selectedStackIDs.size());
-
-        createCols(vb_FavStacksContainer.getWidth());
-    }
-
+    /********** View Methods **********/
+    /**
+     * Creates Col for Containers
+     * @param windowSize
+     */
     public void createCols(double windowSize){
         createStackView(vb_FavStacksContainer, stacks.getFavStacks(), stacks.getFavStacks().size(), ccFav, windowSize);
         createStackView(vb_NonFavStacksContainer, stacks.getNonFavStacks(), stacks.getNonFavStacks().size(), ccNonFav, windowSize);
@@ -94,8 +102,7 @@ public class StackSelector_StackManager {
 
 
     private void  createStackView(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, ColumnCreator cc, double windowWSize){
-
-        removeListener(cc);
+        cc.removeListener();
 
         vb.getChildren().clear();
 
@@ -103,10 +110,7 @@ public class StackSelector_StackManager {
             cc = new ColumnCreator(vb, stackViewSize);
             vb.getChildren().clear();
 
-            // Add columns to Column Creator
             ArrayList<VBox> vbCol = new ArrayList<>();
-
-            // Column Creator class will generate resizable columns
             cc.addListener();
 
             for(FM_StackManager_Info stack: stacks){
@@ -114,12 +118,15 @@ public class StackSelector_StackManager {
             }
 
             cc.addVBoxArrayContainersToArray(vbCol);
-
-            // Create Columns
             cc.createColumns(windowWSize);
         }
     }
 
+    /**
+     * Creates Stack Views and Sets Actions
+     * @param stack
+     * @return
+     */
     private VBox createStack(FM_StackManager_Info stack){
 
         VBox vbAll = new VBox();
@@ -168,6 +175,13 @@ public class StackSelector_StackManager {
         return vbAll;
     }
 
+    /********** Methods For Stacks **********/
+    /**
+     * Sets selected styles
+     * @param vbAll
+     * @param stack
+     * @return
+     */
     private VBox setSelected(VBox vbAll, FM_StackManager_Info stack){
         VBox p = new VBox();
         p.setAlignment(Pos.CENTER);
@@ -181,14 +195,5 @@ public class StackSelector_StackManager {
 
         StackPane.setAlignment(p, Pos.TOP_RIGHT);
         return p;
-    }
-
-
-    private void removeListener(ColumnCreator cc){
-        try{
-            cc.removeListener();
-        }catch (NullPointerException e){
-
-        }
     }
 }

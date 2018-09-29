@@ -19,11 +19,10 @@ import java.util.ArrayList;
  */
 public class ColumnCreator {
 
-    ChangeListener cl;
+    private ChangeListener cl;
     private int lastGridNumber = 2;
     private VBox container;
     private int colSize;
-
     private ArrayList<VBox> vbContainer = new ArrayList<>();
 
     public ColumnCreator(VBox container, int colSize){
@@ -34,7 +33,6 @@ public class ColumnCreator {
     public void createColumns(double windowSize){
         container.getChildren().add(recreateGridPaneWithButtons(container, ((int)Math.floor((windowSize / colSize)))));
     }
-
 
     /**
      * Recreates gird pane every time the size of its container is changed
@@ -77,29 +75,19 @@ public class ColumnCreator {
     }
 
     public void removeListener(){
-        container.widthProperty().removeListener(cl);
+        try{
+            container.widthProperty().removeListener(cl);
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
     }
 
-    public void addListenerWithOutSideCotnainer(VBox vbAll){
-        cl = new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                if(vbContainer.size() > 0){
-                    int currentGirdColumbs = ((int)Math.floor(newValue.intValue()/ colSize));
-                    if((currentGirdColumbs != lastGridNumber) && (currentGirdColumbs != 0)){
-                        container.getChildren().add(recreateGridPaneWithButtons(container, currentGirdColumbs));
-                        lastGridNumber = currentGirdColumbs;
-                    }
-                }else{
-                    container.getChildren().clear();
-                }
-            }
-        };
-
-        vbAll.widthProperty().addListener(cl);
-    }
-
-    public void addListenerWithOutSideCotnainerContainers(VBox vbAll, int numOfContainers){
+    /**
+     * Creates Containers Listeners that take in account for the amount of containers that are pre-created
+     * @param vbAll
+     * @param numOfContainers
+     */
+    public void addListenerWithSideBySideContainers(VBox vbAll, int numOfContainers){
         cl = new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
@@ -114,10 +102,12 @@ public class ColumnCreator {
                 }
             }
         };
-
         vbAll.widthProperty().addListener(cl);
     }
 
+    /**
+     * Adds Listener that reacts when window is re sized
+     */
     public void addListener(){
         cl = new ChangeListener<Number>() {
             @Override
@@ -152,6 +142,10 @@ public class ColumnCreator {
         vbContainer.add(vb);
     }
 
+    /**
+     * Returns Col Container
+     * @return
+     */
     public VBox getContainer(){
         return container;
     }

@@ -1,29 +1,18 @@
 
 /****************************************************************************************
-    -fx-padding: 10px;
-    -fx-background-color: transparent;
 // Color Sets
-
 Purple 1: #131025
 Purple 2: #5351A9
 Purple 3: #322E61
 
 Purple Lettering: #6157AC
 
-
-* -fx-color-DarkBlue: #1565C0;
-* -fx-color-LightBlue: #82B1FF;
-# -fx-color-GreyBlue: #455A64;
-
-* -fx-color-White: #FFFFFF;
-* -fx-color-Grey: #FAFAFA;
 * -fx-color-LightGrey: #BDBDBD;
 ****************************************************************************************/
 
-
-/****************************************************************************************
-// RESETS
-****************************************************************************************/
+/******************************************************************************
+************ Defaults
+*******************************************************************************/
 .root{
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
@@ -38,9 +27,10 @@ Purple Lettering: #6157AC
 .button{
     -fx-cursor: hand;
 }
-.label{
-    /* Set font here */
-}
+
+/******************************************************************************
+************ Container Styles
+*******************************************************************************/
 .background{
     -fx-background-color: #131025;
 }
@@ -48,15 +38,11 @@ Purple Lettering: #6157AC
     -fx-background-color: #131025;
 }
 
-.selectedStack{
-    -fx-effect: dropshadow(three-pass-box, #322E61, 10, 0, 0, 0);
+.vbContainer{
+ -fx-spacing: 5;
 }
-.lbHintText{
-    -fx-text-size: 10px;
-    -fx-text-fill: #E4EAED;
-}
-.card .hbox{
-    -fx-spacing: 10px;
+.hbContainer{
+    -fx-spacing: 5;
 }
 .HBox{
     -fx-spacing: 10px;
@@ -64,6 +50,10 @@ Purple Lettering: #6157AC
 .VBox{
     -fx-spacing: 10px;
 }
+
+/******************************************************************************
+************ Text Area/Field Styles
+*******************************************************************************/
 .text-field{
     -fx-border-radius: 0 0 0 0;
     -fx-background-radius: 0 0 0 0;
@@ -71,6 +61,50 @@ Purple Lettering: #6157AC
 .text-area{
     -fx-border-radius: 0 0 0 0;
     -fx-background-radius: 0 0 0 0;
+}
+/******************************************************************************
+************ Slider Style
+*******************************************************************************/
+ .slider .track{
+    -fx-background-color: white;
+    -fx-text-fill: white;
+ }
+ .slider{
+    -fx-tick-mark-fill: white;
+    -fx-tick-text-fill: white;
+   }
+
+ .slider .axis .axis-tick-mark, .slider .axis .axis-minor-tick-mark {
+     -fx-fill: null;
+     -fx-stroke: white;
+ }
+/******************************************************************************
+************ Radio Button Style
+*******************************************************************************/
+.radio-button .radio{
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-background-color: transparent;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+}
+.radio-button .radio:selected{
+    -fx-background-color : transparent ;
+    -fx-background-image : null  ;
+}
+.radio-button:selected .dot {
+  -fx-mark-highlight-color: white ;
+  -fx-mark-color: white;
+}
+.radio-button{
+    -fx-text-fill: white;
+}
+/******************************************************************************
+************ Label Settings
+*******************************************************************************/
+.lbHintText{
+    -fx-text-size: 10px;
+    -fx-text-fill: #E4EAED;
 }
 .outlabels{
     -fx-text-fill: white;
@@ -91,12 +125,16 @@ Purple Lettering: #6157AC
     -fx-border-radius: 100 100 100 100;
     -fx-background-radius: 100 100 100 100;
 }
-.stackSelected_indication .label{
-    -fx-text-fill: white;
-}
+
+/******************************************************************************
+************ Stack/Card Styles
+*******************************************************************************/
 .stack{
     -fx-background-color: white;
     -fx-padding: 10px;
+}
+.card .hbox{
+    -fx-spacing: 10px;
 }
 .card{
     -fx-background-color: white;
@@ -108,6 +146,7 @@ Purple Lettering: #6157AC
 .stack: hover{
     -fx-cursor: hand;
 }
+/******************************** Stack/Card Labels *************************************/
 .card_title_1{
     -fx-font-size: 16px;
     -fx-font-weight: bold;
@@ -122,14 +161,9 @@ Purple Lettering: #6157AC
     -fx-font-size: 12px;
     -fx-text-fill: #BDBDBD;
 }
-.toast{
-    -fx-background-color: #5351A9;
-}
-.toast .label{
-    -fx-text-fill: White;
-    -fx-font-size: 16px;
-    -fx-padding: 5 0 5 0;
-}
+/******************************************************************************
+************ Button Styles
+*******************************************************************************/
 .btnFav{
     -fx-background-color: transparent;
     -fx-border-color: #6157AC;
@@ -163,15 +197,31 @@ Purple Lettering: #6157AC
 .btnDefault: pressed{
     -fx-background-color: #5351A9;
 }
-.vbContainer{
- -fx-spacing: 5;
-}
-.hbContainer{
-    -fx-spacing: 5;
-}
+
+/******************************************************************************
+************ Stack Editor Styles
+*******************************************************************************/
 .draggedCard{
     -fx-border-color: #5351A9;
 }
 .selectedCard{
     -fx-border-color: #5351A9;
+}
+
+.selectedStack{
+    -fx-effect: dropshadow(three-pass-box, #322E61, 10, 0, 0, 0);
+}
+.stackSelected_indication .label{
+    -fx-text-fill: white;
+}
+/******************************************************************************
+************ Toast Styles
+*******************************************************************************/
+.toast{
+    -fx-background-color: #5351A9;
+}
+.toast .label{
+    -fx-text-fill: White;
+    -fx-font-size: 16px;
+    -fx-padding: 5 0 5 0;
 }

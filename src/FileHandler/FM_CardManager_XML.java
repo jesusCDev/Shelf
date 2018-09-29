@@ -1,6 +1,6 @@
 package FileHandler;
 
-import assets.Constants;
+import assets.Constants_Prefs;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.XMLOutputter;
@@ -11,13 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FM_CardManager_XML extends FM_XMLParser{
+/**
+ * FXML Manager
+ */
+public class FM_CardManager_XML extends FM_XMLParser implements Constants_Prefs{
 
     private ArrayList<FM_CardManager_Info> cards = new ArrayList<>();
     private File xmlDocument;
 
     public FM_CardManager_XML(String cardName, boolean creatingNewProject){
-        xmlDocument = new File(Constants.pref.get(Constants.PREF_SV_String_MainPath, null) + cardName + ".xml");
+        xmlDocument = new File(pref.get(PREF_SV_String_MainPath, null) + cardName + ".xml");
 
         if(!creatingNewProject){
             getXMLInfo();

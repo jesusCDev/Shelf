@@ -3,21 +3,25 @@ package Main;
 import ControllerUI.DefaultMethods.Common_DefaultMethods;
 import FileHandler.FM_FileChecker;
 import assets.Constants;
+import assets.Constants_Prefs;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application implements Constants {
+/**
+ * A project design to help manage code by keeping snippets of code blocks that can be re-used in order to organize code
+ */
+public class Main extends Application implements Constants_Prefs, Constants {
 
     Common_DefaultMethods cdm = new Common_DefaultMethods();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
         String xmlFile;
         FM_FileChecker ffc = new FM_FileChecker();
+
         if(pref.getBoolean(PREF_SV_Boolean_FirstTimeUsingApp, true) && ffc.checkIfMainDocumentExistOrHasBeenMessWith()){
             xmlFile = FILE_FXML_FileSetup;
             cdm.hardRest();
@@ -38,7 +42,6 @@ public class Main extends Application implements Constants {
     public void stop(){
         cdm.resetValues();
     }
-
 
     public static void main(String[] args) {
         launch(args);

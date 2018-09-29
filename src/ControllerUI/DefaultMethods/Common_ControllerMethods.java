@@ -1,291 +1,82 @@
 package ControllerUI.DefaultMethods;
 
-import assets.Constants;
+import assets.Constants_Prefs;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.InputEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
-import java.util.concurrent.ConcurrentNavigableMap;
-import java.util.prefs.Preferences;
-public class Common_ControllerMethods implements Constants{
 
+import static assets.Constants.FILE_CSS;
 
-    private Preferences pref = Preferences.userRoot();
+public class Common_ControllerMethods implements Constants_Prefs{
 
-    /*************************************************
-     // USER INTERACTION METHODS
-     *************************************************/
-    public void toast_Message(String message){
-        JOptionPane.showMessageDialog(null, message);
-    }
+    public static int CHANGE_SCREEN_NORMAL = 0;
+    public static int CHANGE_SCREEN_NORMAL_ALWAYS_ON_TOP = 1;
+    public static int CHANGE_SCREEN_DYNAMIC = 2;
+    public static int CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP = 3;
 
-    public void toast_Confirmation(String message){
-
-    }
-
-    public void toast_Options(String message){
-
-    }
-    /*************************************************
-     // SCREEN METHODS
-     *************************************************/
-
-    public void screen_checkAlwaysOnTop(String prefID, MouseEvent event, String fxmlScreen, BorderPane bpAll){
-        if(pref.getBoolean(prefID, false)){
-            screen_changeDynamicAlwaysOnTop(event, fxmlScreen, bpAll);
-        }else{
-            screen_changeDynamicAlwaysOffTop(event, fxmlScreen, bpAll);
-        }
-    }
-    public void screen_checkAlwaysOnTop(String prefID, ActionEvent event, String fxmlScreen, BorderPane bpAll){
-        if(pref.getBoolean(prefID, false)){
-            screen_changeDynamicAlwaysOnTop(event, fxmlScreen, bpAll);
-        }else{
-            screen_changeDynamicAlwaysOffTop(event, fxmlScreen, bpAll);
-        }
-    }
-
+    /****************************************
+     /**** Screen Changing Methods
+     ****************************************/
+    /********** Setting Method **********/
     protected void screen_SetSize(BorderPane bodyPane){
-
         if(!pref.getBoolean(PREF_SV_ScreenMax, false)){
             bodyPane.setPrefWidth(pref.getDouble(PREF_SV_ScreenWidth, 800.0));
             bodyPane.setPrefHeight(pref.getDouble(PREF_SV_ScreenHeight, 800.0));
         }
     }
 
-    public void screen_changeNormal(ActionEvent e, String fxmlScreen){
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
+    /********** Screen Checking **********/
+    public void screen_checkAlwaysOnTop(String prefID, MouseEvent event, String fxmlScreen, BorderPane bpAll){
+        if(pref.getBoolean(prefID, false)){
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, true);
         }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, false);
         }
-
-        stage.setScene(scene);
-        stage.show();
     }
 
-    public void screen_changeNormal(MouseEvent e, String fxmlScreen){
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
+    public void screen_checkAlwaysOnTop(String prefID, ActionEvent event, String fxmlScreen, BorderPane bpAll){
+        if(pref.getBoolean(prefID, false)){
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, true);
         }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, false);
         }
-
-        stage.setScene(scene);
-        stage.show();
     }
 
-    public void screen_changeDynamicAlwaysOnTop(MouseEvent e, String fxmlScreen, BorderPane bpAll){
-        changeDynamic_SaveWidth(bpAll);
-
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(true);
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
-        }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
-        }
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void screen_changeDynamicAlwaysOnTop(ActionEvent e, String fxmlScreen, BorderPane bpAll){
-        changeDynamic_SaveWidth(bpAll);
-
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(true);
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
-        }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
-        }
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void screen_changeDynamicAlwaysOffTop(MouseEvent e, String fxmlScreen, BorderPane bpAll){
-        changeDynamic_SaveWidth(bpAll);
-
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(false);
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
-        }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
-        }
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void screen_changeDynamicAlwaysOffTop(ActionEvent e, String fxmlScreen, BorderPane bpAll){
-        changeDynamic_SaveWidth(bpAll);
-
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(false);
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
-        }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
-        }
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void screen_changeNormalTurnOfAlwaysOnTop(ActionEvent e, String fxmlScreen){
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(false);
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-    public void screen_changeNormalAlwaysOnTop(ActionEvent e, String fxmlScreen){
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(true);
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
-        }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
-        }
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    // TODO MAYBE I SHOULDNT BE TAKING OFF AND ON THE ALWAYS ON TOP FEATURE - TO INCONSISTANT
-
-    public void screen_changeNormalAlwaysOnTop(MouseEvent e, String fxmlScreen){
-        Parent loader = null;
-        try {
-            loader = FXMLLoader.load(getClass().getResource(fxmlScreen));
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-        Scene scene = new Scene(loader);
-        scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setAlwaysOnTop(true);
-
-        if (stage.isFullScreen()) {
-            stage.setMaximized(true);
-            pref.putBoolean(PREF_SV_ScreenMax, true);
-        }else{
-            pref.putBoolean(PREF_SV_ScreenMax, false);
-        }
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
+    /**
+     * Saves screen demotions
+     * @param bpAll
+     */
     private void changeDynamic_SaveWidth(BorderPane bpAll) {
         pref.putDouble(PREF_SV_ScreenWidth, bpAll.getWidth());
         pref.putDouble(PREF_SV_ScreenHeight, bpAll.getHeight());
     }
 
-    public void screen_changeDynamic(ActionEvent e, String fxmlScreen, BorderPane bpAll){
+    /********** Screen Changing **********/
+    /**
+     * Changes Stage to new scene using Action Events
+     * @param changeScreenSettings - Type of Screen Changing
+     * @param fxmlScreen - Screen Changing
+     * @param e - Event
+     * @param bpAll - Top Window
+     * @param alwaysOnTop - Always On Top Value
+     */
+    public void changeScreen(int changeScreenSettings, String fxmlScreen, ActionEvent e, BorderPane bpAll, boolean alwaysOnTop){
 
-        changeDynamic_SaveWidth(bpAll);
+        if(changeScreenSettings > 1){
+            changeDynamic_SaveWidth(bpAll);
+        }
+
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 
         Parent loader = null;
         try {
@@ -296,7 +87,10 @@ public class Common_ControllerMethods implements Constants{
 
         Scene scene = new Scene(loader);
         scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+
+        if(changeScreenSettings == 1 || changeScreenSettings == 3){
+            stage.setAlwaysOnTop(alwaysOnTop);
+        }
 
         if (stage.isFullScreen()) {
             stage.setMaximized(true);
@@ -309,9 +103,21 @@ public class Common_ControllerMethods implements Constants{
         stage.show();
     }
 
-    public void screen_changeDynamic(MouseEvent e, String fxmlScreen, BorderPane bpAll){
+    /**
+     * Changes Stage to new scene using Mouse Events
+     * @param changeScreenSettings - Type of Screen Changing
+     * @param fxmlScreen - Screen Changing
+     * @param e - Event
+     * @param bpAll - Top Window
+     * @param alwaysOnTop - Always On Top Value
+     */
+    public void changeScreen(int changeScreenSettings, String fxmlScreen, MouseEvent e, BorderPane bpAll, boolean alwaysOnTop){
 
-        changeDynamic_SaveWidth(bpAll);
+        if(changeScreenSettings > 1){
+            changeDynamic_SaveWidth(bpAll);
+        }
+
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 
         Parent loader = null;
         try {
@@ -322,7 +128,10 @@ public class Common_ControllerMethods implements Constants{
 
         Scene scene = new Scene(loader);
         scene.getStylesheets().add(getClass().getResource(FILE_CSS).toExternalForm());
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+
+        if(changeScreenSettings == 1 || changeScreenSettings == 3){
+            stage.setAlwaysOnTop(alwaysOnTop);
+        }
 
         if (stage.isFullScreen()) {
             stage.setMaximized(true);
@@ -333,20 +142,5 @@ public class Common_ControllerMethods implements Constants{
 
         stage.setScene(scene);
         stage.show();
-    }
-
-
-    ////////////////////////////////////////////////////////////////////////////////////////////
-    /// COMMENTS TO DELETE
-    ////////////////////////////////////////////////////////////////////////////////////////////
-
-    private void space(){
-        System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.println();
-    }
-
-    // PROGRAMMING METHODS
-    private void pop(String message){
-        System.out.println(message);
     }
 }

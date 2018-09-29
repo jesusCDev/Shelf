@@ -1,7 +1,9 @@
 package FileHandler;
 
+/**
+ * Card Info Container
+ */
 public class FM_CardManager_Info {
-
 
     private String cardTitle = "";
     private String cardDescription = "";
