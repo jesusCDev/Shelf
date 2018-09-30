@@ -13,21 +13,20 @@ All:
 ```
 This version should be able to run on all current operating systems running java8 or higher.
 ```
-[![jar][jar-download]][allvens.com/projects/shelf/java]
+<a class="github-button" href="https://github.com/ntkme/github-buttons/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ntkme/github-buttons on GitHub">Shelf.jar</a>
+
 Linux:
 ```
 Ubuntu - deb version
 Mint - deb version
 Fedora - dmg version
 ```
-[![deb][deb-download]][allvens.com/projects/shelf/deb]
-[![dmg][exe-download]][allvens.com/projects/shelf/dmg]
+<a class="github-button" href="https://github.com/ntkme/github-buttons/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ntkme/github-buttons on GitHub">Shelf.deb</a>
+
+<a class="github-button" href="https://github.com/ntkme/github-buttons/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ntkme/github-buttons on GitHub">Shelf.dmg</a>
 
 Windows:
-```
-
-```
-[![exe][exe-download]][google.com]
+<a class="github-button" href="https://github.com/ntkme/github-buttons/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ntkme/github-buttons on GitHub">Shelf.exe</a>
 ### Built With
 
 ```
