@@ -23,6 +23,7 @@ public class SnackBar {
      */
     public SnackBar(StackPane sp){
         this.sp = sp;
+        sp.setMaxHeight(50);
         sp.getStyleClass().add("toast");
     }
 

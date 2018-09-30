@@ -8,6 +8,7 @@ import FileHandler.FM_StackManager_XML;
 import FileHandler.FM_StackManager_Info;
 import assets.Constants;
 import assets.Constants_Prefs;
+import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -79,7 +80,7 @@ public class StackCreator extends Common_ControllerMethods implements Constants_
             FM_CardManager_XML cardFile = new FM_CardManager_XML(stack.getStackID(), true);
             cardFile.createXMLFile();
 
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, bpContainer_All, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, Constants.WINDOW_TITLE_Main, bpContainer_All, false);
         }else if(!tfStackTitle.getText().isEmpty() && StackGettingEdited){
             mainStackXmlParser.getStack(stackID).setStackTitle(tfStackTitle.getText());
             mainStackXmlParser.getStack(stackID).setStackDescrption(taStackDescription.getText());
@@ -87,7 +88,7 @@ public class StackCreator extends Common_ControllerMethods implements Constants_
             mainStackXmlParser.reorganizeStackAlphabetically();
             mainStackXmlParser.updateXMLFile();
 
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, bpContainer_All, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, Constants.WINDOW_TITLE_Main, bpContainer_All, false);
         }else{
             toast.showMessage(Constants.TEXT_FillTitle, Constants.WINDOW_TITLE_Error);
         }
@@ -99,6 +100,6 @@ public class StackCreator extends Common_ControllerMethods implements Constants_
      */
     @FXML
     public void btnActionCancel(ActionEvent e){
-        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, bpContainer_All, false);
+        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_Main, e, Constants.WINDOW_TITLE_Main,bpContainer_All, false);
     }
 }

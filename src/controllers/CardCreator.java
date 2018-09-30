@@ -79,14 +79,14 @@ public class CardCreator extends Common_ControllerMethods implements Constants_P
             cardXmlParser.getCards().add(card);
             cardXmlParser.updateXMLFile();
 
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, FILE_FXML_StackViewer, e, bpContainer_All, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, FILE_FXML_StackViewer, e, Constants.WINDOW_TITLE_StackViewer, bpContainer_All, false);
         }else if(!taCardCopyData.getText().isEmpty() && editing){
             card.setCardTitle(tfCardTitle.getText());
             card.setCardDescription(taCardDescription.getText());
             card.setCardCopyData(taCardCopyData.getText());
 
             cardXmlParser.updateXMLFile();
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, FILE_FXML_CardEditor, e, bpContainer_All, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, FILE_FXML_CardEditor, e, Constants.WINDOW_TITLE_CardEditor, bpContainer_All, false);
         }else{
             toast.showMessage(TEXT_FillData, Constants.WINDOW_TITLE_Error);
         }
@@ -99,9 +99,9 @@ public class CardCreator extends Common_ControllerMethods implements Constants_P
     @FXML
     public void btnAction_Cancel(ActionEvent e){
         if(editing){
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, FILE_FXML_CardEditor, e, bpContainer_All, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, FILE_FXML_CardEditor, e, Constants.WINDOW_TITLE_CardEditor, bpContainer_All, false);
         }else{
-            screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, FILE_FXML_StackViewer, bpContainer_All);
+            screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, FILE_FXML_StackViewer, Constants.WINDOW_TITLE_StackViewer, bpContainer_All);
         }
     }
 }

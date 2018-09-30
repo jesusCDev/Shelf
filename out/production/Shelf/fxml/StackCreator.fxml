@@ -17,7 +17,7 @@
                <children>
                   <Label fx:id="lbStackTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" text="New Stack">
                      <styleClass>
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                         <String fx:value="title_1" />
                      </styleClass></Label>
                </children>
@@ -32,14 +32,14 @@
                   <Label text="Title: *">
                      <styleClass>
                         <String fx:value="title_2" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass></Label>
                   <TextField fx:id="tfStackTitle" />
                </children>
             </VBox>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="vbContainer">
                <children>
-                  <Label styleClass="outlabels" text="Description:" />
+                  <Label styleClass="labels_OnBackground" text="Description:" />
                   <TextArea fx:id="taStackDescription" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>

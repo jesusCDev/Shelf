@@ -9,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -102,8 +103,6 @@ public class StackSelector_StackManager implements Constants_Prefs{
 
 
     private void  createStackView(VBox vb, ArrayList<FM_StackManager_Info> stacks, int numOfStacks, ColumnCreator cc, double windowWSize){
-        cc.removeListener();
-
         vb.getChildren().clear();
 
         if(numOfStacks != 0){
@@ -131,9 +130,10 @@ public class StackSelector_StackManager implements Constants_Prefs{
 
         VBox vbAll = new VBox();
         vbAll.getChildren().clear();
-        vbAll.getStyleClass().add("stack");
 
-        StackPane spContainer = new StackPane();
+        BorderPane bpCardContainer = new BorderPane();
+        bpCardContainer.getStyleClass().add("stack");
+        bpCardContainer.setMinWidth(BorderPane.USE_COMPUTED_SIZE);
 
         VBox vbStack = new VBox();
         vbStack.getStyleClass().add("vbContainer");
@@ -146,11 +146,12 @@ public class StackSelector_StackManager implements Constants_Prefs{
         vbStack.getChildren().add(lbStackDescription);
         vbStack.setFillWidth(true);
 
-        spContainer.getChildren().add(vbStack);
+        bpCardContainer.setCenter(vbStack);
         StackPane.setAlignment(vbStack, Pos.CENTER);
 
         if (stack.isSelected()){
-            spContainer.getChildren().add(setSelected(vbAll, stack));
+            VBox stackID = setSelected(stack);
+            bpCardContainer.setRight(stackID);
             if((stack.getSelectedOrder() != 1) || (selectedStackIDs.size() > 1)){
                 vbStack.setOnMouseClicked(new EventHandler<MouseEvent>() {
                     @Override
@@ -170,7 +171,7 @@ public class StackSelector_StackManager implements Constants_Prefs{
 
         vbStack.setFillWidth(true);
         vbAll.setPrefWidth(stackViewSize);
-        vbAll.getChildren().add(spContainer);
+        vbAll.getChildren().add(bpCardContainer);
 
         return vbAll;
     }
@@ -178,11 +179,10 @@ public class StackSelector_StackManager implements Constants_Prefs{
     /********** Methods For Stacks **********/
     /**
      * Sets selected styles
-     * @param vbAll
      * @param stack
      * @return
      */
-    private VBox setSelected(VBox vbAll, FM_StackManager_Info stack){
+    private VBox setSelected(FM_StackManager_Info stack){
         VBox p = new VBox();
         p.setAlignment(Pos.CENTER);
         p.getStyleClass().add("stackSelected_indication");

@@ -66,6 +66,6 @@ public class Home extends Common_ControllerMethods implements Constants_Prefs{
     @FXML
     public void btnActionCreateStack(ActionEvent e){
         pref.put(PREF_SV_String_StackViewList, "");
-        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_StackCreator, e, bpContainer_All, false);
+        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_StackCreator, e, Constants.WINDOW_TITLE_StackCreator, bpContainer_All, false);
     }
 }

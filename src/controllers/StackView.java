@@ -49,7 +49,7 @@ public class StackView extends Common_ControllerMethods implements Constants_Pre
      */
     @FXML
     public void btnAction_CreateNewCard(ActionEvent e){
-        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_StackSelector, e, bpContainer_All, false);
+        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_StackSelector, e, Constants.WINDOW_TITLE_StackSelector, bpContainer_All, false);
     }
 
     /**
@@ -59,7 +59,7 @@ public class StackView extends Common_ControllerMethods implements Constants_Pre
     @FXML
     public void btnAction_GoBackToMainMenu(ActionEvent e){
         pref.put(PREF_SV_String_StackViewList, "");
-        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_Main, e, bpContainer_All, false);
+        changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_Main, e, Constants.WINDOW_TITLE_Main, bpContainer_All, false);
     }
 
     /**

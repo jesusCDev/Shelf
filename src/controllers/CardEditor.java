@@ -58,7 +58,7 @@ public class CardEditor extends Common_ControllerMethods implements Constants_Pr
     @FXML
     public void btnAction_GoBackToStackView(ActionEvent e){
         cardFileManager.undoChanges();
-        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, bpAll);
+        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, Constants.WINDOW_TITLE_StackViewer, bpAll);
     }
 
     /**
@@ -68,6 +68,6 @@ public class CardEditor extends Common_ControllerMethods implements Constants_Pr
     @FXML
     public void btnAction_SaveValuesGoBackToStackView(ActionEvent e){
         cardFileManager.saveCardStack();
-        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, bpAll);
+        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, Constants.WINDOW_TITLE_StackViewer, bpAll);
     }
 }

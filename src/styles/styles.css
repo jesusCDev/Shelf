@@ -65,28 +65,50 @@ Purple Lettering: #6157AC
 /******************************************************************************
 ************ Slider Style
 *******************************************************************************/
- .slider .track{
-    -fx-background-color: white;
-    -fx-text-fill: white;
- }
- .slider{
-    -fx-tick-mark-fill: white;
-    -fx-tick-text-fill: white;
-   }
+.scroll-pane > .viewport {
+   -fx-background-color: #30333A;
+   -fx-border-width: 0;
+   -fx-border-color: transparent;
+}
+.scroll-bar{
+	-fx-border-color: transparent;
+}
+.scroll-bar:focused{
+	-fx-border-color: #30333A;
+}
+.scroll-bar:vertical{
+    -fx-width: 0.7em;
+    -fx-background-color:transparent;
+ 	-fx-radius: 0em;
 
- .slider .axis .axis-tick-mark, .slider .axis .axis-minor-tick-mark {
-     -fx-fill: null;
-     -fx-stroke: white;
+}
+.scroll-bar:vertical .thumb {
+     -fx-background-color: transparent;
+     -fx-border-color: white;
+     -fx-border-width: .1em;
+ 	-fx-background-insets: 0, 0, 0;
  }
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow,
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+	-fx-width: 0;
+	-fx-height: 0;
+    -fx-background-color: transparent;
+}
 /******************************************************************************
 ************ Radio Button Style
 *******************************************************************************/
+.radio-button: hover{
+    -fx-cursor: hand;
+}
 .radio-button .radio{
-    -fx-border-width: 2px;
+    -fx-border-width: .1em;
     -fx-border-color: white;
     -fx-background-color: transparent;
     -fx-background-image: null;
-    -fx-border-radius: 15px;
+    -fx-border-radius: 1em;
 }
 .radio-button .radio:selected{
     -fx-background-color : transparent ;
@@ -103,42 +125,36 @@ Purple Lettering: #6157AC
 ************ Label Settings
 *******************************************************************************/
 .lbHintText{
-    -fx-text-size: 10px;
+    -fx-text-size: 0.4em;
     -fx-text-fill: #E4EAED;
 }
-.outlabels{
+.labels_OnBackground{
     -fx-text-fill: white;
 }
 .title_1{
-    -fx-font-size: 20px;
+    -fx-font-size: 2em;
+    -fx-font-family: Verdeana;
+    -fx-font-weight: bold;
 }
 .title_2{
-    -fx-font-size: 15px;
+    -fx-font-size:1em;
 }
 .title_3{
-    -fx-font-size: 10px;
+    -fx-font-size: 0.5em;
 }
-.stackSelected_indication{
-    -fx-padding: 10px;
-    -fx-text-fill: white;
-    -fx-background-color: #322E61;
-    -fx-border-radius: 100 100 100 100;
-    -fx-background-radius: 100 100 100 100;
-}
-
 /******************************************************************************
 ************ Stack/Card Styles
 *******************************************************************************/
 .stack{
     -fx-background-color: white;
-    -fx-padding: 10px;
+    -fx-padding: .5em;
 }
 .card .hbox{
-    -fx-spacing: 10px;
+    -fx-spacing: .5em;
 }
 .card{
     -fx-background-color: white;
-    -fx-padding: 10px;
+    -fx-padding: .5em;
 }
 .card: hover{
     -fx-cursor: hand;
@@ -148,17 +164,17 @@ Purple Lettering: #6157AC
 }
 /******************************** Stack/Card Labels *************************************/
 .card_title_1{
-    -fx-font-size: 16px;
+    -fx-font-size: 1.2em;
     -fx-font-weight: bold;
     -fx-text-fill: #6157AC;
 }
 .card_title_2{
-    -fx-font-size: 14px;
+    -fx-font-size: 1em;
     -fx-font-weight: lighter;
     -fx-text-fill: #000000;
 }
 .card_title_3{
-    -fx-font-size: 12px;
+    -fx-font-size: .8em;
     -fx-text-fill: #BDBDBD;
 }
 /******************************************************************************
@@ -168,7 +184,7 @@ Purple Lettering: #6157AC
     -fx-background-color: transparent;
     -fx-border-color: #6157AC;
     -fx-text-fill: #6157AC;
-    -fx-font-size: 14px;
+    -fx-font-size: 1em;
 }
 .btnFav: hover{
     -fx-text-fill: white;
@@ -184,11 +200,11 @@ Purple Lettering: #6157AC
     -fx-background-color: transparent;
     -fx-border-color: white;
     -fx-text-fill: White;
-    -fx-font-size: 14px;
+    -fx-font-size: 1em;
 }
 .btnDefault .label{
     -fx-text-fill: White;
-    -fx-font-size: 14px;
+    -fx-font-size: 1em;
 }
 .btnDefault: hover{
     -fx-cursor: hand;
@@ -211,8 +227,15 @@ Purple Lettering: #6157AC
 .selectedStack{
     -fx-effect: dropshadow(three-pass-box, #322E61, 10, 0, 0, 0);
 }
+
+.stackSelected_indication{
+    -fx-padding: .4em;
+    -fx-background-color: transparent;
+    -fx-border-color: #322E61;
+    -fx-border-width: 0 2 0 0;
+}
 .stackSelected_indication .label{
-    -fx-text-fill: white;
+    -fx-text-fill: #322E61;
 }
 /******************************************************************************
 ************ Toast Styles
@@ -222,6 +245,6 @@ Purple Lettering: #6157AC
 }
 .toast .label{
     -fx-text-fill: White;
-    -fx-font-size: 16px;
+    -fx-font-size: 1em;
     -fx-padding: 5 0 5 0;
 }

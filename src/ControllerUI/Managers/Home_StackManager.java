@@ -20,7 +20,7 @@ import javafx.scene.layout.VBox;
 import java.util.ArrayList;
 
 /**
- * Manager That Keep Track Of Stack Views
+ * Keeps track of stack view
  */
 public class Home_StackManager implements Constants_Prefs {
 
@@ -46,8 +46,12 @@ public class Home_StackManager implements Constants_Prefs {
      * @param cc
      */
     private void removeListener(ColumnCreator cc){
-        cc.removeListener();
+        try{
+            cc.removeListener();
+        }catch (NullPointerException e){
+        }
     }
+
     /**
      * Recreates Cols For FAv
      * @param vb
@@ -182,12 +186,13 @@ public class Home_StackManager implements Constants_Prefs {
      */
     private void setVbAction(VBox vb, String stackId, boolean editMode){
         Common_ControllerMethods ccm = new Common_ControllerMethods();
+
         if(!editMode){
             vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     pref.put(PREF_SV_String_StackViewList,stackId);
-                    ccm.screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, event, Constants.FILE_FXML_StackViewer, bpAll);
+                    ccm.screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, event, Constants.FILE_FXML_StackViewer, Constants.WINDOW_TITLE_StackViewer, bpAll);
                 }
             });
         }else{
@@ -196,7 +201,7 @@ public class Home_StackManager implements Constants_Prefs {
                 public void handle(MouseEvent event) {
                     pref.putBoolean(PREF_SV_Boolean_Editing, true);
                     pref.put(PREF_SV_String_SelectedStack, stackId);
-                    ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_StackCreator, event, bpAll, false);
+                    ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_StackCreator, event, Constants.WINDOW_TITLE_StackCreator, bpAll, false);
                 }
             });
         }

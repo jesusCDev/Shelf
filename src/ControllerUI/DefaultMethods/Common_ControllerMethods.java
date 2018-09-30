@@ -36,19 +36,19 @@ public class Common_ControllerMethods implements Constants_Prefs{
     }
 
     /********** Screen Checking **********/
-    public void screen_checkAlwaysOnTop(String prefID, MouseEvent event, String fxmlScreen, BorderPane bpAll){
+    public void screen_checkAlwaysOnTop(String prefID, MouseEvent event, String fxmlScreen, String windowTitle, BorderPane bpAll){
         if(pref.getBoolean(prefID, false)){
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, true);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, windowTitle, bpAll, true);
         }else{
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, windowTitle, bpAll, false);
         }
     }
 
-    public void screen_checkAlwaysOnTop(String prefID, ActionEvent event, String fxmlScreen, BorderPane bpAll){
+    public void screen_checkAlwaysOnTop(String prefID, ActionEvent event, String fxmlScreen, String windowTitle, BorderPane bpAll){
         if(pref.getBoolean(prefID, false)){
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, true);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, windowTitle, bpAll, true);
         }else{
-            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, bpAll, false);
+            changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, fxmlScreen, event, windowTitle, bpAll, false);
         }
     }
 
@@ -70,13 +70,14 @@ public class Common_ControllerMethods implements Constants_Prefs{
      * @param bpAll - Top Window
      * @param alwaysOnTop - Always On Top Value
      */
-    public void changeScreen(int changeScreenSettings, String fxmlScreen, ActionEvent e, BorderPane bpAll, boolean alwaysOnTop){
+    public void changeScreen(int changeScreenSettings, String fxmlScreen, ActionEvent e, String windowTitle, BorderPane bpAll, boolean alwaysOnTop){
 
         if(changeScreenSettings > 1){
             changeDynamic_SaveWidth(bpAll);
         }
 
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setTitle(windowTitle);
 
         Parent loader = null;
         try {
@@ -111,13 +112,14 @@ public class Common_ControllerMethods implements Constants_Prefs{
      * @param bpAll - Top Window
      * @param alwaysOnTop - Always On Top Value
      */
-    public void changeScreen(int changeScreenSettings, String fxmlScreen, MouseEvent e, BorderPane bpAll, boolean alwaysOnTop){
+    public void changeScreen(int changeScreenSettings, String fxmlScreen, MouseEvent e, String windowTitle, BorderPane bpAll, boolean alwaysOnTop){
 
         if(changeScreenSettings > 1){
             changeDynamic_SaveWidth(bpAll);
         }
 
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setTitle(windowTitle);
 
         Parent loader = null;
         try {

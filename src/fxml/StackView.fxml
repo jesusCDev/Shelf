@@ -59,7 +59,7 @@
                   <Label text="Stack View">
                      <styleClass>
                         <String fx:value="title_1" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass>
                   </Label>
                </children>

@@ -29,7 +29,6 @@ public class StackSelector extends Common_ControllerMethods implements Constants
     @FXML
     public void initialize(){
         screen_SetSize(bpContainer_All);
-
         ss = new StackSelector_StackManager();
         ss.setFavVBoxContainer(vb_FavStacksContainer);
         ss.setNonFavVBoxContainer(vb_NonFavStacksContainer);
@@ -44,7 +43,7 @@ public class StackSelector extends Common_ControllerMethods implements Constants
      */
     @FXML
     public void btnAction_Cancel(ActionEvent e){
-        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, bpContainer_All);
+        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, Constants.WINDOW_TITLE_StackViewer, bpContainer_All);
     }
 
     /**
@@ -54,6 +53,6 @@ public class StackSelector extends Common_ControllerMethods implements Constants
     @FXML
     public void btnAction_Done(ActionEvent e){
         ss.saveSelectedStacks();
-        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, bpContainer_All);
+        screen_checkAlwaysOnTop(PREF_SV_Boolean_AlwaysOnTop, e, Constants.FILE_FXML_StackViewer, Constants.WINDOW_TITLE_StackViewer, bpContainer_All);
     }
 }

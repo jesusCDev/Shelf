@@ -78,7 +78,7 @@ public class ColumnCreator {
         try{
             container.widthProperty().removeListener(cl);
         }catch (NullPointerException e){
-            e.printStackTrace();
+
         }
     }
 

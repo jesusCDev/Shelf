@@ -17,7 +17,7 @@
                <children>
                   <Label fx:id="lbCardTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" text="New Card">
                      <styleClass>
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                         <String fx:value="title_1" />
                      </styleClass></Label>
                </children>
@@ -32,7 +32,7 @@
                   <Label text="Title:">
                      <styleClass>
                         <String fx:value="title_2" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass></Label>
                   <TextField fx:id="tfCardTitle" />
                </children>
@@ -42,7 +42,7 @@
                   <Label text="Description:">
                      <styleClass>
                         <String fx:value="title_2" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass></Label>
                   <TextArea fx:id="taCardDescription" prefHeight="200.0" prefWidth="200.0" />
                </children>
@@ -54,7 +54,7 @@
                         <Label text="Data: *">
                            <styleClass>
                               <String fx:value="title_2" />
-                              <String fx:value="outlabels" />
+                              <String fx:value="labels_OnBackground" />
                            </styleClass></Label>
                         <Label styleClass="lbHintText" text="Text That Will Be Copied To Clipboard" />
                      </children>

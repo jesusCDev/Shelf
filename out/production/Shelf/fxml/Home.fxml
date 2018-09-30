@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="812.0" prefWidth="873.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Home">
    <center>
@@ -19,14 +20,14 @@
                   <Label text="Favorites">
                      <styleClass>
                         <String fx:value="title_2" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass></Label>
                   <VBox fx:id="vbContainer_Fav" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="vbContainer">
                </VBox>
                   <Label text="Languages">
                      <styleClass>
                         <String fx:value="title_2" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass></Label>
                   <VBox fx:id="vbContainer_Main" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="800.0" styleClass="vbContainer">
                   </VBox>
@@ -57,9 +58,12 @@
                <children>
                   <Label text="Shelf">
                      <styleClass>
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                         <String fx:value="title_1" />
                      </styleClass>
+                     <font>
+                        <Font name="Verdana Bold" size="56.0" />
+                     </font>
                   </Label>
                </children>
             </VBox>

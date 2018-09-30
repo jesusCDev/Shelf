@@ -40,4 +40,13 @@ public interface Constants {
     String FILE_FXML_CardCreator = "/fxml/CardCreator.fxml";
     String FILE_FXML_CardEditor = "/fxml/CardEditor.fxml";
     String FILE_CSS = "/styles/styles.css";
+
+
+    /********** Window Titles **********/
+    String WINDOW_TITLE_Main = "Shelf";
+    String WINDOW_TITLE_StackViewer = "Stack Viewer";
+    String WINDOW_TITLE_StackCreator = "Stack Creator";
+    String WINDOW_TITLE_StackSelector = "Stack Selector";
+    String WINDOW_TITLE_CardCreator = "Card Creator";
+    String WINDOW_TITLE_CardEditor = "Card Editor";
 }

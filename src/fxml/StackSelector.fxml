@@ -11,8 +11,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StackSelector">
-   <top>
+<BorderPane fx:id="bpContainer_All" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="812.0" prefWidth="873.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StackSelector">
+    <top>
       <GridPane styleClass="header" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -33,7 +33,7 @@
                   <Label text="Stack Selector">
                      <styleClass>
                         <String fx:value="title_1" />
-                        <String fx:value="outlabels" />
+                        <String fx:value="labels_OnBackground" />
                      </styleClass></Label>
                </children>
             </HBox>
@@ -48,32 +48,32 @@
    <center>
        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
            <content>
-               <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+               <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                    <children>
                        <Label text="Favorites">
-                     <styleClass>
-                        <String fx:value="title_2" />
-                        <String fx:value="outlabels" />
-                     </styleClass></Label>
-                       <VBox fx:id="vb_FavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="vbContainer">
+                           <styleClass>
+                               <String fx:value="title_2" />
+                               <String fx:value="labels_OnBackground" />
+                           </styleClass></Label>
+                       <VBox fx:id="vb_FavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="vbContainer">
                        </VBox>
                        <Label text="Languages">
-                     <styleClass>
-                        <String fx:value="title2" />
-                        <String fx:value="outlabels" />
-                     </styleClass></Label>
-                       <VBox fx:id="vb_NonFavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" styleClass="vbContainer">
+                           <styleClass>
+                               <String fx:value="title_2" />
+                               <String fx:value="labels_OnBackground" />
+                           </styleClass></Label>
+                       <VBox fx:id="vb_NonFavStacksContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="vbContainer">
                        </VBox>
                    </children>
-               <styleClass>
-                  <String fx:value="container" />
-                  <String fx:value="vbContainer" />
-               </styleClass></VBox>
+                   <styleClass>
+                       <String fx:value="container" />
+                       <String fx:value="vbContainer" />
+                   </styleClass></VBox>
            </content>
-         <styleClass>
-            <String fx:value="container" />
-            <String fx:value="body" />
-         </styleClass>
+           <styleClass>
+               <String fx:value="container" />
+               <String fx:value="title_2" />
+           </styleClass>
        </ScrollPane>
    </center>
 </BorderPane>

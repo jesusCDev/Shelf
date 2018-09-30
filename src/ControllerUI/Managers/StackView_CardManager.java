@@ -77,7 +77,7 @@ public class StackView_CardManager implements Constants_Prefs{
         String title =  fsm.getStack(stackID).getStackTitle();
         VBox vb = new VBox();
         Label lb = new Label(title);
-        lb.getStyleClass().add("outlabels");
+        lb.getStyleClass().add("labels_OnBackground");
         lb.getStyleClass().add("title_2");
         vb.setAlignment(Pos.CENTER);
         vb.getChildren().add(lb);
@@ -99,7 +99,7 @@ public class StackView_CardManager implements Constants_Prefs{
             public void handle(MouseEvent event) {
                 pref.put(PREF_SV_String_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
-                ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_CardCreator, event, bpAll, false);
+                ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_CardCreator, event, Constants.WINDOW_TITLE_CardCreator, bpAll, false);
             }
         });
         vb.setAlignment(Pos.CENTER);
@@ -125,7 +125,7 @@ public class StackView_CardManager implements Constants_Prefs{
 
                 pref.put(PREF_SV_String_SelectedStack, stackID);
                 Common_ControllerMethods ccm = new Common_ControllerMethods();
-                ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_CardEditor, event, bpAll, false);
+                ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC_ALWAYS_ON_TOP, Constants.FILE_FXML_CardEditor, event, Constants.WINDOW_TITLE_CardEditor,bpAll, false);
             }
         });
 

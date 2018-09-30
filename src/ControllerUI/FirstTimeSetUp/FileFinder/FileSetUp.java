@@ -70,7 +70,7 @@ public class FileSetUp extends Common_ControllerMethods {
                 fts.setMainPathValue(mainFilePath);
                 fts.setFirstTimePref(false);
                 fts.createDefaultStacks();
-                changeScreen(Common_ControllerMethods.CHANGE_SCREEN_NORMAL, Constants.FILE_FXML_Main, e, null, false);
+                changeScreen(Common_ControllerMethods.CHANGE_SCREEN_NORMAL, Constants.FILE_FXML_Main, e, Constants.WINDOW_TITLE_Main,null, false);
             }else{
                 // TODO TELL USER THE PLACE THEY PICKED DIDN'T DO ANYTHING
             }

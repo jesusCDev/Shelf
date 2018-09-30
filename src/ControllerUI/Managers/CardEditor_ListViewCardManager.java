@@ -140,7 +140,7 @@ public class CardEditor_ListViewCardManager implements Constants_Prefs{
         pref.putInt(PREF_SV_String_SelectedCardPosition, cardPosition);
 
         Common_ControllerMethods ccm = new Common_ControllerMethods();
-        ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_CardCreator, e, bpAll, false);
+        ccm.changeScreen(Common_ControllerMethods.CHANGE_SCREEN_DYNAMIC, Constants.FILE_FXML_CardCreator, e, Constants.WINDOW_TITLE_CardCreator,bpAll, false);
     }
 
     /**
@@ -237,8 +237,8 @@ public class CardEditor_ListViewCardManager implements Constants_Prefs{
         hbContainer.getStyleClass().add("card");
         hbContainer.getStyleClass().add("hbContainer");
 
-        HBox vbButtonContainer = new HBox();
-        vbButtonContainer.getStyleClass().add("hbContainer");
+        HBox hbButtonContainer = new HBox();
+        hbButtonContainer.getStyleClass().add("hbContainer");
         Button btnEditCard = new Button("Edit");
         btnEditCard.getStyleClass().add("btnFav");
         btnEditCard.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -255,12 +255,14 @@ public class CardEditor_ListViewCardManager implements Constants_Prefs{
                 deleteCard(cardPosition);
             }
         });
-        vbButtonContainer.getChildren().add(btnEditCard);
-        vbButtonContainer.getChildren().add(btnDeleteCard);
-        btnEditCard.setMinWidth(Button.USE_COMPUTED_SIZE);
-        btnDeleteCard.setMinWidth(Button.USE_COMPUTED_SIZE);
-        vbButtonContainer.setMinWidth(HBox.USE_COMPUTED_SIZE);
-        vbButtonContainer.setAlignment(Pos.CENTER);
+
+        hbButtonContainer.getChildren().add(btnEditCard);
+        hbButtonContainer.getChildren().add(btnDeleteCard);
+        btnEditCard.setMinWidth(Button.USE_PREF_SIZE);
+        btnDeleteCard.setMinWidth(Button.USE_PREF_SIZE);
+        hbButtonContainer.setMinWidth(HBox.USE_PREF_SIZE);
+        System.out.println("Comp Size" + HBox.USE_PREF_SIZE);
+        hbButtonContainer.setAlignment(Pos.CENTER);
 
         VBox vbCardInfoContainer = new VBox();
         Label lbTitle = new Label(title);
@@ -269,12 +271,14 @@ public class CardEditor_ListViewCardManager implements Constants_Prefs{
         lbDescription.getStyleClass().add("card_title_2");
         Label lbData = new Label(data);
         lbData.getStyleClass().add("card_title_3");
+
         vbCardInfoContainer.getChildren().add(lbTitle);
         vbCardInfoContainer.getChildren().add(lbDescription);
         vbCardInfoContainer.getChildren().add(lbData);
+        vbCardInfoContainer.setMinWidth(0.0);
 
 
-        hbContainer.getChildren().add(vbButtonContainer);
+        hbContainer.getChildren().add(hbButtonContainer);
         hbContainer.getChildren().add(vbCardInfoContainer);
 
         return hbContainer;
