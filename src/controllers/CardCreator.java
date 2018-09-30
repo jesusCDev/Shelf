@@ -1,10 +1,9 @@
 package controllers;
 
-import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.UI_Feedback.SnackBar;
-import ControllerUI.DefaultMethods.UI_Feedback.Toast;
-import FileHandler.FM_CardManager_XML;
-import FileHandler.FM_CardManager_Info;
+import controller_ui.deafult_methods.Common_ControllerMethods;
+import controller_ui.deafult_methods.ui_feedback.Toast;
+import file_manager.FM_CardManager_XML;
+import file_manager.FM_CardManager_Info;
 import assets.Constants;
 import assets.Constants_Prefs;
 import javafx.event.ActionEvent;
@@ -13,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 
 /**
  * User can create cards that belong to a stack

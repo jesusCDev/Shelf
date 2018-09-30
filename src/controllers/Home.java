@@ -1,9 +1,8 @@
 package controllers;
 
-import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.UI_Feedback.Toast;
-import ControllerUI.Managers.Home_StackManager;
-import FileHandler.FM_StackManager_XML;
+import controller_ui.deafult_methods.Common_ControllerMethods;
+import controller_ui.managers.Home_StackManager;
+import file_manager.FM_StackManager_XML;
 import assets.Constants;
 import assets.Constants_Prefs;
 import javafx.event.ActionEvent;

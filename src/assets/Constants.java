@@ -33,7 +33,7 @@ public interface Constants {
 
     /********** File References **********/
     String FILE_FXML_Main = "/fxml/Home.fxml";
-    String FILE_FXML_FileSetup = "/ControllerUI/FirstTimeSetUp/FileFinder/FileSetUp.fxml";
+    String FILE_FXML_FileSetup = "/controller_ui/installer/installer/Installer.fxml";
     String FILE_FXML_StackViewer = "/fxml/StackView.fxml";
     String FILE_FXML_StackCreator = "/fxml/StackCreator.fxml";
     String FILE_FXML_StackSelector = "/fxml/StackSelector.fxml";

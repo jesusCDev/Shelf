@@ -1,7 +1,7 @@
 package controllers;
 
-import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.Managers.StackSelector_StackManager;
+import controller_ui.deafult_methods.Common_ControllerMethods;
+import controller_ui.managers.StackSelector_StackManager;
 import assets.Constants;
 import assets.Constants_Prefs;
 import javafx.event.ActionEvent;

@@ -1,14 +1,12 @@
 package controllers;
 
-import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.UI_Feedback.SnackBar;
-import ControllerUI.DefaultMethods.UI_Feedback.Toast;
-import FileHandler.FM_CardManager_XML;
-import FileHandler.FM_StackManager_XML;
-import FileHandler.FM_StackManager_Info;
+import controller_ui.deafult_methods.Common_ControllerMethods;
+import controller_ui.deafult_methods.ui_feedback.Toast;
+import file_manager.FM_CardManager_XML;
+import file_manager.FM_StackManager_XML;
+import file_manager.FM_StackManager_Info;
 import assets.Constants;
 import assets.Constants_Prefs;
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,7 +14,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 
 public class StackCreator extends Common_ControllerMethods implements Constants_Prefs{
 
@@ -95,7 +92,7 @@ public class StackCreator extends Common_ControllerMethods implements Constants_
     }
 
     /**
-     * Returns user to Main Screen
+     * Returns user to main Screen
      * @param e
      */
     @FXML

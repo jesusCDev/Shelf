@@ -1,9 +1,9 @@
 package controllers;
 
-import ControllerUI.Managers.CardEditor_ListViewCardManager;
-import ControllerUI.DefaultMethods.Common_ControllerMethods;
-import ControllerUI.DefaultMethods.UI_Feedback.SnackBar;
-import FileHandler.FM_StackManager_XML;
+import controller_ui.managers.CardEditor_ListViewCardManager;
+import controller_ui.deafult_methods.Common_ControllerMethods;
+import controller_ui.deafult_methods.ui_feedback.SnackBar;
+import file_manager.FM_StackManager_XML;
 import assets.Constants;
 import assets.Constants_Prefs;
 import javafx.event.ActionEvent;
