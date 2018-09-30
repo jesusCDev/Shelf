@@ -27,7 +27,7 @@ Windows:
 ```
 
 ```
-[![exe][exe-download]][allvens.com/projects/shelf/window]
+[![exe][exe-download]][google.com]
 ### Built With
 
 ```
