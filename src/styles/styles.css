@@ -248,3 +248,9 @@ Purple Lettering: #6157AC
     -fx-font-size: 1em;
     -fx-padding: 5 0 5 0;
 }
+/******************************************************************************
+************ Installer Styles
+*******************************************************************************/
+#lv_FilesAndDirectories{
+    -fx-background-color: transparent;
+}

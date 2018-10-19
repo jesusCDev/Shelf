@@ -13,12 +13,17 @@ public interface Constants {
     int defaultToastHeight = 100;
 
     /********** File/Dir Names **********/
-    String WINDOW_TITLE_Error = "Error";
     String FOLDER_Shelf = "Shelf";
     String DOC_Stack_XML = "Stack.xml";
+
+    /********** Messages **********/
+    String TOAST_MESSAGE_OKAY = "Okay";
+
+    /********** Symbols **********/
     String SYMBOL_Comma = ",";
     String SYMBOL_Underscore = "_";
-    String TOAST_MESSAGE_OKAY = "Okay";
+    char SYMBOL_BackSlash = '/';
+    char SYMBOL_FrontSlash = '\\';
 
     /********** Text Saved On Used In Project **********/
     String TEXT_PROJECT_TITLE = "Shelf";
@@ -43,6 +48,7 @@ public interface Constants {
 
 
     /********** Window Titles **********/
+    String WINDOW_TITLE_Error = "Error";
     String WINDOW_TITLE_Main = "Shelf";
     String WINDOW_TITLE_StackViewer = "Stack Viewer";
     String WINDOW_TITLE_StackCreator = "Stack Creator";
