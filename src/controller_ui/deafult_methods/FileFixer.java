@@ -9,12 +9,9 @@ import java.io.File;
  * Class used to fix file and directories
  */
 public class FileFixer {
+
     public void savePaths(String prefID, String path){
         Constants_Prefs.pref.put(prefID, path);
-    }
-
-    public boolean checkFrontOfPathForFrontBackSlash(String path){
-        return (path.charAt(0) == Constants.SYMBOL_BackSlash || path.charAt(0) == Constants.SYMBOL_FrontSlash);
     }
 
     /**

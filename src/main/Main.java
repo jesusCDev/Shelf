@@ -15,20 +15,22 @@ import javafx.stage.Stage;
  */
 public class Main extends Application implements Constants_Prefs, Constants {
 
-    Common_DefaultMethods cdm = new Common_DefaultMethods();
+    private Common_DefaultMethods cdm = new Common_DefaultMethods();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         String xmlFile;
         FM_FileChecker ffc = new FM_FileChecker();
 
-        if(pref.getBoolean(PREF_SV_Boolean_FirstTimeUsingApp, true) && ffc.checkIfMainDocumentExistOrHasBeenMessWith()){
+        if(pref.getBoolean(PREF_SV_Boolean_FirstTimeUsingApp, true) || !ffc.check_MainDocExistAndWorks()){
             xmlFile = FILE_FXML_FileSetup;
             cdm.hardRest();
         }else{
-            ffc.checkIfStacksExistOrHaveBeenMessedWith();
+            ffc.check_StackExistAndWork();
             xmlFile = FILE_FXML_Main;
         }
+
+
 
         Parent root = FXMLLoader.load(getClass().getResource(xmlFile));
         Scene scene = new Scene(root);

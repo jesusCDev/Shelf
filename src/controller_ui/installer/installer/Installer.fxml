@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller_ui.installer.interface.FileSetUp">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller_ui.installer.installer.Installer">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Files And Directories Being Created:">
                <styleClass>
                   <String fx:value="title_3" />
-                  <String fx:value="outlabels" />
+                  <String fx:value="labels_OnBackground" />
                </styleClass></Label>
             <ListView fx:id="lv_FilesAndDirectories" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
             <Label text="Project Home Directory:">
                <styleClass>
                   <String fx:value="title_3" />
-                  <String fx:value="outlabels" />
+                  <String fx:value="labels_OnBackground" />
                </styleClass></Label>
             <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
                <children>
@@ -52,15 +52,19 @@
       </HBox>
    </bottom>
    <top>
-      <VBox styleClass="header" BorderPane.alignment="CENTER">
+      <VBox BorderPane.alignment="CENTER">
          <children>
             <Label text="Installer">
                <styleClass>
-                  <String fx:value="outlabels" />
+                  <String fx:value="labels_OnBackground" />
                   <String fx:value="title_2" />
                </styleClass>
             </Label>
          </children>
+         <styleClass>
+            <String fx:value="header" />
+            <String fx:value="vbContainer" />
+         </styleClass>
       </VBox>
    </top>
 </BorderPane>

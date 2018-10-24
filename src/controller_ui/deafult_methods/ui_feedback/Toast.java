@@ -43,7 +43,7 @@ public class Toast {
         vbContainer.getStyleClass().add("vbContainer");
 
         Label lbMessage = new Label(message);
-        lbMessage.getStyleClass().add("outlabels");
+        lbMessage.getStyleClass().add("labels_OnBackground");
         lbMessage.getStyleClass().add("title_2");
 
         Button btnCloseWindow = new Button(Constants.TOAST_MESSAGE_OKAY);

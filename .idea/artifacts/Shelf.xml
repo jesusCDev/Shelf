@@ -8,8 +8,8 @@
         <option name="htmlPlaceholderId" value="" />
         <option name="nativeBundle" value="all" />
         <option name="title" value="Shelf" />
-        <option name="vendor" value="Keeps track of re-useable snippets of code or other text that can be used in-order to better organize code." />
-        <option name="version" value="1.0" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
       </options>
     </properties>
     <root id="root">

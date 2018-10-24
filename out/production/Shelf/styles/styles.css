@@ -19,10 +19,13 @@ Purple Lettering: #6157AC
     -fx-background-color: transparent;
 }
 .header{
-    -fx-padding: 10 10 10 10;
+    -fx-padding: 10;
 }
 .body{
-    -fx-padding: 0 10 0 10;
+    -fx-padding: 10;
+}
+.footer{
+    -fx-padding: 10;
 }
 .button{
     -fx-cursor: hand;
@@ -140,7 +143,7 @@ Purple Lettering: #6157AC
     -fx-font-size:1em;
 }
 .title_3{
-    -fx-font-size: 0.5em;
+    -fx-font-size: 0.8em;
 }
 /******************************************************************************
 ************ Stack/Card Styles

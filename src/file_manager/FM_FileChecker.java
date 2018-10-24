@@ -15,7 +15,7 @@ public class FM_FileChecker implements Constants_Prefs{
      * Checks main Document if it works
      * @return
      */
-    public boolean checkIfMainDocumentExistOrHasBeenMessWith() {
+    public boolean check_MainDocExistAndWorks() {
         if (new File(pref.get(PREF_SV_String_MainPath, null)).exists()) {
             try {
                 new FM_StackManager_XML(false);
@@ -30,15 +30,15 @@ public class FM_FileChecker implements Constants_Prefs{
     /**
      * Checks if stack exist and work
      */
-    public void checkIfStacksExistOrHaveBeenMessedWith(){
+    public void check_StackExistAndWork(){
         FM_StackManager_XML fsm = new FM_StackManager_XML(false);
         for(FM_StackManager_Info stack: fsm.getStacks()){
-            if(!checkStack(stack.getStackID())){
+            if(!check_Stack(stack.getStackID())){
                 fsm.getStacks().remove(stack);
             }
         }
         fsm.updateXMLFile();
-        deleteAllOtherFiles(fsm.getStacks());
+        delete_AllOtherFiles(fsm.getStacks());
     }
 
     /**
@@ -46,7 +46,7 @@ public class FM_FileChecker implements Constants_Prefs{
      * @param stackID
      * @return
      */
-    private boolean checkStack(String stackID){
+    private boolean check_Stack(String stackID){
         File file = new File(pref.get(PREF_SV_String_MainPath, "") + stackID + ".xml");
         if(file.exists()){
             try{
@@ -63,7 +63,7 @@ public class FM_FileChecker implements Constants_Prefs{
      * Deletes File if project isn't part of project
      * @param fsm
      */
-    private void deleteAllOtherFiles(ArrayList<FM_StackManager_Info> fsm){
+    private void delete_AllOtherFiles(ArrayList<FM_StackManager_Info> fsm){
         File mainDir = new File(pref.get(PREF_SV_String_MainPath, ""));
         try {
             for (File file : mainDir.listFiles()) {
