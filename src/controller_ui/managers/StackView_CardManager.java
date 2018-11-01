@@ -148,23 +148,24 @@ public class StackView_CardManager implements Constants_Prefs{
         vb.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                sb.createSnackBar(card.getCardCopyData(), SnackBar.SHORT);
+                sb.createSnackBar(card.getCardTitle(), SnackBar.SHORT);
                 writeToClipboard(card.getCardCopyData());
             }
         });
 
         Label lbTitle = new Label(card.getCardTitle());
         lbTitle.getStyleClass().add("card_title_1");
-        Label lbDescription = new Label(card.getCardDescription());
-        lbDescription.getStyleClass().add("card_title_2");
-
         Label lbData = new Label(card.getCardCopyData());
-        lbData.getStyleClass().add("card_title_3");
+        lbData.getStyleClass().add("card_title_2");
+
+        Label lbDescription = new Label(card.getCardDescription());
+        lbDescription.getStyleClass().add("card_title_3");
+
         vb.setPrefWidth(buttonSize);
 
         vb.getChildren().add(lbTitle);
-        vb.getChildren().add(lbDescription);
         vb.getChildren().add(lbData);
+        vb.getChildren().add(lbDescription);
 
         return vb;
     }

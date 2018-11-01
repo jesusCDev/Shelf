@@ -30,9 +30,9 @@ public class DefaultStackValues {
             "/********** SubSubTitle **********/";
     private static String commentBlock_Description_3_Java = "Titles Small Sections in Section";
 
-    private static FM_CardManager_Info[] commentBlockJava_Cards = {new FM_CardManager_Info(commentBlock_Title_1_Java, commentBlock_Code_1_Java, commentBlock_Description_1_Java),
-            new FM_CardManager_Info(commentBlock_Title_2_Java, commentBlock_Code_2_Java, commentBlock_Description_2_Java),
-            new FM_CardManager_Info(commentBlock_Title_3_Java, commentBlock_Code_3_Java, commentBlock_Description_3_Java)};
+    private static FM_CardManager_Info[] commentBlockJava_Cards = {new FM_CardManager_Info(commentBlock_Title_1_Java, commentBlock_Description_1_Java, commentBlock_Code_1_Java),
+            new FM_CardManager_Info(commentBlock_Title_2_Java, commentBlock_Description_2_Java, commentBlock_Code_2_Java),
+            new FM_CardManager_Info(commentBlock_Title_3_Java, commentBlock_Description_3_Java, commentBlock_Code_3_Java)};
 
     private static FM_StackManager_Info commentBlockJava = new FM_StackManager_Info(commentBLock_Title_Java, commentBLock_Description_Java, commentBlockJava_Cards);
 
@@ -59,9 +59,9 @@ public class DefaultStackValues {
                     "}}";
     private static String debuggingBlock_Description_3_Java = "Quick method to print out values for array.";
 
-    private static FM_CardManager_Info[] debuggingBlockJava_Cards = {new FM_CardManager_Info(debuggingBlock_Title_1_Java, debuggingBlock_Code_1_Java, debuggingBlock_Description_1_Java),
-            new FM_CardManager_Info(debuggingBlock_Title_2_Java, debuggingBlock_Code_2_Java, debuggingBlock_Description_2_Java),
-            new FM_CardManager_Info(debuggingBlock_Title_3_Java, debuggingBlock_Code_3_Java, debuggingBlock_Description_3_Java)};
+    private static FM_CardManager_Info[] debuggingBlockJava_Cards = {new FM_CardManager_Info(debuggingBlock_Title_1_Java, debuggingBlock_Description_1_Java, debuggingBlock_Code_1_Java),
+            new FM_CardManager_Info(debuggingBlock_Title_2_Java, debuggingBlock_Description_2_Java, debuggingBlock_Code_2_Java),
+            new FM_CardManager_Info(debuggingBlock_Title_3_Java, debuggingBlock_Description_3_Java, debuggingBlock_Code_3_Java)};
 
     private static FM_StackManager_Info debuggingbLockJava = new FM_StackManager_Info(commentBLock_Title_JavaDebugging, commentBLock_Description_JavaDebugging, debuggingBlockJava_Cards);
 
@@ -90,9 +90,9 @@ public class DefaultStackValues {
             "<!--------------------------------- TITLE 3 --------------------------------->";
     private static String commentBlock_Description_3_HTML = "Separates Code";
 
-    private static FM_CardManager_Info[] commentBlockHTML_Cards = {new FM_CardManager_Info(commentBlock_Title_1_HTML, commentBlock_Code_1_HTML, commentBlock_Description_1_HTML),
-            new FM_CardManager_Info(commentBlock_Title_2_HTML, commentBlock_Code_2_HTML, commentBlock_Description_2_HTML),
-            new FM_CardManager_Info(commentBlock_Title_3_HTML, commentBlock_Code_3_HTML, commentBlock_Description_3_HTML),};
+    private static FM_CardManager_Info[] commentBlockHTML_Cards = {new FM_CardManager_Info(commentBlock_Title_1_HTML, commentBlock_Description_1_HTML, commentBlock_Code_1_HTML),
+            new FM_CardManager_Info(commentBlock_Title_2_HTML, commentBlock_Description_2_HTML, commentBlock_Code_2_HTML),
+            new FM_CardManager_Info(commentBlock_Title_3_HTML, commentBlock_Description_3_HTML, commentBlock_Code_3_HTML),};
 
     private static FM_StackManager_Info commentBlockHTML = new FM_StackManager_Info(commentBLock_Title_HTML, commentBLock_Description_HTML, commentBlockHTML_Cards);
 
@@ -121,9 +121,9 @@ public class DefaultStackValues {
             "/******************************** TITLE 3 *************************************/";
     private static String commentBlock_Description_3_JavaScriptCSS = "Separates Code";
 
-    private static FM_CardManager_Info[] commentBlockJavaScriptCSS_Cards = {new FM_CardManager_Info(commentBlock_Title_1_JavaScriptCSS, commentBlock_Code_1_JavaScriptCSS, commentBlock_Description_1_JavaScriptCSS),
-            new FM_CardManager_Info(commentBlock_Title_2_JavaScriptCSS, commentBlock_Code_2_JavaScriptCSS, commentBlock_Description_2_JavaScriptCSS),
-            new FM_CardManager_Info(commentBlock_Title_3_JavaScriptCSS, commentBlock_Code_3_JavaScriptCSS, commentBlock_Description_3_JavaScriptCSS),};
+    private static FM_CardManager_Info[] commentBlockJavaScriptCSS_Cards = {new FM_CardManager_Info(commentBlock_Title_1_JavaScriptCSS, commentBlock_Description_1_JavaScriptCSS, commentBlock_Code_1_JavaScriptCSS),
+            new FM_CardManager_Info(commentBlock_Title_2_JavaScriptCSS, commentBlock_Description_2_JavaScriptCSS, commentBlock_Code_2_JavaScriptCSS),
+            new FM_CardManager_Info(commentBlock_Title_3_JavaScriptCSS, commentBlock_Description_3_JavaScriptCSS, commentBlock_Code_3_JavaScriptCSS),};
 
     private static FM_StackManager_Info commentBlockJavaScriptCSS = new FM_StackManager_Info(commentBLock_Title_JavaScriptCSS, commentBLock_Description_JavaScriptCSS, commentBlockJavaScriptCSS_Cards);
 
@@ -154,22 +154,22 @@ public class DefaultStackValues {
     private static String commentBlock_Description_3_Python = "Separates Code";
 
 
-    private static FM_CardManager_Info[] commentBlockPython_Cards = {new FM_CardManager_Info(commentBlock_Title_1_Python, commentBlock_Code_1_Python, commentBlock_Description_1_Python),
-            new FM_CardManager_Info(commentBlock_Title_2_Python, commentBlock_Code_2_Python, commentBlock_Description_2_Python),
-            new FM_CardManager_Info(commentBlock_Title_3_Python, commentBlock_Code_3_Python, commentBlock_Description_3_Python),};
+    private static FM_CardManager_Info[] commentBlockPython_Cards = {new FM_CardManager_Info(commentBlock_Title_1_Python, commentBlock_Description_1_Python, commentBlock_Code_1_Python),
+            new FM_CardManager_Info(commentBlock_Title_2_Python, commentBlock_Description_2_Python, commentBlock_Code_2_Python),
+            new FM_CardManager_Info(commentBlock_Title_3_Python, commentBlock_Description_3_Python, commentBlock_Code_3_Python),};
 
     private static FM_StackManager_Info commentBlockPython= new FM_StackManager_Info(commentBLock_Title_Python, commentBLock_Description_Python, commentBlockPython_Cards);
 
-    /********** LoremIpsum Text **********/
-    private static String loremIpsum_Title = "LoremIpsum Text";
-    private static String loremIpsum_Description = "Fake use to fill up content blocks.";
-
-    private static String loremIpsum_Title_Long = "Lorem Ipsum Long Title";
-    private static String loremIpsum_Title_Medium = "Lorem Ipsum Medium Title";
-    private static String loremIpsum_Title_Short = "Lorem Ipsum Short Title";
-    private static String loremIpsum_Description_Long = "Lorem Ipsum Long Description";
-    private static String loremIpsum_Description_Medium = "Lorem Ipsum Medium Description";
-    private static String loremIpsum_Description_Short = "Lorem Ipsum Short Description";
+//    /********** LoremIpsum Text **********/
+//    private static String loremIpsum_Title = "LoremIpsum Text";
+//    private static String loremIpsum_Description = "Fake use to fill up content blocks.";
+//
+//    private static String loremIpsum_Title_Long = "Lorem Ipsum Long Title";
+//    private static String loremIpsum_Title_Medium = "Lorem Ipsum Medium Title";
+//    private static String loremIpsum_Title_Short = "Lorem Ipsum Short Title";
+//    private static String loremIpsum_Description_Long = "Lorem Ipsum Long Description";
+//    private static String loremIpsum_Description_Medium = "Lorem Ipsum Medium Description";
+//    private static String loremIpsum_Description_Short = "Lorem Ipsum Short Description";
 
 
     /********** Comment Container **********/

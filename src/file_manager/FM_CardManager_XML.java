@@ -77,8 +77,8 @@ public class FM_CardManager_XML extends FM_XMLParser implements Constants_Prefs{
             root.addContent(custElement);
 
             addChild_OneElement_OneValue(custElement, FM_CardManager_Values.TITLE, card.getCardTitle());
-            addChild_OneElement_OneValue(custElement, FM_CardManager_Values.DESCRIPTION, card.getCardDescription());
             addChild_OneElement_OneValue(custElement, FM_CardManager_Values.COPY_DATA, card.getCardCopyData());
+            addChild_OneElement_OneValue(custElement, FM_CardManager_Values.DESCRIPTION, card.getCardDescription());
         }
 
         return doc;
