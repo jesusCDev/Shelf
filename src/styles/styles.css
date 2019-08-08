@@ -42,10 +42,10 @@ Purple Lettering: #6157AC
 }
 
 .vbContainer{
- -fx-spacing: 5;
+ -fx-spacing: 0.8em;
 }
 .hbContainer{
-    -fx-spacing: 5;
+    -fx-spacing: 0.8em;
 }
 .HBox{
     -fx-spacing: 10px;
