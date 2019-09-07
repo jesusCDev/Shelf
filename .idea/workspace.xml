@@ -5,20 +5,460 @@
       <artifact name="Shelf:jar" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/fxml/StackCreator.fxml" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jaxen_1_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdom_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxen-1.1.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jdom-2.0.6.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Shelf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Shelf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Shelf_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Shelf_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Manager_Languages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Manager_Languages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shelf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shelf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jaxen-1.1.6.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/maven/jaxen/jaxen/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/META-INF/maven/jaxen/jaxen/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/BaseXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/ContextSupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/DefaultNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/Function.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/FunctionCallException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/FunctionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/JaxenRuntimeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/NamedAccessNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/NamespaceContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/Navigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/QualifiedName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/SimpleFunctionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/SimpleNamespaceContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/SimpleVariableContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/UnresolvableException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/UnsupportedAxisException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/VariableContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/XPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/XPathFunctionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/XPathSyntaxException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom/DOMXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom/DocumentNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom/NamespaceNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom4j/DocumentNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/dom4j/Dom4jXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/AdditiveExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/AllNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/BinaryExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/CommentNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAbsoluteLocationPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAdditiveExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAllNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultAndExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultArithExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultBinaryExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultCommentNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultDivExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultEqualityExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultEqualsExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultFilterExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultFunctionCallExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultGreaterThanEqualExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultGreaterThanExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLessThanEqualExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLessThanExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLiteralExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLocationPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultLogicalExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultMinusExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultModExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultMultiplicativeExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultMultiplyExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultNameStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultNotEqualsExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultNumberExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultOrExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultPathExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultPlusExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultPredicate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultProcessingInstructionNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultRelationalExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultRelativeLocationPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultTextNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultTruthExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultUnaryExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultUnionExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultVariableReferenceExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultXPathExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/DefaultXPathFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/EqualityExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Expr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/FilterExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/FunctionCallExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/IdentitySet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/LiteralExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/LocationPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/LogicalExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/MultiplicativeExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/NameStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/NodeComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/NumberExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/PathExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Predicate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/PredicateSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Predicated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/ProcessingInstructionNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/RelationalExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/Step.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/TextNodeStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/UnaryExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/UnionExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/VariableReferenceExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/XPathExpr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/XPathFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAncestorAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAncestorOrSelfAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAttributeAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableChildAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableDescendantAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableDescendantOrSelfAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableFollowingAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableFollowingSiblingAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableNamespaceAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableParentAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterablePrecedingAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterablePrecedingSiblingAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/expr/iter/IterableSelfAxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/BooleanFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/CeilingFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ConcatFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ContainsFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/CountFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/FalseFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/FloorFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/IdFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/LangFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/LastFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/LocalNameFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NameFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NamespaceUriFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NormalizeSpaceFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NotFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/NumberFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/PositionFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/RoundFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/StartsWithFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/StringFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/StringLengthFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SubstringAfterFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SubstringBeforeFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SubstringFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/SumFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/TranslateFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/TrueFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/EndsWithFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/EvaluateFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/LocaleFunctionSupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/LowerFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/ext/UpperFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/function/xslt/DocumentFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/DocumentNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/Element.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/ElementIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/javabean/JavaBeanXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/jdom/DocumentNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/jdom/JDOMXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/jdom/XPathNamespace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/AnyChildNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/AnyNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/LocationPathPattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NameTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NamespaceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NoNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/NodeTypeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/Pattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/PatternHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/PatternParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/TextNodeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/pattern/UnionPattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/Axis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/Operator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/SAXPathEventSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/SAXPathException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/XPathHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/XPathReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/XPathSyntaxException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/TokenTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/Verifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/XPathLexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/base/XPathReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/helpers/DefaultXPathHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/saxpath/helpers/XPathReaderFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/AncestorAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/AncestorOrSelfAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/DescendantAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/DescendantOrSelfAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/FollowingAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/FollowingSiblingAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/LinkedIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/PrecedingAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/PrecedingSiblingAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/SelfAxisIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/SingleObjectIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/SingletonList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/util/StackedIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/xom/DocumentNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/jaxen/xom/XOMXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jaxen-1.1.6.jar/org/w3c/dom/UserDataHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/META-INF/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jdom-2.0.6.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/META-INF/jdom-info.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Attribute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/AttributeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/AttributeType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/CDATA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/CloneBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Comment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Content.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/ContentList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DataConversionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DefaultJDOMFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DescendantIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/DocType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Document.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Element.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/EntityRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/FilterIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalAddException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalDataException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalNameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/IllegalTargetException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/JDOMConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/JDOMException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/JDOMFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Namespace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/NamespaceAware.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Parent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/ProcessingInstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/SlimJDOMFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/StringBin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Text.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/UncheckedJDOMFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/Verifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/adapters/AbstractDOMAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/adapters/DOMAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/adapters/JAXPDOMAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/AbstractFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/AndFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/AttributeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/ClassFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/ContentFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/ElementFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/Filters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/NegateFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/OrFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/PassThroughFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/filter/TextOnlyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/DOMBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/JDOMParseException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/SAXBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/StAXEventBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/StAXStreamBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/AbstractReaderSchemaFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/AbstractReaderXSDFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/BuilderErrorHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/DefaultSAXHandlerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXBuilderEngine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXEngine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/SAXHandlerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/TextBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderJAXPFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderJDOMFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderSAX2Factory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderSchemaFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaderXSDFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/XMLReaders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/sax/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/DTDParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/DefaultStAXFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/StAXFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/input/stax/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/internal/ArrayCopy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/internal/ReflectionConstructor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/internal/SystemProperty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/Located.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedCDATA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedDocType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedEntityRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedJDOMFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedProcessingInstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/located/LocatedText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/DOMOutputter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/EscapeStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/Format.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/JDOMLocator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/LineSeparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/SAXOutputter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/StAXEventOutputter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/StAXStreamOutputter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/XMLOutputter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractDOMOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractFormattedWalker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractSAXOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractStAXEventProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractStAXStreamProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/AbstractXMLOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/DOMOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/FormatStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/SAXOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/SAXTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/StAXEventProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/StAXStreamProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/Walker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerNORMALIZE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerPRESERVE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerTRIM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/WalkerTRIM_FULL_WHITE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/output/support/XMLOutputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/JDOMResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/JDOMSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/XSLTransformException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/transform/XSLTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/util/IteratorIterable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/util/NamespaceStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathDiagnostic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/XPathHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOM2Navigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOMCoreNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOMNavigator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JDOMXPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JaxenCompiled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/JaxenXPathFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/jaxen/NamespaceContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/util/AbstractXPathCompiled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jdom-2.0.6.jar/org/jdom2/xpath/util/XPathDiagnosticImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/C#_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/C#_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/C++_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/C++_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/CSS_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/CSS_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/Go_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/Go_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/HTML_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/HTML_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/JavaScript_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/JavaScript_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/Java_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/Java_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/Manager_Languages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/Manager_Languages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/PHP_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/PHP_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/Python_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/Python_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/Ruby_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/Ruby_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/Swift_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/Swift_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/Resources/XML_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/Resources/XML_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/ColumnCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/ColumnCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/deafult_methods/Common_ControllerMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/deafult_methods/Common_ControllerMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/deafult_methods/FileFixer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/deafult_methods/FileFixer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/deafult_methods/ui_feedback/SnackBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/deafult_methods/ui_feedback/SnackBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/installer/FirstTimeSetUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/installer/FirstTimeSetUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/installer/installer/Installer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/installer/installer/Installer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/installer/installer/Installer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/installer/installer/Installer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/CardEditor_ListViewCardManager$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/CardEditor_ListViewCardManager$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/CardEditor_ListViewCardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/CardEditor_ListViewCardManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/Home_StackManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/Home_StackManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/StackSelector_StackManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/StackSelector_StackManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/StackView_CardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/StackView_CardManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/StackView_StackManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controller_ui/managers/StackView_StackManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/controllers/StackView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/controllers/StackView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_CardManager_XML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_CardManager_XML.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_FileChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_FileChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_StackManager_XML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_StackManager_XML.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/file_manager/FM_XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/CardCreator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/CardCreator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/CardEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/CardEditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/StackCreator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/StackCreator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/StackSelector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/StackSelector.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/fxml/StackView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/fxml/StackView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shelf/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Shelf/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shelf/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/C#_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/C#_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/C++_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/C++_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/CSS_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/CSS_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Go_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Go_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/HTML_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/HTML_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/JavaScript_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/JavaScript_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Java_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Java_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Manager_Languages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Manager_Languages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/PHP_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/PHP_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Python_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Python_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Ruby_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Ruby_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Swift_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Swift_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/XML_language_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/XML_language_data.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Constants_Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Constants_Prefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Constants_StyleClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Constants_StyleClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/ColumnCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/ColumnCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/deafult_methods/Common_ControllerMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/deafult_methods/Common_ControllerMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/deafult_methods/Common_DefaultMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/deafult_methods/Common_DefaultMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/deafult_methods/FileFixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/deafult_methods/FileFixer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/SnackBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/SnackBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/Toast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/Toast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/installer/DefaultStackValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/installer/DefaultStackValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/installer/FirstTimeSetUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/installer/FirstTimeSetUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/installer/installer/OuterFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/installer/installer/OuterFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/managers/CardEditor_ListViewCardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/managers/CardEditor_ListViewCardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/managers/Home_StackManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/managers/Home_StackManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/managers/StackSelector_StackManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/managers/StackSelector_StackManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/managers/StackView_CardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/managers/StackView_CardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller_ui/managers/StackView_StackManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller_ui/managers/StackView_StackManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CardCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CardCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CardEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CardEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StackCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StackCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StackSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StackSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/StackView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StackView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_CardManager_Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_CardManager_Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_CardManager_Values.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_CardManager_Values.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_CardManager_XML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_CardManager_XML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_FileChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_FileChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_StackManager_Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_StackManager_Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_StackManager_Values.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_StackManager_Values.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_StackManager_XML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_StackManager_XML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_manager/FM_XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_manager/FM_XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CardCreator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/CardCreator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/CardEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/CardEditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/StackCreator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/StackCreator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/StackSelector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/StackSelector.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/StackView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/StackView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.css" afterDir="false" />
     </list>
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,80 +508,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
-  </component>
-  <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/controllers/StackView.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="644">
-                  <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/controller_ui/managers/StackView_StackManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="299">
-                  <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/DefaultStackValues.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="92">
-                  <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/FirstTimeSetUp.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1587">
-                  <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="794">
-                  <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/file_manager/FM_CardManager_Info.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
-                  <folding>
-                    <element signature="e#668#669#0" expanded="true" />
-                    <element signature="e#706#707#0" expanded="true" />
-                    <element signature="e#768#769#0" expanded="true" />
-                    <element signature="e#822#823#0" expanded="true" />
-                    <element signature="e#861#862#0" expanded="true" />
-                    <element signature="e#896#897#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -226,69 +592,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/ControllerUI/FirstTimeSetUp/FirstTimeSetUp.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/SnackBar.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Toast.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/UI_Feedback/Toast.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/Managers/StackView_StackManager.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_DefaultMethods.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Info.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_Values.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_CardManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_FileChecker.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_StackManager_Info.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_StackManager_Values.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_StackManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler/FM_XMLParser.java" />
-        <option value="$PROJECT_DIR$/src/Main/Main.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/ColumnCreator.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/Managers/StackSelector_StackManager.java" />
-        <option value="$PROJECT_DIR$/src/fxml/CardCreator.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/CardEditor.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/StackView.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/StackSelector.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/StackCreator.fxml" />
-        <option value="$PROJECT_DIR$/src/fxml/Home.fxml" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_ControllerMethods.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/Managers/Home_StackManager.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/Managers/StackView_CardManager.java" />
-        <option value="$PROJECT_DIR$/src/controllers/StackCreator.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/FirstTimeSetUp/FileFinder/FileSetUp.java" />
-        <option value="$PROJECT_DIR$/src/controllers/CardEditor.java" />
-        <option value="$PROJECT_DIR$/src/controllers/StackSelector.java" />
-        <option value="$PROJECT_DIR$/src/controllers/StackView.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/Managers/CardEditor_ListViewCardManager.java" />
-        <option value="$PROJECT_DIR$/src/ControllerUI/DefaultMethods/UI_Feedback/SnackBar.java" />
-        <option value="$PROJECT_DIR$/src/controller_ui/managers/Home_StackManager.java" />
-        <option value="$PROJECT_DIR$/src/assets/Constants.java" />
-        <option value="$PROJECT_DIR$/src/controller_ui/file_managing/file_manager/FM_FileChecker.java" />
-        <option value="$PROJECT_DIR$/src/controller_ui/file_managing/file_manager/FileFixer.java" />
-        <option value="$PROJECT_DIR$/src/controller_ui/deafult_methods/FileFixer.java" />
-        <option value="$PROJECT_DIR$/src/file_manager/Fm_FileManager.java" />
-        <option value="$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.fxml" />
-        <option value="$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/Toast.java" />
-        <option value="$PROJECT_DIR$/src/file_manager/FM_FileChecker.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/assets/Constants_Prefs.java" />
-        <option value="$PROJECT_DIR$/src/file_manager/FM_CardManager_XML.java" />
-        <option value="$PROJECT_DIR$/src/controllers/CardCreator.java" />
-        <option value="$PROJECT_DIR$/src/controller_ui/installer/DefaultStackValues.java" />
-        <option value="$PROJECT_DIR$/src/controllers/Home.java" />
-        <option value="$PROJECT_DIR$/src/styles/styles.css" />
-        <option value="$PROJECT_DIR$/src/controller_ui/managers/StackView_CardManager.java" />
-        <option value="$PROJECT_DIR$/src/file_manager/FM_CardManager_Info.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1P7S80GW5rMgrcRBA8z35mVl0vl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -297,88 +600,8 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller_ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller_ui" type="462c0819:PsiDirectoryNode" />
-              <item name="deafult_methods" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller_ui" type="462c0819:PsiDirectoryNode" />
-              <item name="installer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="file_manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shelf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shelf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -390,14 +613,14 @@
     <property name="SearchEverywhereHistoryKey" value="update&#9;ACTION&#9;WelcomeScreen.Update&#10;card&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/controller_ui/managers/StackView_CardManager.java&#10;de&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/controller_ui/installer/DefaultStackValues.java&#10;default&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/controller_ui/installer/DefaultStackValues.java&#10;css&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/styles/styles.css&#10;Toast&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/controller_ui/deafult_methods/ui_feedback/Toast.java&#10;File&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/controller_ui/deafult_methods/FileFixer.java&#10;Fil&#9;FILE&#9;file:///home/jesuscdev/eclipse-workspace/Shelf/src/file_manager/FM_FileChecker.java&#10;TODO&#9;ACTION&#9;ActivateTODOToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Projects-Programming/Shelf/App/Scene" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PATH_TO_FIX$" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -448,7 +671,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="Shelf" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="--module-path ${JAVA12FX} --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="controller_ui.installer.*" />
@@ -525,490 +748,26 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="2609" y="387" width="1871" height="1053" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="UI Designer" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.6703755" visible="true" weight="0.1513988" />
-      <window_info id="Structure" order="3" weight="0.25" />
-      <window_info id="Favorites" order="4" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="0" weight="0.32388973" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32861805" />
-      <window_info anchor="bottom" x="890" y="504" width="725" height="209" id="Run" order="3" type="WINDOWED" weight="0.32895753" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39969015" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32911393" />
-      <window_info anchor="bottom" id="Event Log" order="8" weight="0.33152595" />
-      <window_info anchor="bottom" id="Changes" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32535365" />
-      <window_info anchor="bottom" id="Application Servers" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32990506" />
-      <window_info anchor="bottom" id="Problems" order="13" />
-      <window_info anchor="bottom" id="Profiler" order="14" />
-      <window_info anchor="right" id="Palette&#9;" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32967636" />
-      <window_info anchor="right" id="JetGradle" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette" order="7" />
-      <window_info anchor="right" id="Maven" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="UI Designer" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.6703755" visible="true" weight="0.20262739" />
-      <window_info id="Structure" order="3" weight="0.25" />
-      <window_info id="Favorites" order="4" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="0" weight="0.3268784" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32929516" />
-      <window_info anchor="bottom" x="728" y="834" width="878" height="484" id="Run" order="3" type="WINDOWED" visible="true" weight="0.32895753" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39969015" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32929516" />
-      <window_info anchor="bottom" id="Event Log" order="8" />
-      <window_info anchor="bottom" id="Changes" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3268784" />
-      <window_info anchor="bottom" id="Application Servers" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Problems" order="13" />
-      <window_info anchor="bottom" id="Profiler" order="14" />
-      <window_info anchor="right" id="Palette&#9;" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="right" id="JetGradle" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette" order="7" />
-    </layout-to-restore>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/StackView_Manager/StackManager.java" />
-    <entry file="jar://$USER_HOME$/jdk1.8.0_151/javafx-src.zip!/javafx/scene/layout/VBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="213" column="11" selection-start-line="213" selection-start-column="11" selection-end-line="213" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_DebugMethods.java" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/DefaultMethods/Common_FilePathMethods.java" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FirstTimeSetUp/FileFinder/SectionManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FirstTimeSetUp/DefaultCard.java" />
-    <entry file="file://$PROJECT_DIR$/src/ControllerUI/FirstTimeSetUp/DefaultStackContainer.java" />
-    <entry file="jar://$USER_HOME$/jdk1.8.0_151/javafx-src.zip!/javafx/scene/input/MouseEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="130" column="42" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/deafult_methods/Common_DefaultMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_StackManager_Values.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/Home.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
-          <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/StackCreator.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="41" column="56" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/StackSelector.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/CardCreator.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/CardEditor.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/ColumnCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/managers/StackSelector_StackManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1234">
-          <caret line="138" column="42" lean-forward="true" selection-start-line="138" selection-start-column="42" selection-end-line="138" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StackCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="102" column="125" selection-start-line="102" selection-start-column="125" selection-end-line="102" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CardEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="60" column="131" selection-start-line="60" selection-start-column="131" selection-end-line="60" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StackSelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="55" column="131" selection-start-line="55" selection-start-column="131" selection-end-line="55" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/jdk1.8.0_151/javafx-src.zip!/javafx/scene/layout/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/managers/CardEditor_ListViewCardManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="263" column="59" selection-start-line="263" selection-start-column="59" selection-end-line="263" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/SnackBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/deafult_methods/Common_ControllerMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="99" column="45" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/installer/OuterFiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/managers/Home_StackManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="118" column="15" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Constants_StyleClasses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_XMLParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/deafult_methods/FileFixer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/Fm_FileManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="294" selection-start-line="11" selection-start-column="294" selection-end-line="11" selection-end-column="294" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_FileChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/deafult_methods/ui_feedback/Toast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_StackManager_XML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Constants_Prefs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_CardManager_Values.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_CardManager_XML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="79" column="107" selection-start-line="79" selection-start-column="92" selection-end-line="79" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_StackManager_Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CardCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/StackView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/managers/StackView_CardManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="151" column="53" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StackView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/managers/StackView_StackManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/DefaultStackValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/FirstTimeSetUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller_ui/installer/installer/Installer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file_manager/FM_CardManager_Info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor>
-            <show-content>
-              <type id="artifact" />
-              <type id="library" />
-            </show-content>
-          </artifact-editor>
-          <last-edited>Shelf</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Shelf</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
